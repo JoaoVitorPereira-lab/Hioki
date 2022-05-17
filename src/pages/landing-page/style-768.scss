@@ -1,0 +1,518 @@
+@media screen and (min-width: 760px) and (max-width: 780px)
+{
+    .faixas
+    {
+        display: flex;
+        flex-direction: column;
+        width: 780px;
+    }
+
+    .me
+    {
+        background-image:url('../../../public/images/fundoverde.jpg');
+        background-repeat: no-repeat;
+        background-size: 680px;
+        background-position-y: 0px;
+        background-position-x: 46px;
+
+        width: 100%;
+        height: 550px;
+    }
+
+    .bt-me
+    {
+        margin-top: 20px;
+    }
+
+    .botao-me
+    {
+        width: 130px;
+        height: 50px;
+        font-size: 20px;
+
+        margin-left: 10px;
+        margin-top: 100px;
+    }
+
+    .logo-me
+    {            
+        margin-left: 30px;
+        margin-top: 50px;
+        
+        height: 130px;
+    }
+
+    .text-me
+    {
+        margin-left: 0px;
+        margin-top: -20px;
+    
+        font-size: 20px;
+    }
+
+    .nome-me
+    {
+        margin-left: 120px;
+        margin-top: 50px;
+    }
+
+    .desc-me
+    {
+        margin-left: 20px;
+    }
+
+    /* faixa 2 */
+
+    nav
+    {
+        background-color: #eee;
+    }
+
+    .diz
+    {
+        display: flex;
+        flex-direction: row;
+
+        width: 750px;
+        height: 200px;
+        
+        margin-top: -50px;
+
+        background-image: url('../../../public/images/Screenshot_1-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 425px;
+        background-position-x: 280px;
+        background-position-y: 270px;
+    }
+
+    .img-f2
+    {
+        width: 270px;
+        height: 210px;
+        margin-left: 570px;
+        margin-right: -400px;
+
+        background-color: inherit;
+    }
+
+    .tx-d
+    {
+        flex-direction: column;
+
+        width: 800px;
+        height: 280px;
+
+        margin-top: 70px;
+        margin-left: 280px;
+        margin-right: 390px;
+    }
+
+    .h1-d
+    {
+        text-align: inherit;
+
+        height: 10px;
+
+        margin-top: 0px;
+        margin-right: 200px;
+    }
+
+
+    .p-d
+    {
+        text-align: inherit;    
+        
+        width: 330px;
+
+        margin-top: 30px;
+        margin-right: 200px;
+    }
+
+    /* faixa 3 */
+
+    .oque
+    {
+        display: flex;
+        flex-direction: row;
+
+        width: 750px;
+        height: 200px;
+        
+        margin-top: -50px;
+
+        background-image: url('../../../public/images/Screenshot_4-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 590px;
+        background-position-x: 100px;
+        background-position-y: 250px;
+    }
+
+    .img-f3
+    {
+        width: 280px;
+        height: 210px;
+        margin-left: 550px;
+        margin-right: -600px;
+
+        background-color: inherit;
+    }
+
+    .tx-oq
+    {
+        flex-direction: column;
+
+        width: 800px;
+        height: 280px;
+
+        margin-top: 50px;
+        margin-left: 380px;
+        margin-right: 380px;
+    }
+
+    .h1-oq
+    {
+        text-align: inherit;
+
+        height: 30px;
+        width: 200px;
+        line-height: 20px;
+
+        margin-top: -20px;
+        margin-left: 120px;
+        margin-right: 200px;
+    }
+
+
+    .p-oq
+    {
+        text-align: inherit;    
+        
+        width: 300px;
+
+        margin-top: 30px;
+        margin-right: 200px;
+    }
+
+    .botao-anchor
+    {
+        margin-left: -100px;
+    }
+
+    /* faixa 4 */
+
+    .a
+    {
+        display: flex;
+        flex-direction: row-reverse;
+
+        width: 750px;
+        height: 240px;
+        
+        margin-top: -50px;
+
+        background-image: url('../../../public/images/Screenshot_6-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 680px;
+        background-position-x: 50px;
+        background-position-y: 280px;
+    }
+
+    .img-a
+    {
+        margin-right: 80px;
+        margin-top: 80px;
+
+        padding-bottom: 0px;
+    }
+
+    .img-f4
+    {
+        width: 180px;
+        height: 230px;
+
+        margin-right: 250px;
+        margin-left: 190px;
+
+        background-color: inherit;
+    }
+
+    .tx-a
+    {
+        flex-direction: column;
+
+        width: 800px;
+        height: 280px;
+
+        margin-top: 50px;
+        margin-left: 280px;
+        margin-right: -350px;
+    }
+
+    .h1-a
+    {
+        font-family: 'Dela Gothic One';
+        font-size: 24px;
+        line-height: 10px;
+        text-align: center;
+        
+        width: 300px;
+
+        margin-right: 0px;
+        margin-left: 150px;
+        margin-top: -100px;
+
+        height: 20px;
+    }
+
+    .h1-a2
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        line-height: 10px;
+
+        margin-right: 20px;
+        margin-left: 100px;
+
+        height: 10px;
+        width: 390px;
+    }
+
+    .p-a
+    {
+        text-align: inherit;    
+        
+        width: 300px;
+
+        margin-top: 120px;
+        margin-left: 10px;
+    }
+
+    /* faixa 5 */
+
+    .bios
+    {
+        display: flex;
+        flex-direction: row;
+
+        width: 750px;
+        height: 400px;
+        
+        margin-top: -50px;
+
+        background-image: url('../../../public/images/Screenshot_17-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 700px;
+        background-position-x: 40px;
+        background-position-y: 380px;
+    }
+
+    .img-b
+    {
+        margin-right: -50px;
+        margin-top: 80px;
+
+        padding-bottom: 0px;
+    }
+
+    .img-f5
+    {
+        width: 200px;
+        height: 250px;
+
+        margin-right: 0px;
+        margin-left: -50px;
+
+        background-color: inherit;
+    }
+
+    .tx-b
+    {
+        flex-direction: column;
+
+        width: 800px;
+        height: 280px;
+
+        margin-top: 50px;
+        margin-left: 100px;
+        margin-right: -400px;
+    }
+
+    .h1-b
+    {
+        font-family: 'Dela Gothic One';
+        font-size: 24px;
+        line-height: 10px;
+        text-align: center;
+        
+        width: 300px;
+
+        margin-right: 0px;
+        margin-left: -35px;
+        margin-top: -100px;
+
+        height: 20px;
+    }
+
+    .h1-b-2
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        line-height: 10px;
+
+        margin-right: 0px;
+        margin-left: -80px;
+        margin-top: 0px;
+
+        height: 10px;
+        width: 390px;
+    }
+
+    .p-b
+    {
+        text-align: center;    
+        
+        width: 400px;
+
+        margin-top: 180px;
+        margin-left: 50px;
+    }
+
+    /* Rodapé */
+
+    /* Rodapé pt 1 */
+
+    footer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        background-image: url('../../../public/images/Screenshot_0-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 770px;
+        background-position-x: -20px;
+        background-position-y: 270px;
+    }
+
+    .rd-rdsc
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-bottom: -100px;
+        margin-left: 50px;
+        margin-right: 0px;
+    }
+
+    .txt-rd
+    {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: -350px;
+
+        width: 700px;
+    }
+
+    .img-rd
+    {
+        width: 250px;
+        height: 150px;
+        margin-left: 1130px;
+        margin-top: 0px;
+    } 
+
+    .p-rd
+    {
+        width: 300px;
+        font-size: 20px;
+
+        margin-right: 0px;
+        margin-left: 910px;
+        margin-top: 30px;
+    }
+
+    .rdsc
+    {
+        margin-left: 930px;
+        margin-right: -100px;
+        width: 230px;
+    }
+
+    .rdsc-imgs
+    {
+        margin-top: 20px;
+        margin-left: 24px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    /* rodapé pt 2 */
+
+    .rd-pt
+    {
+        margin-top: 570px;
+        margin-left: 0px;
+    }
+
+    .p-pt
+    {
+        width: 300px;
+        margin-left: 40px;
+
+        text-align: center;
+    }
+
+    .img-pt
+    {
+        margin-left: 50px;
+    }
+    /* rodapé pt 3 */
+
+    .rd-cnt
+    {
+        margin-top: 320px;
+        margin-right: 1580px;
+        margin-left: -100px;
+        margin-bottom: 0px;
+    }
+
+    .cnt-nos
+    {
+        margin-left: 3px;
+    }
+
+    .cnt
+    {
+        margin-right: 100px;
+    }
+
+    .img-cnt
+    {
+        margin-top: 0px;
+        margin-left: 0px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    .rdsc-imgs-2
+    {
+        margin-top: 20px;
+        margin-left: 0px;
+
+        width: 37px;
+        height: 27px;
+    }
+
+    .rdsc
+    {
+        padding-left: 0px;
+    }
+
+    hr
+    {
+        display: none;
+    }
+}

@@ -1,0 +1,125 @@
+@media screen and (min-width: 560px) and (max-width: 599px){
+
+    .txt1{
+        text-align: center;
+        font-family: 'Dela Gothic One', cursive;
+        font-size: 18px;
+        color:#FFF;
+        margin: 20px 25px;
+        height: 30px;
+    }
+
+    .quadrado{
+        background-color:#7FCBB1;
+        height: 35em;
+        width: 25em;
+    }
+    .cx1,
+    .cx2,
+    .cx3,
+    .cx4,
+    .cx5{
+    font-family:'Open Sans', sans-serif;
+    font-weight:bolder;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    background-color: #FFF;
+    border-radius: 5px;
+    height: 30px;
+    width: 23em;
+    margin: auto;
+    border-right: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+}
+
+.cx5{
+    margin-top: 30px;
+    
+}
+
+.caixatxt{
+    margin-left: 80px;
+    border: transparent;
+    transform: none;
+    height: 15px;
+    width: 18em;
+    outline: none;
+}
+
+.caixatxt2{
+    margin-left: 80px;
+    border: transparent;
+    transform: none;
+    height: 20px;
+    width: 8em;
+    outline: none;
+}
+.caixatxt3{
+    margin-left: 44px;
+    border: transparent;
+    transform: none;
+    height: 20px;
+    width: 8em;
+    outline: none;
+}
+.caixatxt4{
+    margin-left: 86px;
+    border: transparent;
+    transform: none;
+    height: 20px;
+    width: 40rem;
+    outline: none;
+}
+.caixatxt5{
+    margin-left: 60px;    border: transparent;
+    transform: none;
+    height: 20px;
+    width: 40rem;
+    outline: none;
+}
+
+.tel,
+.user,
+.mail,
+.calendar,
+.clock{
+    height: 15px;
+}
+.online{
+    font-family:'Open Sans', sans-serif;
+    font-weight:bolder;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #FFF;
+    background-color: #FFF;
+    border-radius: 12px;
+    height: 25px;
+    width: 15em;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.caixita{
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+.confirmacaotxt{
+    color: black;
+    font-weight: bold;
+    height: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+}

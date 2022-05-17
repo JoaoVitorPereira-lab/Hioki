@@ -1,0 +1,577 @@
+@media screen and (min-width: 205px) and (max-width: 345px)
+{
+    .me
+    {
+        background-image: url('../../../public/images/fundoverde.jpg');
+        background-size: 300px;
+
+        height: 350px;
+        width: 100%;
+    }
+
+    .bt-me
+    {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .botao-me
+    {
+        background-color: #7FFFD4;
+
+        width: 150px;
+        height: 50px;
+
+        font-size: 12px;
+
+        margin-left: 10px;
+        margin-top: 10px;
+
+        padding: 2px 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .logo-me
+    {            
+        margin-left: 30px;
+        margin-top: 20px;
+        
+        height: 70px;
+        width: 120px;
+    }
+
+    .text-me
+    {
+        margin-left: 0px;
+        margin-top: -10px;
+    
+        font-size: 12px;
+    }
+
+    .nome-me
+    {
+        margin-left: 40px;
+        margin-top: 20px;
+
+        font-size: 22px;
+    }
+
+    .desc-me
+    {
+        margin-left: 0px;
+        margin-top: 10px;
+
+        font-size: 20px;
+    }
+
+    /* faixa 2 */
+
+    .diz
+    {
+        flex-direction: column;
+        justify-content: center;
+
+        background-image: url('../../../public/images/Screenshot_1-removebg-preview.png');
+        background-size: 315px;
+        background-position-x: 0px;
+        background-position-y: 410px;
+
+        margin-top: -50px;
+
+        height: 200px;
+        width: 320px;
+    }
+
+    .img-f2
+    {
+        width: 280px;
+        height: 200px;
+
+        margin-left: 20px;
+        margin-right: 0px;
+        margin-bottom: -10px;
+
+        background-color: inherit;
+    }
+
+    .tx-d
+    {
+        flex-direction: column;
+
+        width: 800px;
+        height: 280px;
+
+        margin-top: 70px;
+        margin-left: -100px;
+        margin-right: 0px;
+    }
+
+    .h1-d
+    {
+        text-align: center;
+
+        font-size: 14px;
+
+        height: 10px;
+
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 260px;
+    }
+
+    .p-d
+    {
+        text-align: center;   
+        
+        font-size: 12px;
+        
+        width: 330px;
+
+        margin-top: 30px;
+        margin-left: 100px;
+        margin-right: 0px;
+    }
+
+    /* faixa 3 */
+
+    .oque
+    {
+        flex-direction: column;
+        justify-content: center;
+
+        background-image: url('../../../public/images/Screenshot_4-removebg-preview.png');
+        background-size: 315px;
+        background-position-x: 0px;
+        background-position-y: 390px;
+
+        margin-top: -50px;
+
+        height: 200px;
+    }
+
+    .img-f3
+    {
+        width: 280px;
+        height: 200px;
+
+        margin-left: 20px;
+        margin-right: 0px;
+
+        background-color: inherit;
+    }
+
+    .tx-oq
+    {
+        flex-direction: column;
+
+        width: 799px;
+        height: 280px;
+
+        margin-top: 40px;
+        margin-left: -100px;
+        margin-right: 0px;
+    }
+
+    .h1-oq
+    {
+        text-align: center;
+
+        font-size: 12px;
+
+        letter-spacing: 3px;
+
+        height: 3px;
+
+        margin-top: 15px;
+        margin-left: 25px;
+        margin-right: 320px;
+    }
+
+    .p-oq
+    {
+        text-align: center; 
+        
+        font-size: 10px;
+        
+        width: 250px;
+
+        margin-top: 25px;
+        margin-left: 160px;
+        margin-right: 0px;
+        margin-bottom: -5px;
+    }
+
+    .botao-oq
+    {
+        width: 60px;
+        height: 20px;
+
+        font-size: 14px;
+
+        margin-left: 17em;
+        padding: 5px 5px;
+    }
+
+    .botao-anchor
+    {
+        margin-top: 40px;
+    }
+
+    /* faixa 4 */
+
+    .a
+    {
+        display: flex;
+        flex-direction: row-reverse;
+
+        width: 750px;
+        height: 240px;
+        
+        margin-top: -50px;
+
+        background-image: url('../../../public/images/Screenshot_6-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 315px;
+        background-position-x: 0px;
+        background-position-y: 310px;
+    }
+
+    .img-a
+    {
+        margin-right: 900px;
+        margin-left: -300px;
+        margin-top: 100px;
+
+        padding-bottom: 0px;
+    }
+
+    .img-f4
+    {
+        width: 70px;
+        height: 100px;
+
+        margin-right: 0px;
+        margin-left: -80px;
+
+        background-color: inherit;
+    }
+
+    .tx-a
+    {
+        flex-direction: column;
+
+        width: 800px;
+        height: 280px;
+
+        margin-top: 50px;
+        margin-left: 430px;
+        margin-right: 0px;
+    }
+
+    .h1-a
+    {
+        font-size: 14px;
+
+        line-height: 10px;
+
+        text-align: center;
+
+        letter-spacing: 1px;
+        
+        width: 300px;
+
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: -100px;
+
+        height: 10px;
+    }
+
+    .h1-a2
+    {
+        font-size: 14px;
+
+        line-height: 10px;
+
+        margin-right: 0px;
+        margin-left: -45px;
+
+        height: 10px;
+        width: 390px;
+    }
+
+    .p-a
+    {
+        font-size: 12px;
+
+        text-align: inherit;    
+        
+        width: 300px;
+
+        margin-top: 70px;
+        margin-left: 0px;
+        margin-right: 250px;
+    }
+
+    /* faixa 5 */
+
+    .bios
+    {
+        display: flex;
+        flex-direction: row;
+
+        width: 750px;
+        height: 50px;
+        
+        margin-top: -100px;
+
+        background-image: url('../../../public/images/Screenshot_17-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 315px;
+        background-position-x: 0px;
+        background-position-y: 280px;
+    }
+
+    .img-b
+    {
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+
+        padding-bottom: 0px;
+    }
+
+    .img-f5
+    {
+        width: 100px;
+        height: 130px;
+
+        margin-right: 0px;
+        margin-left: 0px;
+
+        background-color: inherit;
+    }
+
+    .tx-b
+    {
+        flex-direction: column;
+
+        width: 800px;
+        height: 280px;
+
+        margin-top: 50px;
+        margin-left: -80px;
+        margin-right: 0px;
+    }
+
+    .h1-b
+    {
+        font-size: 14px;
+
+        line-height: 10px;
+
+        text-align: center;
+
+        letter-spacing: 1px;
+        
+        width: 300px;
+
+        margin-right: 0px;
+        margin-left: -5px;
+        margin-top: -150px;
+
+        height: 10px;
+    }
+
+    .h1-b-2
+    {
+        font-size: 14px;
+
+        line-height: 10px;
+
+        margin-right: 0px;
+        margin-left: -50px;
+        margin-bottom: 20px;
+
+        height: 10px;
+        width: 390px;
+    }
+
+    .p-b
+    {
+        font-size: 12px;
+
+        text-align: end;    
+        
+        width: 200px;
+
+        margin-top: 100px;
+        margin-left: 90px;
+        margin-right: -200px;
+    }
+
+    /* Rodapé */
+
+    /* Rodapé pt 1 */
+
+    footer
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background-image: url('../../../public/images/Screenshot_0-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 345px;
+        background-position-x: -10px;
+        background-position-y: 190px;
+
+        margin-top: -30px;
+    }
+
+    .rd-rdsc
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .txt-rd
+    {
+        margin-left: 40px;
+        margin-right: 0px;
+        margin-top: 0px;
+
+        width: 700px;
+    }
+
+    .img-rd
+    {
+        width: 250px;
+        height: 150px;
+
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+    } 
+
+    .p-rd
+    {
+        width: 200px;
+
+        font-size: 16px;
+
+        margin-right: 0px;
+        margin-left: 25px;
+        margin-top: 50px;
+    }
+
+    .rdsc
+    {
+        margin-left: 40px;
+        margin-right: 0px;
+        width: 230px;
+    }
+
+    .rdsc-imgs
+    {
+        margin-top: 20px;
+        margin-left: 24px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    /* rodapé pt 2 */
+
+    .rd-pt
+    {
+        margin-top: 50px;
+        margin-right: 0px;
+        margin-left: 15px;
+
+        background-image: url('../../../public/images/Screenshot_0-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 325px;
+        background-position-x: -10px;
+        background-position-y: 50px;
+    }
+
+    .p-pt
+    {
+        width: 300px;
+        margin-left: 0px;
+
+        text-align: center;
+
+        font-size: 16px;
+    }
+
+    .img-pt
+    {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    /* rodapé pt 3 */
+
+    .rd-cnt
+    {
+        justify-content: center;
+
+        margin-top: 50px;
+        margin-right: 0px;
+        margin-left: 55px;
+        margin-bottom: 0px;
+
+        background-image: url('../../../public/images/Screenshot_0-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 240px;
+        background-position-x: -5px;
+        background-position-y: 15px;
+    }
+
+    .cnt-nos
+    {
+        margin-left: 50px;
+        font-size: 16px;
+    }
+
+    .cnt
+    {
+        margin-right: 0px;
+    }
+
+    .img-cnt
+    {
+        margin-top: 0px;
+        margin-left: 20px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .rdsc-imgs-2
+    {
+        margin-top: 20px;
+        margin-left: 0px;
+
+        width: 25px;
+        height: 25px;
+    }
+
+    .rdsc
+    {
+        padding-left: 0px;
+    }
+
+    hr
+    {
+        display: none;
+    }
+}

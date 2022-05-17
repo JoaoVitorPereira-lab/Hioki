@@ -1,0 +1,540 @@
+main
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.me
+{
+    display: flex;
+    flex-direction: column;
+
+    height: 670px;
+
+    background-image:url('../../../public/images/fundoverde.jpg');
+    background-repeat: no-repeat;
+    background-size: 1100px;
+    background-position: right;
+    background-position-y: 0px;
+    background-color: rgb(249, 249, 249); 
+}
+
+.botao-me
+{
+    background-color: #7FFFD4;
+
+    width: 150px;
+    height: 50px;
+    
+    border: #7FFFD4;
+    border-radius: 30px;
+
+    font-size: bold;
+    font-family: 'Open Sans';
+    font-size: 20px;
+
+    margin-left: 60px;
+
+    text-decoration: none;
+    color: inherit;
+
+    padding: 5px 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.logo-me
+
+{
+    flex-direction: column;
+    align-items: flex-start;
+    
+    margin-left: 200px;
+    margin-top: 30px;
+
+    height: 130px;
+}
+
+.text-me{
+    margin-left: 180px;
+    margin-top: -20px;
+
+    font-size: 18px;
+    color: black;
+    opacity: 0.30;
+}
+
+.nome-me
+{
+    font-size: 33px;
+    font-family: 'Inika-bold';
+
+    margin-left: 240px;
+    margin-top: 50px;
+}
+
+.desc-me
+{
+    font-family: 'Inika-regular';
+    font-size: 35px;
+    
+    margin-left: 73px;
+}
+
+/* faixa 2 */
+
+nav
+{
+    background-color: #eee;
+}
+
+.faixas{
+    display: flex;
+    flex-direction: column;
+}
+
+.diz
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 16em 0em;
+
+    background-image: url('../../../public/images/Screenshot_1-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-position: 630px;
+    background-size: 600px;
+}
+
+.img-d
+{
+    justify-content: center;
+    margin-right: 10em;
+    
+}
+
+.img-f2
+{
+    border-radius: 25px;
+    border-color: black;
+    border-width: 2px;
+
+    background-color: white;
+
+    width: 400px;
+    height: 300px;
+}
+
+.tx-d
+{
+    justify-content: center;
+    margin-right: 160px;
+}
+
+.h1-d
+{
+    font-family: 'Dela Gothic One';
+    font-size: 20px;
+    line-height: 10px;
+    text-align: center;
+
+    height: 10px;
+
+    margin-top: 79px;
+}
+
+.p-d
+{
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;    
+    
+    width: 400px;
+
+    margin-top: 30px;
+}
+
+/* faixa 3 */
+
+.oque
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 16em 0em;
+
+    background-image: url('../../../public/images/Screenshot_4-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-position: 630px;
+    background-size: 600px;
+}
+
+.img-oq
+{
+    justify-content: center;
+    margin-right: 10em;
+    
+}
+
+.img-f3
+{
+    border-radius: 25px;
+    border-color: black;
+    border-width: 2px;
+
+    background-color: white;
+
+    width: 400px;
+    height: 300px;
+}
+
+.tx-oq
+{
+    justify-content: center;
+    margin-right: 160px;
+}
+
+.h1-oq
+{
+    font-family: 'Dela Gothic One';
+    font-size: 20px;
+    line-height: 10px;
+    text-align: center;
+
+    height: 10px;
+
+    margin-top: 79px;
+    margin-left: 90px;
+}
+
+.p-oq
+{
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;    
+    
+    width: 405px;
+
+    margin-top: 30px;
+    margin-left: 120px;
+}
+
+.teste-oq
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.botao-oq
+{
+    background-color: #229C73;
+    border-radius: 20px;
+
+    width: 100px;
+    height: 30px;
+
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+
+    margin-left: 18em;
+    padding: 5px 15px;
+}
+
+.botao-anchor
+{
+    padding-right: 20px;
+    font-family: 'Open Sans';
+}
+
+#anchor
+{
+    scroll-behavior: smooth;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+/* faixa 4 */
+
+.a
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    padding: 16em 0em;
+
+    background-image: url('../../../public/images/Screenshot_6-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-position: 410px;
+    background-size: 1000px;
+}
+
+.img-a
+{
+    justify-content: center;
+    margin-right: 100px;
+
+    padding-bottom: 50px;
+}
+
+.img-f4
+{
+    border-radius: 70px;
+
+    width: 250px;
+    height: 320px;
+}
+
+.tx-a
+{
+    justify-content: center;
+    margin-right: 300px;
+
+    margin-top: 20px;
+}
+
+.h1-a
+{
+    font-family: 'Dela Gothic One';
+    font-size: 24px;
+    line-height: 10px;
+    text-align: center;
+
+    height: 10px;
+}
+
+.h1-a2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 10px;
+    text-align: center;
+
+    height: 10px;
+
+    margin-top: 20px;
+}
+
+.p-a
+{
+    font-family: 'Open Sans';
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;    
+    
+    width: 580px;
+
+    margin-top: 60px;
+}
+
+/* faixa 5 */
+
+.bios
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 16em 0em;
+
+    background-image: url('../../../public/images/Screenshot_17-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 1200px;
+}
+
+.img-b
+{
+    justify-content: center;
+    margin-right: 100px;
+
+    padding-bottom: 50px;
+}
+
+.img-f5
+{
+    border-radius: 70px;
+
+    width: 220px;
+    height: 280px;
+}
+
+.tx-b
+{
+    justify-content: center;
+    margin-left: 300px;
+
+    margin-top: 20px;
+}
+
+.h1-b
+{
+    font-family: 'Dela Gothic One';
+    font-size: 24px;
+    line-height: 10px;
+    text-align: center;
+
+    height: 10px;
+}
+
+.h1-b-2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 10px;
+    text-align: center;
+
+    height: 10px;
+
+    margin-top: 20px;
+}
+
+.p-b
+{
+    font-family: 'Open Sans';
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;    
+    
+    width: 480px;
+
+    margin-top: 60px;
+}
+
+/* Rodapé */
+
+/* rodapé pt 1 */
+
+footer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 1400px;
+
+    background-image: url('../../../public/images/Screenshot_21-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-size: 1390px;
+    background-position: 10px;
+}
+
+.rd-rdsc
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 40px;
+    margin-left: -15px;
+}
+
+.txt-rd
+{
+    margin-left: 70px;
+}
+
+.img-rd
+{
+    width: 200px;
+    height: 120px;
+    margin-left: 50px;
+}
+
+.p-rd
+{
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Dela Gothic One';
+
+    margin-right: 60px;
+}
+
+.rdsc-imgs
+{
+    margin-top: 20px;
+    margin-left: 20px;
+
+    width: 30px;
+    height: 27px;
+}
+
+/* rodapé pt 2 */
+
+hr
+{
+    margin-top: 100px;
+    height: 150px;
+}
+
+.rd-pt
+{
+    margin-top: 70px;
+}
+
+.p-pt
+{
+    font-size: 20px;
+    font-family: 'Dela Gothic One';
+
+    width: 300px;
+}
+
+/* rodapé pt 3 */
+
+.rd-cnt
+{
+    margin-top: 70px;
+    margin-right: 30px;
+}
+
+.cnt-nos
+{
+    font-family: 'Dela Gothic One';
+    font-size: 1.5em;
+
+    margin-left: 60px;
+}
+
+.cnt
+{
+    font-family: 'Open Sans';
+    font-size: 20px;
+
+    margin-right: 100px;
+}
+
+.img-cnt
+{
+    margin-top: 0px;
+    margin-left: 46px;
+
+    width: 40px;
+    height: 40px;
+
+}
+
+.rdsc-imgs-2
+{
+    margin-top: 20px;
+    margin-left: 20px;
+
+    width: 30px;
+    height: 27px;
+}
+
+.rdsc
+{
+    padding-left: 90px;
+}
+
