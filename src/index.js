@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App'
 
 import Admin from './pages/Admin';
-import Cadastro from './pages/cadastro';
+import Cadastro from './pages/Cadastro';
 import LandingPage from './pages/landing-page';
 import Login from './pages/login';
 
