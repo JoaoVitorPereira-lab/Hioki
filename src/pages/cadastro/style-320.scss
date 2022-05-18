@@ -3,7 +3,7 @@
     .txt1{
         text-align: center;
         font-family: 'Dela Gothic One', cursive;
-        font-size: 18px;
+        font-size: 22px;
         color:#FFF;
         margin: 20px 25px;
         height: 30px;
@@ -11,8 +11,8 @@
 
     .quadrado{
         background-color:#7FCBB1;
-        height: 35em;
-        width: 17em;
+        height: 41.7em;
+        width: 24em;
     }
     .cx1,
     .cx2,
@@ -28,7 +28,7 @@
     background-color: #FFF;
     border-radius: 5px;
     height: 30px;
-    width: 15em;
+    width: 20em;
     margin: auto;
     border-right: solid 1px #ccc;
     padding: 5px;
@@ -42,7 +42,7 @@
 }
 
 .caixatxt{
-    margin-left: 18px;
+    margin-left: 42px;
     border: transparent;
     transform: none;
     height: 15px;
@@ -51,7 +51,7 @@
 }
 
 .caixatxt2{
-    margin-left: 18px;
+    margin-left: 42px;
     border: transparent;
     transform: none;
     height: 20px;
@@ -123,4 +123,17 @@
     margin-left: 10px;
     font-size: 15px;
 }
+}
+.t{
+    left: 36%;
+}
+.t2{
+    left: 48%
+}
+.on{
+    padding-right: 10px;
+}
+
+.agend{
+    margin-top: 12px;
 }

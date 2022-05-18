@@ -3,7 +3,7 @@
     .txt1{
         text-align: center;
         font-family: 'Dela Gothic One', cursive;
-        font-size: 18px;
+        font-size: 25px;
         color:#FFF;
         margin: 20px 25px;
         height: 30px;
@@ -11,8 +11,8 @@
 
     .quadrado{
         background-color:#7FCBB1;
-        height: 35em;
-        width: 23em;
+        height: 56em;
+        width: 25.9em;
     }
     .cx1,
     .cx2,
@@ -21,19 +21,20 @@
     .cx5{
     font-family:'Open Sans', sans-serif;
     font-weight:bolder;
-    font-size: 15px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     border: 1px solid #ced4da;
     background-color: #FFF;
     border-radius: 5px;
-    height: 30px;
-    width: 23em;
+    height: 40px;
+    width: 19em;
     margin: auto;
     border-right: solid 1px #ccc;
     padding: 5px;
     border-radius: 10px;
-    margin-bottom: -10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
 }
 
 .cx5{
@@ -42,44 +43,50 @@
 }
 
 .caixatxt{
-    margin-left: 80px;
+    margin-left: 62px;
     border: transparent;
     transform: none;
     height: 15px;
     width: 18em;
     outline: none;
+    font-size: 17px;
 }
 
 .caixatxt2{
-    margin-left: 80px;
+    margin-left: 65px;
     border: transparent;
     transform: none;
     height: 20px;
-    width: 8em;
+    width: 14em;
     outline: none;
+    font-size: 17px;
 }
 .caixatxt3{
-    margin-left: 44px;
+    margin-left: 25px;
     border: transparent;
     transform: none;
     height: 20px;
     width: 8em;
     outline: none;
+    font-size: 17px;
 }
 .caixatxt4{
-    margin-left: 86px;
+    margin-left: 73px;
     border: transparent;
     transform: none;
     height: 20px;
     width: 40rem;
     outline: none;
+    font-size: 19px;
 }
 .caixatxt5{
-    margin-left: 60px;    border: transparent;
+    margin-left: 35px;    
+    border: transparent;
     transform: none;
     height: 20px;
     width: 40rem;
     outline: none;
+    font-size: 19px;
 }
 
 .tel,
@@ -87,20 +94,20 @@
 .mail,
 .calendar,
 .clock{
-    height: 15px;
+    height: 20px;
 }
 .online{
     font-family:'Open Sans', sans-serif;
     font-weight:bolder;
-    font-size: 15px;
+    font-size: 19px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: solid #FFF;
     background-color: #FFF;
     border-radius: 12px;
-    height: 25px;
-    width: 15em;
+    height: 40px;
+    width: 17em;
     margin: auto;
     margin-top: 30px;
     display: flex;
@@ -111,8 +118,10 @@
 }
 
 .caixita{
-    margin-top: 4px;
-    margin-left: 10px;
+    margin-top: 4.6px;
+    margin-left: 5px;
+    height: 15px;
+    width: 15px;
 }
 
 .confirmacaotxt{
@@ -120,6 +129,27 @@
     font-weight: bold;
     height: 20px;
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 18px;
+    padding-left: -6px;
+    
+}
+.caixas{
+    margin-top: 9em;
+}
+.t{
+    left: 37%;
+    height: 50px;
+}
+.t2{
+    height: 48px;
+}
+.confirm{
+    margin-top: 20px;
+}
+.agend{
+    height: 40px;
+    font-size: 22px;
+    padding-top: 12px;
 }
 }
+
