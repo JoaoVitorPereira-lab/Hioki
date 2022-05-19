@@ -1,0 +1,236 @@
+@media screen and (min-width: 1420px) and (max-width: 1679px)
+{
+    /* Faixa 1 */
+
+    .bt-me
+    {
+        margin-left: -40px;
+        margin-top: 20px;
+    }
+
+    .logo-me
+    {
+        margin-left: 125px;
+    }
+
+    .text-me
+    {
+        margin-left: 80px;
+    }
+
+    .nome-me
+    {
+        font-size: 40px;
+
+        margin-left: 120px;
+    }
+
+    .desc-me
+    {
+        font-size: 30px;
+        
+        margin-left: 30px;
+    }
+
+    /* Faixa 2 */
+
+    .diz
+    {
+        background-position: 660px;
+    }
+
+    .tx-d
+    {
+        margin-left: 50px;
+    }
+
+    .img-d
+    {
+        margin-left: 50px;
+    }
+
+    /* Faixa 3 */
+
+    .oque
+    {
+        background-position: 660px;
+    }
+
+    .img-oq
+    {
+        margin-left: 280px;
+    }
+
+    .tx-oq
+    {
+        margin-right: 350px;
+    }
+
+    /* Faixa 4 */
+
+    .a
+    {
+        background-size: 840px;
+        background-position: 480px;
+    }
+
+    .img-f4
+    {
+        width: 220px;
+        height: 300px;
+
+        margin-right: 50px;
+    }
+
+    .tx-a
+    {
+        margin-left: 50px;
+    }
+
+    /* Faixa 5 */
+
+    .bios
+    {
+        background-position-y: 220px;
+    }
+
+    /* Rodapé/Footer */
+
+    /* footer pt 1 */
+
+    footer
+    {
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: space-around;
+
+        background-image: url('../../../public/images/Screenshot_21-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: 1380px;
+        width: 1440px;
+        background-position: 5px;
+    }
+
+    .rd-rdsc
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
+    .txt-rd
+    {
+        margin-left: 35px;
+    }
+
+    .img-rd
+    {
+        width: 200px;
+        height: 100px;
+        margin-left: 70px;
+    }
+
+    .p-rd
+    {
+        width: 300px;
+        font-size: 20px;
+
+        margin-left: 20px;
+    }
+
+    .rdsc
+    {
+        margin-left: -55px;
+    }
+
+    .rdsc-imgs
+    {
+        margin-top: 20px;
+        margin-left: 35px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    /* rodapé pt 2 */
+
+    .hr-rd
+    {
+        margin-left: -20px;
+        height: 150px;
+    }
+
+    .rd-pt
+    {
+        align-items: center;
+
+        margin-top: 60px;
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+
+    .p-pt
+    {
+        width: 300px;
+
+        margin-left: 40px;
+    }
+
+    .img-pt
+    {
+        margin-right: 20px;
+    }
+
+    /* rodapé pt 3 */
+
+    .rd-cnt
+    {
+        margin-top: 70px;
+        margin-right: -10px;
+        margin-left: 10px;
+    }
+
+    .cnt-nos
+    {
+        font-family: 'Dela Gothic One';
+        font-size: 1.5em;
+
+        margin-left: 60px;
+    }
+
+    .cnt
+    {
+        font-family: 'Open Sans';
+        font-size: 20px;
+
+        margin-right: 100px;
+    }
+
+    .img-cnt
+    {
+        margin-top: 0px;
+        margin-left: 46px;
+
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .rdsc-imgs-2
+    {
+        margin-top: 20px;
+        margin-left: 20px;
+
+        width: 30px;
+        height: 27px;
+    }
+
+    .rdsc
+    {
+        padding-left: 90px;
+    }
+}

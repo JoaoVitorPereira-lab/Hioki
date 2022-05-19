@@ -1,21 +1,20 @@
-@media screen and (min-width: 760px) and (max-width: 800px)
+@media screen and (min-width: 780px) and (max-width: 879px)
 {
     .faixas
     {
         display: flex;
         flex-direction: column;
-        width: 780px;
+        width: block;
     }
 
     .me
     {
         background-image:url('../../../public/images/fundoverde.jpg');
         background-repeat: no-repeat;
-        background-size: 680px;
+        background-size: 780px;
         background-position-y: 0px;
         background-position-x: 46px;
 
-        width: 100%;
         height: 550px;
     }
 
@@ -81,7 +80,7 @@
         background-image: url('../../../public/images/Screenshot_1-removebg-preview.png');
         background-repeat: no-repeat;
         background-size: 425px;
-        background-position-x: 280px;
+        background-position-x: 320px;
         background-position-y: 270px;
     }
 
@@ -89,8 +88,8 @@
     {
         width: 270px;
         height: 210px;
-        margin-left: 570px;
-        margin-right: -400px;
+        margin-left: 590px;
+        margin-right: -350px;
 
         background-color: inherit;
     }
@@ -135,7 +134,7 @@
         display: flex;
         flex-direction: row;
 
-        width: 750px;
+        width: 959px;
         height: 200px;
         
         margin-top: -50px;
@@ -143,7 +142,7 @@
         background-image: url('../../../public/images/Screenshot_4-removebg-preview.png');
         background-repeat: no-repeat;
         background-size: 590px;
-        background-position-x: 100px;
+        background-position-x: 170px;
         background-position-y: 250px;
     }
 
@@ -151,7 +150,7 @@
     {
         width: 280px;
         height: 210px;
-        margin-left: 550px;
+        margin-left: 400px;
         margin-right: -600px;
 
         background-color: inherit;
@@ -294,7 +293,7 @@
         display: flex;
         flex-direction: row;
 
-        width: 750px;
+        width: 959px;
         height: 400px;
         
         margin-top: -50px;
@@ -320,7 +319,7 @@
         height: 250px;
 
         margin-right: 0px;
-        margin-left: -50px;
+        margin-left: -250px;
 
         background-color: inherit;
     }
@@ -389,9 +388,9 @@
 
         background-image: url('../../../public/images/Screenshot_0-removebg-preview.png');
         background-repeat: no-repeat;
-        background-size: 770px;
+        background-size: 825px;
         background-position-x: -20px;
-        background-position-y: 270px;
+        background-position-y: 240px;
     }
 
     .rd-rdsc
@@ -401,8 +400,8 @@
         justify-content: center;
 
         margin-bottom: -100px;
-        margin-left: 50px;
-        margin-right: 0px;
+        margin-left: 25px;
+        margin-right: 100px;
     }
 
     .txt-rd
@@ -418,7 +417,7 @@
     {
         width: 250px;
         height: 150px;
-        margin-left: 1130px;
+        margin-left: 1170px;
         margin-top: 0px;
     } 
 
@@ -434,7 +433,7 @@
 
     .rdsc
     {
-        margin-left: 930px;
+        margin-left: 940px;
         margin-right: -100px;
         width: 230px;
     }
@@ -459,22 +458,22 @@
     .p-pt
     {
         width: 300px;
-        margin-left: 40px;
+        margin-left: -30px;
 
         text-align: center;
     }
 
     .img-pt
     {
-        margin-left: 50px;
+        margin-left: -30px;
     }
     /* rodapé pt 3 */
 
     .rd-cnt
     {
         margin-top: 320px;
-        margin-right: 1580px;
-        margin-left: -100px;
+        margin-right: 1500px;
+        margin-left: 20px;
         margin-bottom: 0px;
     }
 

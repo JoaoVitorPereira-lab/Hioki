@@ -1,21 +1,20 @@
-@media screen and (min-width: 760px) and (max-width: 800px)
+@media screen and (min-width: 860px) and (max-width: 959px)
 {
     .faixas
     {
         display: flex;
         flex-direction: column;
-        width: 780px;
+        width: block;
     }
 
     .me
     {
         background-image:url('../../../public/images/fundoverde.jpg');
         background-repeat: no-repeat;
-        background-size: 680px;
+        background-size: 780px;
         background-position-y: 0px;
-        background-position-x: 46px;
+        background-position-x: 80px;
 
-        width: 100%;
         height: 550px;
     }
 
@@ -65,7 +64,7 @@
 
     nav
     {
-        background-color: #eee;
+        background-color: #eee; 
     }
 
     .diz
@@ -73,7 +72,7 @@
         display: flex;
         flex-direction: row;
 
-        width: 750px;
+        width: 959px;
         height: 200px;
         
         margin-top: -50px;
@@ -81,7 +80,7 @@
         background-image: url('../../../public/images/Screenshot_1-removebg-preview.png');
         background-repeat: no-repeat;
         background-size: 425px;
-        background-position-x: 280px;
+        background-position-x: 360px;
         background-position-y: 270px;
     }
 
@@ -89,8 +88,8 @@
     {
         width: 270px;
         height: 210px;
-        margin-left: 570px;
-        margin-right: -400px;
+        margin-left: 465px;
+        margin-right: -350px;
 
         background-color: inherit;
     }
@@ -135,7 +134,7 @@
         display: flex;
         flex-direction: row;
 
-        width: 750px;
+        width: 959px;
         height: 200px;
         
         margin-top: -50px;
@@ -143,7 +142,7 @@
         background-image: url('../../../public/images/Screenshot_4-removebg-preview.png');
         background-repeat: no-repeat;
         background-size: 590px;
-        background-position-x: 100px;
+        background-position-x: 170px;
         background-position-y: 250px;
     }
 
@@ -151,7 +150,7 @@
     {
         width: 280px;
         height: 210px;
-        margin-left: 550px;
+        margin-left: 400px;
         margin-right: -600px;
 
         background-color: inherit;
@@ -205,7 +204,7 @@
         display: flex;
         flex-direction: row-reverse;
 
-        width: 750px;
+        width: 880px;
         height: 240px;
         
         margin-top: -50px;
@@ -213,7 +212,7 @@
         background-image: url('../../../public/images/Screenshot_6-removebg-preview.png');
         background-repeat: no-repeat;
         background-size: 680px;
-        background-position-x: 50px;
+        background-position-x: 80px;
         background-position-y: 280px;
     }
 
@@ -294,21 +293,22 @@
         display: flex;
         flex-direction: row;
 
-        width: 750px;
+        width: 100%;
         height: 400px;
         
         margin-top: -50px;
 
         background-image: url('../../../public/images/Screenshot_17-removebg-preview.png');
         background-repeat: no-repeat;
-        background-size: 700px;
-        background-position-x: 40px;
-        background-position-y: 380px;
+        background-size: 800px;
+        background-position-x: 0px;
+        background-position-y: 350px;
     }
 
     .img-b
     {
         margin-right: -50px;
+        margin-left: 200px;
         margin-top: 80px;
 
         padding-bottom: 0px;
@@ -320,7 +320,7 @@
         height: 250px;
 
         margin-right: 0px;
-        margin-left: -50px;
+        margin-left: -250px;
 
         background-color: inherit;
     }
@@ -347,7 +347,7 @@
         width: 300px;
 
         margin-right: 0px;
-        margin-left: -35px;
+        margin-left: -60px;
         margin-top: -100px;
 
         height: 20px;
@@ -360,7 +360,7 @@
         line-height: 10px;
 
         margin-right: 0px;
-        margin-left: -80px;
+        margin-left: -108px;
         margin-top: 0px;
 
         height: 10px;
@@ -387,11 +387,13 @@
         flex-direction: row;
         justify-content: center;
 
+        width: 1500px;
+
         background-image: url('../../../public/images/Screenshot_0-removebg-preview.png');
         background-repeat: no-repeat;
-        background-size: 770px;
+        background-size: 895px;
         background-position-x: -20px;
-        background-position-y: 270px;
+        background-position-y: 200px;
     }
 
     .rd-rdsc
@@ -401,8 +403,8 @@
         justify-content: center;
 
         margin-bottom: -100px;
-        margin-left: 50px;
-        margin-right: 0px;
+        margin-left: 25px;
+        margin-right: 100px;
     }
 
     .txt-rd
@@ -418,8 +420,9 @@
     {
         width: 250px;
         height: 150px;
-        margin-left: 1130px;
+        margin-left: 1170px;
         margin-top: 0px;
+        margin-bottom: 12px;
     } 
 
     .p-rd
@@ -434,7 +437,7 @@
 
     .rdsc
     {
-        margin-left: 930px;
+        margin-left: 940px;
         margin-right: -100px;
         width: 230px;
     }
@@ -459,22 +462,22 @@
     .p-pt
     {
         width: 300px;
-        margin-left: 40px;
+        margin-left: -30px;
 
         text-align: center;
     }
 
     .img-pt
     {
-        margin-left: 50px;
+        margin-left: -30px;
     }
     /* rodapé pt 3 */
 
     .rd-cnt
     {
         margin-top: 320px;
-        margin-right: 1580px;
-        margin-left: -100px;
+        margin-right: 1500px;
+        margin-left: 20px;
         margin-bottom: 0px;
     }
 
