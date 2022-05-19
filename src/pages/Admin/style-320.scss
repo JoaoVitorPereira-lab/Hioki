@@ -78,9 +78,9 @@ details
 }
 
 .filtragem{
-margin-left: 300px;
-width: 50px;
-height: 50px;
+margin-left: 23em;
+width: 87px;
+height: 25px;
 }
 
 header .agend
@@ -93,7 +93,10 @@ header .agend
     text-decoration: none;
     font-family: 'Open Sans';
 
-    margin-right: -5px;
+    margin-right: 5px;
+    width: 12em;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 12px;
 }
 
 h5
@@ -109,9 +112,9 @@ header .seja-bem
 
 .ftl
 {
-    margin-right: 30px;
+    margin-right: 26px;
     width: 200px;  
-    height: 50px;  
+    height: 18px;  
 }
 
 label
@@ -124,6 +127,14 @@ a
 {
     font-family: 'Dela Gothic One';
 }
+}
+.filtrin{
+    margin-left: 10px;
+}
+.seja-bem{
+    margin-right: 3px;
+    width: 14em;
+    height: -20px;
 }
 
 }

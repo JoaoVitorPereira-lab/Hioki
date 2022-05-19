@@ -1,0 +1,103 @@
+@media screen and (min-width: 400px) and (max-width: 559px){
+
+    .bd-login
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        background-image: url('../../../public/images/WhatsApp\ Image\ 2022-04-27\ at\ 17.10.19.jpeg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    
+        height: 100vh;
+        
+    
+    
+    .logo
+    {
+        display: flex;
+        flex-direction: column;
+    
+        height: 20em;
+        width: 22em;
+        margin: -50px auto;
+        margin-top: -150px;
+    }
+    
+    .login
+    {
+        display: flex;
+        flex-direction: column;
+        background-color:#7FCBB1;
+        border-radius: 5px;
+        width: 25em;
+        height: 30em;
+    }
+    
+    .txt1,
+    .txt2
+    {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 28px;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        font-family: 'Open Sans';
+    }
+    
+    .cx1,
+    .cx2
+    {
+        margin-top: 5px;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 20px;
+        border-style: none;
+        height: 25px;
+        width: 23em;
+    }
+    .botao
+    {
+        display: flex;
+        justify-content: center;
+    
+        background-color:#229C73;
+        width: 8em;
+        padding: 14px 11px;
+        text-decoration: none;
+    
+        border-radius: 10px;
+        font-size: 15px;
+    
+        margin-left: 130px;
+        margin-top: 20px;
+        margin-bottom: -35px;
+    
+        color: black;
+    }
+    
+    .esq
+    {    
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        font-size: 15px;
+    
+        text-decoration: none;
+    
+        color: black;
+    }
+    
+    .cad
+    {
+        margin-left: 60em;
+    }
+    }
+}
+

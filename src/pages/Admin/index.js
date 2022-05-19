@@ -29,7 +29,7 @@ export default function Admin() {
 
             <section className="filtros">
 
-                <label>Selecione uma filtragem:</label>
+                <label className="filtrin">Selecione uma filtragem:</label>
 
                 <select className="filtragem">
 

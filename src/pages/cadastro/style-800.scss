@@ -4,23 +4,23 @@
     {
         text-align: center;
         font-family: 'Dela Gothic One', cursive;
-        font-size: 18px;
+        font-size: 32px;
         color:#FFF;
         margin: 20px 25px;
-        height: 30px;
+        height: 50px;
     }
 
     .t
     {
         left: 42%;
-        margin-left: 15px;
     }
 
     .quadrado
     {
         background-color:#7FCBB1;
-        height: 36em;
-        width: 32em;
+        height: 43em;
+        width: 33em;
+        margin-top: 13em;
     }
     
     .cx1,
@@ -30,14 +30,14 @@
     .cx5{
     font-family:'Open Sans', sans-serif;
     font-weight:bolder;
-    font-size: 15px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     border: 1px solid #ced4da;
     background-color: #FFF;
     border-radius: 5px;
     height: 30px;
-    width: 23em;
+    width: 19em;
     margin: auto;
     border-right: solid 1px #ccc;
     padding: 5px;
@@ -53,52 +53,62 @@
 
     .caixatxt
     {
-        margin-left: 80px;
+        margin-left: 70px;
         border: transparent;
         transform: none;
         height: 15px;
-        width: 18em;
+        width: 19em;
         outline: none;
+        font-size: 14px;
+        font-family: 'Dela Gothic One', cursive;
     }
 
     .caixatxt2
     {
-        margin-left: 80px;
+        margin-left: 72px;
         border: transparent;
         transform: none;
         height: 20px;
-        width: 8em;
+        width: 19em;
         outline: none;
+        font-size: 14px;
+        font-family: 'Dela Gothic One', cursive;
     }
 
     .caixatxt3
     {
-        margin-left: 40px;
+        margin-left: 27px;
         border: transparent;
         transform: none;
         height: 20px;
-        width: 9em;
+        width: 19em;
         outline: none;
+        font-size: 14px;
+        font-family: 'Dela Gothic One', cursive;
     }
 
     .caixatxt4
     {
-        margin-left: 76px;
+        margin-left: 81px;
         border: transparent;
         transform: none;
         height: 20px;
         width: 40rem;
         outline: none;
+        font-size: 14px;
+        font-family: 'Dela Gothic One', cursive;
     }
 
     .caixatxt5
     {
-        margin-left: 50px;
+        margin-left: 38px;
         border: transparent;
         transform: none;
         height: 20px;
         width: 40rem;
         outline: none;
+        font-size: 14px;
+        font-family: 'Dela Gothic One', cursive;
     }
 
     .tel,
@@ -107,21 +117,21 @@
     .calendar,
     .clock
     {
-        height: 15px;
+        height: 24px;
     }
 
     .online
     {
         font-family:'Open Sans', sans-serif;
         font-weight:bolder;
-        font-size: 15px;
+        font-size: 23px;
         display: flex;
         justify-content: center;
         align-items: center;
         border: solid #FFF;
         background-color: #FFF;
         border-radius: 12px;
-        height: 25px;
+        height: 29px;
         width: 15em;
         margin: auto;
         margin-top: 30px;
@@ -134,8 +144,10 @@
 
     .caixita
     {
-        margin-top: 4px;
-        margin-left: 10px;
+        margin-top: 4.6px;
+        margin-left: 5px;
+        height: 20px;
+        width: 20px;
     }
 
     .confirmacaotxt
@@ -144,6 +156,15 @@
         font-weight: bold;
         height: 20px;
         margin-left: 10px;
-        font-size: 15px;
+        font-size: 22px;
+    }
+    .t{
+        left: 42.2%;
+    }
+    .confirm{
+        margin-top: 20px;
+    }
+    .agend{
+        font-size: 25px;
     }
 }
