@@ -1,4 +1,11 @@
 import './index.scss';
+import './style-320.scss';
+import './style-400.scss';
+import './style-561.scss';
+import './style-602.scss';
+import './style-800.scss';
+import './style-1020.scss';
+
 
 export default function Admin() {
 
