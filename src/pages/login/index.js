@@ -17,7 +17,7 @@ export default function Login() {
 
             <section className="login"> 
 
-                <div className="txt1">Login</div>
+                <div className="txt1">CPF</div>
                 <div><input className="cx1" type="email"/></div>
                 <div className="txt2" >Senha</div>
                 <div><input className="cx2" type="password"/></div>
