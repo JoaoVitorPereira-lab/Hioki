@@ -7,7 +7,7 @@ insert into tb_login (ds_cpf, ds_senha)
 -- CSU01:: efetuar login
 select id_login 		id,
 		   ds_cpf			cpf,
-           ds_senha			email
+       ds_senha			senha
   from tb_login
  where ds_cpf 		= '111.111.111-11'
    and ds_senha		= 'DoutorHioki';
