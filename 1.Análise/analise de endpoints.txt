@@ -1,0 +1,151 @@
+CS01 (Login) /post      /usuario/login
+    {
+    "cpf": "?"
+    "senha": "?"
+}
+
+response{
+    "usuário": ?
+    "cpf": "?"
+    "senha": "?"
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+CS02(Inserir um novo agendamento) /post      /agendamento
+
+    {
+    "usuário": ?,
+    "nome": "?",
+    "email": "?",
+    "telefone": "?",
+    "horario": "?",
+    "data": "?",
+    "tipo": "?"
+}
+
+response{
+    "usuário": ?,
+    "nome": "?",
+    "email": "?",
+    "telefone": "?",
+    "horario": "?",
+    "data": "?",
+    "tipo": "?",
+    "id": ?
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+CS03(Consultar todos os agendamentos)   /get      /agendamento
+
+response[{
+    "usuário": ?,
+    "id": ?,
+    "nome": "?",
+    "email": "?",
+    "telefone": "?",
+    "horario": "?",
+    "data": "?",
+    "tipo": "?"
+}]
+
+//////////////////////////////////////////////////////////////////////////////
+
+CS04(Alterar Agendamento) /put     /agendamento/:id
+
+{   
+    "usuário": ?,
+    "nome": "?",
+    "email": "?",
+    "telefone": "?",
+    "horário": "?",
+    "data": "?",
+    "tipo": "?"
+}
+
+204 no content
+-no response
+
+//////////////////////////////////////////////////////////////////////////////
+
+CS05(Deletar agendamento) /delete    /agendamento/:id
+
+204 no content
+-no response
+
+//////////////////////////////////////////////////////////////////////////////
+
+CS06 (Listar por nome) /get        /agendamento/buscar/nome?nome=
+
+response{
+    [
+  {
+    "usuário": ?,
+    "id": ?,
+    "nome": "?",
+    "email": "?",
+    "telefone": "?",
+    "horário": "?",
+    "data": "?",
+    "tipo": "?"
+  }
+]
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+CS07 (Listar por Data) /get   /agendamento/buscar/data?data=
+
+response{
+    [
+  {
+    "usuário": ?,
+    "id": ?,
+    "nome": "?",
+    "email": "?",
+    "telefone": "?",
+    "horário": "?",
+    "data": "?",
+    "tipo": "?"
+  }
+]
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+CS08 (Listar por Horário) /get              /agendamento/buscar/horario?hr=
+
+response{
+    [
+  {
+    "usuário": ?,
+    "id": ?,
+    "nome": "?",
+    "email": "?",
+    "telefone": "?",
+    "horário": "?",
+    "data": "?",
+    "tipo": "?"
+  }
+]
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+CS09 (Listar por Tipo da consulta) /get    /agendamento/buscar/consulta?tp=
+
+response{
+    [
+  {
+    "usuário": ?,
+    "id": ?,
+    "nome": "?",
+    "email": "?",
+    "telefone": "?",
+    "horário": "?",
+    "data": "?",
+    "tipo": "?"
+  }
+]
+}

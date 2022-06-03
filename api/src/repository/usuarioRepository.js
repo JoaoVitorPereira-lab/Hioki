@@ -3,7 +3,7 @@ import {con} from "./connection.js"
 export async function Login (cpf, senha){
 
     const comando = `
-    select id_login 	id,
+    select id_login 	usuário,
     ds_cpf			    cpf,
     ds_senha			senha
 from tb_login

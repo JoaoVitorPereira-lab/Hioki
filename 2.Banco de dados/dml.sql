@@ -16,21 +16,7 @@ select id_login 		id,
 insert into tb_agendamento (id_login, nm_paciente, ds_email, ds_telefone, hr_consulta, dt_consulta, ds_tipo)
 values (1, 'José', 'luluminecraftbr@hotmail.com', '(11) 98724-0982', '12:20:00', '2022-05-14', 'Presencial');
 
-	-- CSU03:: alterar agendamento
-UPDATE tb_agendamento 
-   SET nm_paciente    = 'José',
-       ds_email       = 'vasco2012@gmail.com',
-       ds_telefone    = '(11) 1111-1111',
-       hr_consulta    = '15:20:00',
-       dt_consulta    = '2022-05-15',
-       ds_tipo        = 'Presencial'
- WHERE id_agendamento = 4;
- 
-	-- CSU04:: remover agendamento
-DELETE FROM tb_agendamento 
- WHERE id_login = 1;
-      
-	-- CSU05:: consultar todos os agendamentos 
+	-- CSU03:: consultar todos os agendamentos 
 SELECT id_login			'id',
 	   id_agendamento   'agendamento',
 	   nm_paciente		'nome',
@@ -40,6 +26,21 @@ SELECT id_login			'id',
        dt_consulta     	'data',
 	   ds_tipo			'tipo'	
   FROM tb_agendamento;
+
+	-- CSU04:: alterar agendamento
+UPDATE tb_agendamento 
+   SET nm_paciente    = 'José',
+       ds_email       = 'vasco2012@gmail.com',
+       ds_telefone    = '(11) 1111-1111',
+       hr_consulta    = '15:20:00',
+       dt_consulta    = '2022-05-15',
+       ds_tipo        = 'Presencial'
+ WHERE id_agendamento = 4;
+ 
+	-- CSU05:: remover agendamento
+DELETE FROM tb_agendamento 
+ WHERE id_agendamento = 1;
+      
 		
 	-- CSU06:: consultar agendamento por nome
 	
