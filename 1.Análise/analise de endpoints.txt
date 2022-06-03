@@ -76,7 +76,7 @@ CS05(Deletar agendamento) /delete    /agendamento/:id
 
 //////////////////////////////////////////////////////////////////////////////
 
-CS06 (Listar por nome) /get        /agendamento/buscar/nome?nome=
+CS06 (Listar por nome) /get        /agendamento/buscar/nome?nm=
 
 response{
     [
@@ -95,7 +95,7 @@ response{
 
 //////////////////////////////////////////////////////////////////////////////
 
-CS07 (Listar por Data) /get   /agendamento/buscar/data?data=
+CS07 (Listar por Data) /get   /agendamento/buscar/data?dt=
 
 response{
     [

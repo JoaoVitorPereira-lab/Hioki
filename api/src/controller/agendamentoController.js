@@ -120,9 +120,9 @@ server.delete('/agendamento/:id', async (req,resp) =>{
 //Listar por Data
 server.get('/agendamento/buscar/data', async(req, resp) => {
     try{
-    const {data} = req.query;
+    const {dt} = req.query;
 
-    const resposta = await ListarporData(data)
+    const resposta = await ListarporData(dt)
     if(!resposta){
         resp.status(404).send([])
     }
@@ -138,9 +138,9 @@ server.get('/agendamento/buscar/data', async(req, resp) => {
 //Listar por Nome
 server.get('/agendamento/buscar/nome', async(req, resp) => {
     try{
-    const {nome} = req.query;
+    const {nm} = req.query;
 
-    const resposta = await ListarporNome(nome)
+    const resposta = await ListarporNome(nm)
     if(!resposta){
         resp.status(404).send([])
     }
