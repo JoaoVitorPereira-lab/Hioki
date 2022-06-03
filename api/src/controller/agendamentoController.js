@@ -89,7 +89,7 @@ server.put('/agendamento/:id', async (req, resp) => {
 
         const resposta =  await alterarAgendamento(id, agendamento);
         if(resposta != 1)
-            throw new Error('Filme não pode ser alterado')
+            throw new Error('Agendamento não pode ser alterado')
         else
             resp.sendStatus(204)
     } 
