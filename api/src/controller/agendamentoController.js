@@ -107,7 +107,7 @@ server.delete('/agendamento/:id', async (req,resp) =>{
         const resposta = await removerAgendamento(id)
 
         if(resposta != 1){
-            throw new Error('Filme não pode ser removido')
+            throw new Error('Agendamento não pode ser removido')
         }
     resp.status(204).send();
     } 

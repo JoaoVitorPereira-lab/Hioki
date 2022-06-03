@@ -19,7 +19,7 @@ CS02(Inserir um novo agendamento) /post      /agendamento
     "nome": "?",
     "email": "?",
     "telefone": "?",
-    "horario": "?",
+    "horário": "?",
     "data": "?",
     "tipo": "?"
 }
