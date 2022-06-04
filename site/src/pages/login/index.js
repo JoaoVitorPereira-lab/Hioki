@@ -6,6 +6,7 @@ import './style-602.scss';
 import './style-800.scss';
 import './style-1020.scss';
 
+import{Link} from 'react-router-dom'
 export default function Login() {
 
     return(    
@@ -13,7 +14,9 @@ export default function Login() {
     <body className='bd-login'>
    
         <main className="page1">
+            <Link to="/landing-page">
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
+            </Link>
 
             <section className="login"> 
 
@@ -24,11 +27,10 @@ export default function Login() {
             
                 <br/>
 
-                <a className="botao" href="../Admin"> Entrar </a>
+                <Link className="botao" to="/Admin"> Entrar </Link>
                 
-                <br/>
+                
 
-                <a className="esq" href=""> Esqueceu a Senha</a>
             </section>
 
         </main>

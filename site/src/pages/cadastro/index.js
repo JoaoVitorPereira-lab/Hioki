@@ -1,11 +1,12 @@
-import './index.scss';
+import './index.scss'
 import './style-320.scss';
 import './style-400.scss';
 import './style-561.scss';
 import './style-602.scss';
 import './style-800.scss';
-import './style-1020.scss';
+import './style-1020.scss'
 
+import {Link} from 'react-router-dom'
 export default function Cad() {
 
     return(
@@ -62,15 +63,22 @@ export default function Cad() {
                     <input type="time" className="caixatxt5"/>
                     </div>
 
-                    <div className="online">
-                        <botton className="on">ONLINE</botton>&nbsp; <div className="t2"></div> &nbsp; <botton className="on2">PRESENCIAL</botton>
-                    </div>
+                <div className='escolha'>
+                    <div className="online1">
+                        <botton className="on">ONLINE</botton>
+                        </div>
+                        <div className='online2'>
+                        <botton className="on2">PRESENCIAL</botton>
+                        </div>
+                   
+                        </div>
+
 
                     <div className="confirm"> 
                         <input className="caixita" type="checkbox"/>
                         <div className="confirmacaotxt">Eu confirmo o agendamento dessa consulta</div>
                     </div>&nbsp;
-                    <a href="../landing-page" className="agend">AGENDAR</a>
+                    <Link to="/Admin" className="agend">AGENDAR</Link>
             </div>
             </div>
 

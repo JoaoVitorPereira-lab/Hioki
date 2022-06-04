@@ -8,41 +8,9 @@
     background-color:#10DA96 ;
 }
 
-table,
-th,
-td
-{
-    font-family: 'Open Sans';
-    background-color: #10DA96;
-    color: rgb(0, 0, 0);
-    margin: auto;
-    width: 50em;
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 6px;
-    text-align: center;
-}
 
-.edit,
-.delete
-{
-    height: 1.4em;
-    cursor: pointer;
-}
 
-.confirma
-{
-    width: 1.6em;
-    height: 1.6em;
-    background-color: white;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    appearance: none;
-    outline: none;
-    cursor: pointer;
-    margin-bottom: 15px;
-}
+
 
 header
 {
@@ -72,12 +40,19 @@ details
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
-    font-family: 'Open Sans';
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
 }
 
 .filtragem
 {
     margin-left: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    border-radius: 2vh;
+    border: none;
+    outline: none;
+    padding: 3px
 }
 
 
@@ -88,17 +63,20 @@ details
 
 header .agend
 {
-    background-color: #C4C4C4;
-    padding: 6px 7px;
+    background-color: #baebdb;
+    padding: 6px 10px;
     border-radius: 20px;
-
+    width: 25vh;
     color: black;
     text-decoration: none;
-    font-family: 'Open Sans';
-    font-size: 16px;
+    font-family: 'Dela Gothic One';
+    font-size: 14px;
     margin-right: 50px;
+    transition: transform .7s;
 }
-
+.agend:hover{
+    transform: scale(1.05);
+}
 h5
 {
     font-size: 17px;
@@ -107,13 +85,25 @@ h5
 header .seja-bem
 {
     font-family: 'Dela Gothic One';
-    margin-left: 300px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40vh;
+    font-size: 3vh;
 }
 
 .ftl
 {
-    margin-right: 30px;
-    width: 200px;    
+    margin-left: 10vh;
+    margin-top: 3vh;
+    width: 100vh;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 15vh;
+    padding-left: 2vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
 }
 
 label
@@ -124,6 +114,106 @@ label
 a
 {
     font-family: 'Dela Gothic One';
+}
+
+
+
+.cards{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #65d4af;
+    width: 100vh;
+    height: 12vh;
+    margin-left: 10vh;
+    align-items: center;
+    border-radius: 15vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    transition: transform .7s;
+    
+}
+.cards2{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #65d4af;
+    width: 100vh;
+    height: 12vh;
+    margin-left: 10vh;
+    margin-top: 2vh;
+    align-items: center;
+    border-radius: 15vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    transition: transform .7s;
+    
+}
+
+.cards:hover, .cards2:hover{
+    transform: scale(1.05)
+}
+.info1{
+    margin-left: 6vh;
+}
+
+.acoes{
+    display: flex;
+    flex-direction: column;
+}
+
+.delete
+{
+    height: 1.9em;
+    cursor: pointer;
+    margin-right: 8vh;
+}
+.edit{
+    
+    height: 1.7em;
+    width: 1.7em;
+    cursor: pointer;
+    margin-left: 0.5vh;
+    
+
+}
+
+main{
+    background-color: #baebdb;
+    height: 100vh;
+    width: 120vh;
+    margin-left: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    border-radius: 2vh;
+
+}
+.consultas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+.data{
+    margin-bottom: -2vh;
+}
+
+.numero,
+.tipo{
+    margin-top: -2vh;
+}
+
+.info2-4{
+    margin-left: -3vh;
+}
+.info2-3{
+    margin-left: 1vh;
+}
+.info2-5{
+    margin-left: -5vh;
 }
 
 }

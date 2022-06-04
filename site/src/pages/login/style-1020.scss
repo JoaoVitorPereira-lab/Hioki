@@ -7,7 +7,7 @@
         justify-content: center;
         align-items: center;
     
-        background-image: url('../../../public/images/WhatsApp\ Image\ 2022-04-27\ at\ 17.10.19.jpeg');
+        background-image: url('../../../public/images/WhatsApp\ Image\ 2022-06-04\ at\ 15.30.47.jpeg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -23,7 +23,7 @@
         height: 20em;
         width: 22em;
         margin: -50px auto;
-        margin-top: -150px;
+        margin-top: -30vh;
     }
     
     .login
@@ -33,18 +33,21 @@
         background-color:#7FCBB1;
         border-radius: 5px;
         width: 25em;
-        height: 30em;
+        height: 22em;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
     }
     
     .txt2
     {
-        margin-top: 70px;
+        margin-top: 40px;
         display: flex;
         flex-direction: row;
         margin-left: 28px;
         font-size: 20px;
         color: rgb(0, 0, 0);
-        font-family: 'Open Sans';
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
     }
     
     
@@ -58,14 +61,18 @@
         border-radius: 20px;
         border-style: none;
         height: 25px;
-        width: 17em;
+        width: 23em;
+        padding-left: 10px;
+        outline: none;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
     }
     .botao
     {
         display: flex;
         justify-content: center;
     
-        background-color:#229C73;
+        background-color: #baebdb;
         width: 8em;
         padding: 14px 11px;
         text-decoration: none;
@@ -78,6 +85,10 @@
         margin-bottom: -35px;
     
         color: black;
+        transition: transform .7s;
+    }
+    .botao:hover{
+        transform: scale(1.05);
     }
     
     .esq
@@ -114,7 +125,11 @@
         border-radius: 20px;
         border-style: none;
         height: 25px;
-        width: 17em;
+        width: 23em;
+        padding-left: 10px;
+        outline: none;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
         
     }
     }

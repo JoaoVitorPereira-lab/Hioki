@@ -15,6 +15,7 @@ import './style-1680.scss';
 import './style-1780.scss';
 import './style-1920.scss';
 
+import {Link} from 'react-router-dom'
 export default function LP() {
 
     return(
@@ -26,7 +27,7 @@ export default function LP() {
             <section className="me">
 
                 <div className="bt-me">
-                <a className="botao-me" href="../login"> Login </a> 
+                <Link className="botao-me" to="/login"> Login </Link> 
                 </div>
 
                 <div> 
@@ -37,9 +38,6 @@ export default function LP() {
                     <p> Dentistas especializados em ortodontia</p>
                 </div>
 
-                <div>
-                    <h1 className="nome-me" >Dental Hioki</h1>
-                </div>
 
                 <div>
                     <p className="desc-me">O melhor consultório de São Paulo </p>

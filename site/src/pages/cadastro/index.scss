@@ -1,10 +1,10 @@
+
 .bd-cad
 {
-    background-image: url('../../../public/images/WhatsApp\ Image\ 2022-04-28\ at\ 21.39.42.jpeg');
+    background-image: url('../../../public/images/WhatsApp\ Image\ 2022-06-04\ at\ 16.52.56.jpeg');
     background-size: 100% 100%;   
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     height: 100vh;
 }
 
@@ -78,27 +78,54 @@
     height: 20px;
 }
 
-.online
-{
-    font-family:'Open Sans', sans-serif;
-    font-weight:bolder;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid #FFF;
-    background-color: #FFF;
-    border-radius: 12px;
-    height: 25px;
-    width: 22em;
-    margin: auto;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    cursor: pointer;
-}
+.online1
+    {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        font-size: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid #FFF;
+        background-color: #FFF;
+        border-radius: 12px;
+        height: 29px;
+        width: 7em;
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: transform .7s;
+    }
+    .online2
+    {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        font-size: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid #FFF;
+        background-color: #FFF;
+        border-radius: 12px;
+        height: 29px;
+        width: 7em;
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        transition: transform .7s;
+    }
+    online1:hover, online2:hover{
+        transform:scale(1.05)
+    }
 
 .confirm
 {
@@ -122,6 +149,10 @@
     padding: 10px;
     text-decoration: none;
     color: inherit;
+    transition: transform 7s;
+}
+.agend:hover{
+    transform:scale(1.05)
 }
 
 .log
@@ -208,13 +239,16 @@
     left: 49.2%;
 }
 
-.on
-{
-    padding-left: 7px;
-    
+.on{
+    margin-left: -1vh;
+    transition: transform .7s;
 }
-.on2
-{
-    padding-right: 7px;
+.on2{
+    width: 20px;
+    margin-right: 11vh;
+    transition: transform .7s;
+}
+on:hover, on2:hover{
+    transform:scale(1.05)
 }
 
