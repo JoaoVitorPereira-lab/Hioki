@@ -35,8 +35,8 @@ server.post('/agendamento', async (req, resp) => {
             throw new Error('Usuário não logado!');
         }
 
-        const filme =  await inserirAgendamento(novoAgendamento);
-        resp.send(filme)
+        const agendamento =  await inserirAgendamento(novoAgendamento);
+        resp.send(agendamento)
     } 
     catch(err){
         resp.send({
