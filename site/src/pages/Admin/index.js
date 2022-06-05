@@ -53,11 +53,12 @@ export default function Admin() {
                     <div className="info1">
                     <p>Juliano Siqueira</p>
                     <p className='numero'>(11) 95049-8855</p>
-                    <p className='tipo'>Tipo: Presencial</p>
+                    <p className='tipo'>julianosiqueira@gmail.com</p>
                     </div>
                     <div className="info2">
                         <p className="data">Data: 13/06/2022</p>
                         <p>Horário: 16:30</p>
+                        <p className='tipo'>Tipo: Presencial</p>
                     </div>
                     <div className="acoes">
                         <Link to ="/cadastro">
@@ -75,11 +76,12 @@ export default function Admin() {
                     <div className="info1">
                     <p>José Leleco</p>
                     <p className='numero'>(11) 97839-9023</p>
-                    <p className='tipo'>Tipo: Presencial</p>
+                    <p className='tipo'>joséleleco@gmail.com</p>
                     </div>
-                    <div className="info2">
+                    <div className="info2-2">
                         <p className="data">Data: 16/06/2022</p>
                         <p>Horário: 15:30</p>
+                        <p className='tipo'>Tipo: Presencial</p>
                     </div>
                     <div className="acoes">
                         <Link to ="/cadastro">
@@ -96,11 +98,12 @@ export default function Admin() {
                     <div className="info1">
                     <p>Érica Silva</p>
                     <p className='numero'>(11) 99823-0921</p>
-                    <p className='tipo'>Tipo: Online</p>
+                    <p className='tipo'>éricasilva@gmail.com</p>
                     </div>
                     <div className="info2-3">
                         <p className="data">Data: 06/07/2022</p>
                         <p>Horário: 18:30</p>
+                        <p className='tipo'>Tipo: Presencial</p>
                     </div>
                     <div className="acoes">
                         <Link to ="/cadastro">
@@ -117,11 +120,12 @@ export default function Admin() {
                     <div className="info1">
                     <p>Letícia Damasceno</p>
                     <p className='numero'>(11) 93344-2371</p>
-                    <p className='tipo'>Tipo: Presencial</p>
+                    <p className='tipo'>letíciadamasceno@gmail.com</p>
                     </div>
                     <div className="info2-4">
                         <p className="data">Data: 23/07/2022</p>
                         <p>Horário: 16:30</p>
+                        <p className='tipo'>Tipo: Online</p>
                     </div>
                     <div className="acoes">
                         <Link to ="/cadastro">
@@ -138,11 +142,12 @@ export default function Admin() {
                     <div className="info1">
                     <p>Adamastor Gonçalves</p>
                     <p className='numero'>(11) 96666-6666</p>
-                    <p className='tipo'>Tipo: Presencial</p>
+                    <p className='tipo'>adamastorgonçalves@gmail.com</p>
                     </div>
                     <div className="info2-5">
                         <p className="data">Data: 02/08/2022</p>
                         <p>Horário: 12:30</p>
+                        <p className='tipo'>Tipo: Presencial</p>
                     </div>
                     <div className="acoes">
                         <Link to ="/cadastro">

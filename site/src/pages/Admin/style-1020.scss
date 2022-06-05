@@ -138,6 +138,7 @@ a
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: #65d4af;
     width: 100vh;
     height: 12vh;
@@ -154,9 +155,7 @@ a
 .cards:hover, .cards2:hover{
     transform: scale(1.05)
 }
-.info1{
-    margin-left: 6vh;
-}
+
 
 .acoes{
     display: flex;
@@ -206,16 +205,24 @@ main{
 .tipo{
     margin-top: -2vh;
 }
-
-.info2-4{
-    margin-left: -3vh;
+.info1{
+    margin-left: 5vh;
+}
+.info2-2{
+    margin-left: 4vh;
 }
 .info2-3{
-    margin-left: 1vh;
+    margin-left: 5vh;
 }
+.info2-4{
+    margin-left: -4vh;
+}
+
 .info2-5{
-    margin-left: -5vh;
+    margin-left: -7vh;
 }
+
+
 
 }
 

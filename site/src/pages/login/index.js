@@ -6,12 +6,56 @@ import './style-602.scss';
 import './style-800.scss';
 import './style-1020.scss';
 
+import { login } from '../../api/usuarioApi.js'
+import LoadingBar from 'react-top-loading-bar'
 import{Link} from 'react-router-dom'
+import { useState, useRef } from 'react';
+import {useNavigate} from 'react-router-dom'
+
 export default function Login() {
 
-    return(    
+    const [cpf, setCpf] = useState('');
+    const [senha, setSenha] = useState('');
+    const [erro, setErro] = useState('');
+    const [carregando, setCarregando] = useState(false);
 
+    const navigate = useNavigate();
+    const ref = useRef();
+
+    async function entrarClick(){
+        ref.current.continuousStart();
+        setCarregando(true);
+
+        try{
+        const r = await login(cpf, senha);
+        setTimeout(() => {
+            
+            navigate('/Admin');
+        }, 1500)
+        ref.current.complete();
+        
+
+    } catch(err){
+        ref.current.complete();
+        setCarregando(false);
+        if(err.response.status === 401){
+            setErro(err.response.data.erro)
+        }
+    }
+    }
+
+    function mostrarOcultarSenha(){
+        const senha = document.getElementById("senha");
+        if(senha.type==="password")
+            senha.type = "text";
+        
+        else 
+        senha.type = "password"
+    }
+
+    return(    
     <body className='bd-login'>
+        <LoadingBar color='#f11946' ref={ref} />
    
         <main className="page1">
             <Link to="/landing-page">
@@ -19,16 +63,30 @@ export default function Login() {
             </Link>
 
             <section className="login"> 
+                <div className="txt1">
+                    CPF
+                    </div>
+                <div>
+                    <input className="cx1" type="email" placeholder='Insira seu CPF' value={cpf} onChange={e => setCpf(e.target.value)}/>
+                </div>
 
-                <div className="txt1">CPF</div>
-                <div><input className="cx1" type="email"/></div>
-                <div className="txt2" >Senha</div>
-                <div><input className="cx2" type="password"/></div>
+                <div className="txt2" >
+                    Senha
+                    </div>
+                <div>
+                    <input className="cx2" type="password" placeholder='Insira sua Senha' id='senha' value={senha} onChange={e => setSenha(e.target.value)} />
+                    <input className='cxconfirma' type="checkbox" onClick={mostrarOcultarSenha}></input>
+                    </div>
             
                 <br/>
 
-                <Link className="botao" to="/Admin"> Entrar </Link>
+                <button className="botao" onClick={entrarClick} disabled={carregando}> Entrar </button>
                 
+                <br/>
+
+                <div className='invalido'>
+                    {erro}
+                </div>
                 
 
             </section>

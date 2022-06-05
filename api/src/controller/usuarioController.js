@@ -5,18 +5,18 @@ const server = Router()
 
 server.post('/usuario/login' , async (req,resp) => {
     try{
-        const {cpf: cpf, senha} = req.body;
+        const {cpf, senha} = req.body;
 
         const resposta = await Login(cpf,senha)
         if(!resposta){
-            throw new Error('Credenciais Inválidas, tente novamente')
+            throw new Error('Credenciais Inválidas')
         }
         resp.send(resposta)
 
     }
     catch(err){
         resp.status(401).send({
-            erro: 'Ocorreu um erro: ' + err.message
+            erro:err.message
         })
     }
 })

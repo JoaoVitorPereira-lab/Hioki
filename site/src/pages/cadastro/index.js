@@ -25,7 +25,7 @@ export default function Cad() {
                     <img className="user" src="../images/user.png" alt=""/> &nbsp;NOME 
                     <div className="t"> </div> 
                     
-                    <input required="" className="caixatxt"/> 
+                    <input required="" className="caixatxt" placeholder='Insira o nome do paciente'/> 
                 </div>
                 
                 <br/>
@@ -34,7 +34,7 @@ export default function Cad() {
                     <img className="mail" src="../images/mail.png" alt=""/>&nbsp;EMAIL
                     <div className="t"> </div> 
                     
-                    <input className="caixatxt2"/> 
+                    <input className="caixatxt2" placeholder='Insira o email do paciente'/> 
                 </div>
 
                 <br/>
@@ -62,22 +62,19 @@ export default function Cad() {
                     
                     <input type="time" className="caixatxt5"/>
                     </div>
+                    <br/>
 
                 <div className='escolha'>
-                    <div className="online1">
-                        <botton className="on">ONLINE</botton>
-                        </div>
-                        <div className='online2'>
-                        <botton className="on2">PRESENCIAL</botton>
-                        </div>
+                <div className="cx6">
+                    <img className="user" src="../images/user.png" alt=""/> &nbsp;TIPO
+                    <div className="t"> </div> 
+                    
+                    <input required="" className="caixatxt6" placeholder='Online ou Presencial'/> 
+                </div>
                    
                         </div>
 
 
-                    <div className="confirm"> 
-                        <input className="caixita" type="checkbox"/>
-                        <div className="confirmacaotxt">Eu confirmo o agendamento dessa consulta</div>
-                    </div>&nbsp;
                     <Link to="/Admin" className="agend">AGENDAR</Link>
             </div>
             </div>

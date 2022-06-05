@@ -49,7 +49,7 @@
     .quadrado
     {
         background-color:#7FCBB1;
-        height: 38em;
+        height: 34em;
         width: 33em;
         margin-top: 2em;
     }
@@ -58,7 +58,8 @@
     .cx2,
     .cx3,
     .cx4,
-    .cx5{
+    .cx5,
+    .cx6{
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-size: 15px;
@@ -78,7 +79,7 @@
 
     .cx5
     {
-        margin-top: 30px;
+        margin-top: 20px;
         
     }
 
@@ -137,6 +138,17 @@
     .caixatxt5
     {
         margin-left: 41px;
+        border: transparent;
+        transform: none;
+        height: 20px;
+        width: 40rem;
+        outline: none;
+        font-size: 14px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+    }
+    .caixatxt6{
+        margin-left: 11vh;
         border: transparent;
         transform: none;
         height: 20px;
@@ -242,6 +254,7 @@
             font-size: 16px;
             margin-right: 27vh;
             transition: transform .7s;
+            margin-top: 4vh;
     }
         .agend:hover{
             transform: scale(1.05);
