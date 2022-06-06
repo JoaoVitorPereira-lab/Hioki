@@ -14,14 +14,14 @@ import './style-1440.scss';
 import './style-1680.scss';
 import './style-1780.scss';
 import './style-1920.scss';
-
+import Helmet from 'react-helmet'
 import {Link} from 'react-router-dom'
 export default function LP() {
 
     return(
     
     <body className='bd-lp'>
-    
+        <Helmet title='Página inicial'/>
         <main className="faixas">
 
             <section className="me">

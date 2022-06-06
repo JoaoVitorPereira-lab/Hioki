@@ -5,11 +5,12 @@ import './style-561.scss';
 import './style-602.scss';
 import './style-800.scss';
 import './style-1020.scss';
-
+import { Helmet } from 'react-helmet';
+import storage from 'local-storage'
 import { login } from '../../api/usuarioApi.js'
 import LoadingBar from 'react-top-loading-bar'
 import{Link} from 'react-router-dom'
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import {useNavigate} from 'react-router-dom'
 
 export default function Login() {
@@ -22,12 +23,20 @@ export default function Login() {
     const navigate = useNavigate();
     const ref = useRef();
 
+    useEffect(() => {
+        if(storage('usuario-logado')){
+            navigate('/admin')
+        }
+    }, [])
+
     async function entrarClick(){
         ref.current.continuousStart();
         setCarregando(true);
 
         try{
         const r = await login(cpf, senha);
+        storage('usuario-logado', r)
+
         setTimeout(() => {
             
             navigate('/Admin');
@@ -53,9 +62,12 @@ export default function Login() {
         senha.type = "password"
     }
 
+    
+
     return(    
     <body className='bd-login'>
         <LoadingBar color='#f11946' ref={ref} />
+        <Helmet title='Login'/>
    
         <main className="page1">
             <Link to="/landing-page">
@@ -67,7 +79,7 @@ export default function Login() {
                     CPF
                     </div>
                 <div>
-                    <input className="cx1" type="email" placeholder='Insira seu CPF' value={cpf} onChange={e => setCpf(e.target.value)}/>
+                    <input className="cx1" type="text" placeholder='Insira seu CPF' value={cpf} onChange={e => setCpf(e.target.value)}/>
                 </div>
 
                 <div className="txt2" >

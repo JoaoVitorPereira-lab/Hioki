@@ -5,23 +5,50 @@ import './style-561.scss';
 import './style-602.scss';
 import './style-800.scss';
 import './style-1020.scss';
-
+import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom'
-
+import storage from 'local-storage'
+import { useEffect, useState } from 'react';
 export default function Admin() {
+    const [usuario, setUsuario] = useState('')
+
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        if (!storage('usuario-logado')){
+            navigate('/login')
+        }
+        else {
+            const usuarioLogado = storage('usuario-logado');
+            setUsuario(usuarioLogado.nomedoutor)
+        }
+    }, [])
+
+
+    function sairClick(){   
+
+        storage.remove('usuario-logado');
+        navigate('/login');
+    }
+
+    
 
     return(  
 
     <body className='bd-Admin'>
-
+        <Helmet title='Admin'/>
         <header>
             <Link to="/landing-page">
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
             </Link>
 
-            <h5 className="seja-bem">Seja bem vindo, Doutor Hioki</h5>
-
-            <Link className="agend" to="/cadastro">Novo Agendamento</Link>
+            <h5 className="seja-bem">Seja bem vindo, {usuario}!</h5>
+        <div className='botoes'>
+             <button className="botao-sair" onClick={sairClick}>Sair</button>
+            <Link className="botao-agendar" to="/cadastro">Novo Agendamento</Link>
+            </div>
             
         </header>
 

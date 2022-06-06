@@ -147,6 +147,17 @@
         justify-content: center;
         margin-top: 2.5vh;
         color: red;
+        animation: fadein 1s;
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
     }
    
     .cxconfirma{

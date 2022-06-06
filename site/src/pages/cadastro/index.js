@@ -5,13 +5,24 @@ import './style-561.scss';
 import './style-602.scss';
 import './style-800.scss';
 import './style-1020.scss'
-
+import { Helmet } from 'react-helmet';
 import {Link} from 'react-router-dom'
+import storage from 'local-storage'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 export default function Cad() {
+
+    const navigate = useNavigate()
+    useEffect(() => {
+        if (!storage('usuario-logado')){
+            navigate('/login')
+        }
+    }, [])
 
     return(
     
     <body className='bd-cad'>
+        <Helmet title='Novo agendamento'/>
 
         <section className="cadastre">
             
