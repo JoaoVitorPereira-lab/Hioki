@@ -148,7 +148,7 @@
         font-weight: bold;
     }
     .caixatxt6{
-        margin-left: 11vh;
+        margin-left: 10.2vh;
         border: transparent;
         transform: none;
         height: 20px;
@@ -255,6 +255,7 @@
             margin-right: 27vh;
             transition: transform .7s;
             margin-top: 4vh;
+            cursor: pointer;
     }
         .agend:hover{
             transform: scale(1.05);

@@ -4,12 +4,18 @@ import './style-400.scss';
 import './style-561.scss';
 import './style-602.scss';
 import './style-800.scss';
-import './style-1020.scss'
+import './style-1020.scss';
+import {cadastrarAgendamento} from '../../api/agendamentoApi'
 import { Helmet } from 'react-helmet';
-import {Link} from 'react-router-dom'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import storage from 'local-storage'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
+
 export default function Cad() {
 
     const navigate = useNavigate()
@@ -19,9 +25,29 @@ export default function Cad() {
         }
     }, [])
 
+    const [nome, setNome] = useState('');
+    const [email, setEmail] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [data, setData] = useState('');
+    const [horário, setHorário] = useState('');
+    const [tipo, setTipo] = useState('');
+
+
+    async function salvarClick(){
+        try {
+            const usuário = storage('usuario-logado').id;
+            const r = await cadastrarAgendamento(nome, email, telefone, data, horário, tipo, usuário);
+            toast.success('Agendamento cadastrado com sucesso 🚀');
+        } catch (err) {
+          toast.error(err.response.data.erro);  
+        }
+        
+    }
+
     return(
     
     <body className='bd-cad'>
+        <ToastContainer />
         <Helmet title='Novo agendamento'/>
 
         <section className="cadastre">
@@ -36,7 +62,7 @@ export default function Cad() {
                     <img className="user" src="../images/user.png" alt=""/> &nbsp;NOME 
                     <div className="t"> </div> 
                     
-                    <input required="" className="caixatxt" placeholder='Insira o nome do paciente'/> 
+                    <input required="" className="caixatxt" placeholder='Insira o nome do paciente' value={nome} onChange={e => setNome(e.target.value)}/> 
                 </div>
                 
                 <br/>
@@ -45,7 +71,7 @@ export default function Cad() {
                     <img className="mail" src="../images/mail.png" alt=""/>&nbsp;EMAIL
                     <div className="t"> </div> 
                     
-                    <input className="caixatxt2" placeholder='Insira o email do paciente'/> 
+                    <input className="caixatxt2" placeholder='Insira o email do paciente' value={email} onChange={e => setEmail(e.target.value)}/> 
                 </div>
 
                 <br/>
@@ -54,7 +80,7 @@ export default function Cad() {
                     <img className="tel" src="../images/telephone-call.png" alt=""/>&nbsp;TELEFONE
                     <div className="t"> </div> 
                     
-                    <input type="tel" id="Telefone" name="Telefone" placeholder="(99) 99999-9999"  className="caixatxt3"/>
+                    <input type="tel" id="Telefone" name="Telefone" placeholder="(99) 99999-9999"  className="caixatxt3" value={telefone} onChange={e => setTelefone(e.target.value)}/>
                 </div>
 
                 <br/>
@@ -63,7 +89,7 @@ export default function Cad() {
                     <img className="calendar" src="../images/calendar.png" alt=""/>&nbsp;DATA
                     <div className="t"> </div> 
                     
-                    <input type="date" id="data" name="data" className="caixatxt4"/> 
+                    <input type="date" id="data" name="data" className="caixatxt4" value={data} onChange={e => setData(e.target.value)}/> 
                     
                 </div>
 
@@ -71,7 +97,7 @@ export default function Cad() {
                         <img className="clock" src="../images/clock.png" alt=""/>&nbsp;HORÁRIO
                         <div className="t"> </div> 
                     
-                    <input type="time" className="caixatxt5"/>
+                    <input type="time" className="caixatxt5" value={horário} onChange={e => setHorário(e.target.value)}/>
                     </div>
                     <br/>
 
@@ -80,13 +106,13 @@ export default function Cad() {
                     <img className="user" src="../images/user.png" alt=""/> &nbsp;TIPO
                     <div className="t"> </div> 
                     
-                    <input required="" className="caixatxt6" placeholder='Online ou Presencial'/> 
+                    <input required="" className="caixatxt6" placeholder='Online ou Presencial' value={tipo} onChange={e => setTipo(e.target.value)}/> 
                 </div>
                    
                         </div>
 
 
-                    <Link to="/Admin" className="agend">AGENDAR</Link>
+                    <button className="agend" onClick={salvarClick}>AGENDAR</button>
             </div>
             </div>
 
