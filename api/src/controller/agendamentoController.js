@@ -39,7 +39,7 @@ server.post('/agendamento', async (req, resp) => {
         resp.send(agendamento)
     } 
     catch(err){
-        resp.send({
+        resp.status(401).send({
             erro:err.message
         })
 

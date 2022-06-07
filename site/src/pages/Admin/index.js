@@ -40,7 +40,7 @@ export default function Admin() {
     <body className='bd-Admin'>
         <Helmet title='Admin'/>
         <header>
-            <Link to="/landing-page">
+            <Link to="/">
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
             </Link>
 

@@ -62,6 +62,7 @@ export default function Login() {
         senha.type = "password"
     }
 
+
     
 
     return(    
@@ -92,7 +93,7 @@ export default function Login() {
             
                 <br/>
 
-                <button className="botao" onClick={entrarClick} disabled={carregando}> Entrar </button>
+                <button className="botao"  onClick={entrarClick} disabled={carregando}> Entrar </button>
                 
                 <br/>
 

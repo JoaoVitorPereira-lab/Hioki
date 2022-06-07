@@ -28,8 +28,8 @@ export default function Cad() {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
-    const [data, setData] = useState('');
-    const [horário, setHorário] = useState('');
+    const [data, setData] = useState(0);
+    const [horário, setHorário] = useState(0);
     const [tipo, setTipo] = useState('');
 
 

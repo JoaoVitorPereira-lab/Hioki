@@ -6,13 +6,14 @@ const api = axios.create({
 export async function cadastrarAgendamento(nome, email, telefone, data, horário, tipo, usuário){
 
     const resposta = await api.post('/agendamento', {
-        usuário: usuário,
+       
         nome: nome,
         email: email,
         telefone: telefone,
         horário: horário,
         data: data,
-        tipo: tipo
+        tipo: tipo,
+        usuário: usuário
     })
     return resposta.data;
 
