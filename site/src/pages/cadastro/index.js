@@ -5,7 +5,7 @@ import './style-561.scss';
 import './style-602.scss';
 import './style-800.scss';
 import './style-1020.scss';
-import {cadastrarAgendamento} from '../../api/agendamentoApi'
+import {cadastrarAgendamento, alterarAgendamento} from '../../api/agendamentoApi'
 import { Helmet } from 'react-helmet';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -31,17 +31,39 @@ export default function Cad() {
     const [data, setData] = useState(0);
     const [horário, setHorário] = useState(0);
     const [tipo, setTipo] = useState('');
-
+    const [id, setId] = useState(0);
 
     async function salvarClick(){
         try {
             const usuário = storage('usuario-logado').id;
-            const r = await cadastrarAgendamento(nome, email, telefone, data, horário, tipo, usuário);
+            
+
+            if(id === 0){
+            const resposta = await cadastrarAgendamento(nome, email, telefone, data, horário, tipo, usuário);
+
+            setId(resposta.id)
             toast.success('Agendamento cadastrado com sucesso 🚀');
+            }
+            else{
+                await alterarAgendamento(id, nome, email, telefone, data, horário, tipo, usuário);
+                toast.success('Agendamento alterado com sucesso 🚀');
+            }
+
+            
         } catch (err) {
           toast.error(err.response.data.erro);  
         }
         
+    }
+
+    function novoClick(){
+        setId(0);
+        setNome('');
+        setEmail('');
+        setTelefone('');
+        setData(0);
+        setHorário(0);
+        setTipo('');
     }
 
     return(
@@ -112,7 +134,8 @@ export default function Cad() {
                         </div>
 
 
-                    <button className="agend" onClick={salvarClick}>AGENDAR</button>
+                    <button className="agend" onClick={salvarClick}>{id===0 ? 'AGENDAR' : 'ALTERAR'    }</button> &nbsp;
+                    <button className="novo" onClick={novoClick}>NOVO</button>
             </div>
             </div>
 

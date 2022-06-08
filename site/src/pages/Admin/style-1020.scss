@@ -112,9 +112,9 @@ header .seja-bem
 
 .ftl
 {
-    margin-left: 10vh;
+    margin-left: 34vh;
     margin-top: 3vh;
-    width: 100vh;
+    width: 50vh;
     height: 5vh;
     border: none;
     outline: none;
@@ -149,27 +149,12 @@ a
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     transition: transform .7s;
-    
-}
-.cards2{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #65d4af;
-    width: 100vh;
-    height: 12vh;
-    margin-left: 10vh;
-    margin-top: 2vh;
-    align-items: center;
-    border-radius: 15vh;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    transition: transform .7s;
+    margin-bottom: 2vh;
     
 }
 
-.cards:hover, .cards2:hover{
+
+.cards:hover{
     transform: scale(1.05)
 }
 
@@ -222,25 +207,18 @@ main{
 .tipo{
     margin-top: -2vh;
 }
-.info1{
-    margin-left: 5vh;
-}
-.info2-2{
-    margin-left: 4vh;
-}
-.info2-3{
-    margin-left: 5vh;
-}
-.info2-4{
-    margin-left: -4vh;
-}
 
-.info2-5{
-    margin-left: -7vh;
-}
 .botoes{
     display: flex;
     flex-direction: column;
+}
+.lupa{
+    height: 20px;
+    width: 20px;
+    margin-left: 81vh;
+    margin-top: 19.3vh;
+    position: absolute;
+    cursor: pointer;
 }
 
 
