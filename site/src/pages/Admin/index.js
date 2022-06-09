@@ -11,15 +11,22 @@ import {Link} from 'react-router-dom'
 import storage from 'local-storage'
 import { useEffect, useState } from 'react';
 
-import {listarTodosAgendamentos, listarPorNome, listarPorData, listarPorTipo, listarPorHorario} from '../../api/agendamentoApi.js'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
+
+import {listarTodosAgendamentos, listarPorNome, listarPorData, listarPorTipo, listarPorHorario, deletarAgendamento} from '../../api/agendamentoApi.js'
 export default function Admin() {
     const [usuario, setUsuario] = useState('');
+    const [filtroNome, setFiltroNome] = useState('');
     const [agendamento, setAgendamento] = useState([]);
     const navigate = useNavigate();
 
 
     useEffect(() => {
-        listarTodosAgendamentos();
+        carregarTodosAgendamentos();
 
         if (!storage('usuario-logado')){
             navigate('/login')
@@ -31,24 +38,66 @@ export default function Admin() {
     }, [])
 
 
+
     function sairClick(){   
 
         storage.remove('usuario-logado');
         navigate('/login');
     }
 
-    async function carregarTodosFilmes(){
+
+    async function carregarTodosAgendamentos(){
         const resposta = await listarTodosAgendamentos();
-        console.log(resposta);
         setAgendamento(resposta);
 
+    }
+
+    async function filtrarPorNome(){
+        const resposta = await listarPorNome(filtroNome);
+        setAgendamento(resposta);
+    }
+
+    async function removerAgendamentoClick(id, nome) {
+
+        confirmAlert({
+            title:'Remover agendamento',
+            message:`Deseja remover o agendamento de ${nome} ?`,
+            buttons:[
+                {
+                    label:'Sim',
+                    onClick: async () => {
+                const resposta = await deletarAgendamento(id, nome);
+                    if(filtroNome  === '')
+                              carregarTodosAgendamentos();
+                    else
+                            filtrarPorNome();
+                                    toast.success('Agendamento removido com sucesso')
+                    }
+                    
+                },
+                {
+                    label:'Não'
+                }
+            ]
+
+
+        })
+
+
+        
+
+    }
+
+    async function editarAgendamento(id){
+        navigate(`alterar/${id}`)
     }
 
     return(  
 
     <body className='bd-Admin'>
-        <Helmet title='Admin'/>
-        <header>
+        <ToastContainer />
+        <Helmet title='Admin'/> 
+        <header> 
             <Link to="/">
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
             </Link>
@@ -77,41 +126,39 @@ export default function Admin() {
                     
                 </select>
                 </section>
-            
-                <input className="ftl" type="text" placeholder='Insira sua pesquisa'/>
-                <img className="lupa" src='../images/search-free-icon-font.svg'/>
+            <div>
+                <input className="ftl" type="text" placeholder='Insira sua pesquisa' value={filtroNome} onChange={e => setFiltroNome(e.target.value)}/>
+                <img className="lupa" src='../images/search-free-icon-font.svg' onClick={filtrarPorNome}/>
 
-            
+                </div>
 
             <br/>
 
-                <div className="cards">
+               
                     {agendamento.map(item => 
-                    <div>
+                <div className='todos'>
+                    <div className='cards'>
                         <div className="info1">
-                        <p>Juliano Siqueira</p>
-                        <p className='numero'>(11) 95049-8855</p>
-                        <p className='tipo'>julianosiqueira@gmail.com</p>
+                        <p>{item.nome}</p>
+                        <p className='numero'>{item.telefone}</p>
+                        <p className='tipo'>{item.email}</p>
                         </div>
                         <div className="info2">
-                            <p className="data">Data: 13/06/2022</p>
-                            <p>Horário: 16:30</p>
-                            <p className='tipo'>Tipo: Presencial</p>
+                            <p className="data">Data: {item.data.substr(0,10)}</p>
+                            <p>Horário: {item.horário}</p>
+                            <p className='tipo'>Tipo: {item.tipo}</p>
                         </div>
                         <div className="acoes">
-                            <Link to ="/cadastro">
-                        <img className="delete" src="../images/delete.png"></img>
-                        </Link>
-                        <Link to="/cadastro">
-                        <img className="edit"src="../images/edit-button.png"></img>
-                        </Link>
+                        <img className="delete" src="../images/delete.png" onClick={() => removerAgendamentoClick(item.id, item.nome)}></img>
+                        <img className="edit"src="../images/edit-button.png" onClick={() => editarAgendamento(item.id)}></img>
                         </div>
                     </div>
+                 </div>
                         )}
                    
 
                     
-                </div>
+           
 
         
                 <br/>

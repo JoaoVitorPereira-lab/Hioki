@@ -59,3 +59,13 @@ export async function listarPorTipo(tipo){
     const resposta = await api.get(`/agendamento/buscar/consulta?tp=${tipo}`);
     return resposta.data;
 } 
+
+export async function deletarAgendamento(id){
+    const resposta = await api.delete(`/agendamento/${id}`);
+    return resposta.status;
+}
+
+export async function BuscarPorID (id){
+    const resposta = await api.get(`/agendamento/${id}`);
+    return resposta.data
+}

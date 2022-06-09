@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {inserirAgendamento, ConsultarTodos, alterarAgendamento, removerAgendamento, ListarporNome, ListarporData, ListarporHorario, ListarporTipo} from '../repository/agendamentoRepository.js'
+import {inserirAgendamento, ConsultarTodos, alterarAgendamento, removerAgendamento, ListarporNome, ListarporData, ListarporHorario, ListarporTipo, BuscarPorID} from '../repository/agendamentoRepository.js'
 
 const server = Router();
 
@@ -185,6 +185,27 @@ server.get('/agendamento/buscar/consulta', async(req, resp) => {
 }
     } catch(err){
         resp.send({
+            erro: err.message
+        })
+    }
+})
+//Buscar por id
+server.get('/agendamento/:id', async (req, resp) =>{
+    try
+    {
+        const id = Number(req.params.id);
+
+        const resposta = await BuscarPorID(id);
+
+        if(!resposta)
+            resp.status(404).send( [] );
+        else
+        resp.send(resposta);
+    }
+
+    catch(err)
+    {
+        resp.status(400).send({
             erro: err.message
         })
     }

@@ -15,10 +15,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-          <Route path='/'             element={<LandingPage />} />
-          <Route path='/Admin'        element={<Admin />} />
-          <Route path='/cadastro'     element={<Cadastro />} />
-          <Route path='/login'        element={<Login />} />
+          <Route path='/'                         element={<LandingPage />} />
+          <Route path='/Admin'                    element={<Admin />} />
+          <Route path='/Admin/alterar/:idParam'        element={<Cadastro />} />
+          <Route path='/cadastro'                 element={<Cadastro />} />
+          <Route path='/login'                    element={<Login />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -133,3 +133,20 @@ export async function ListarporTipo(tipo){
     const [linhas] = await con.query(comando, [`%${tipo}%`])
     return linhas
 }
+
+export async function BuscarPorID (id){
+    const comando = `
+    SELECT id_login	 'usuário',
+    id_agendamento   'id',
+    nm_paciente		 'nome',
+    ds_email		 'email',
+    ds_telefone	     'telefone',
+    hr_consulta	     'horário',
+    dt_consulta      'data',
+    ds_tipo			 'tipo'	
+FROM tb_agendamento
+WHERE id_agendamento = ?
+`
+const [linhas] = await con.query(comando, [id]);
+return linhas[0];
+}

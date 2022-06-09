@@ -5,7 +5,7 @@ import './style-561.scss';
 import './style-602.scss';
 import './style-800.scss';
 import './style-1020.scss';
-import {cadastrarAgendamento, alterarAgendamento} from '../../api/agendamentoApi'
+import {cadastrarAgendamento, alterarAgendamento, BuscarPorID} from '../../api/agendamentoApi'
 import { Helmet } from 'react-helmet';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -14,6 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import storage from 'local-storage'
 import { useEffect, useState } from 'react';
 
+import {useParams} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 export default function Cad() {
@@ -32,6 +33,29 @@ export default function Cad() {
     const [horário, setHorário] = useState(0);
     const [tipo, setTipo] = useState('');
     const [id, setId] = useState(0);
+
+    const {idParam} = useParams();
+
+    useEffect(() => {
+        if(idParam){
+            carregarAgendamento();
+        }
+    }, [])
+
+    async function carregarAgendamento(){
+        const resposta = await BuscarPorID(idParam);
+        setNome(resposta.nome);
+        setEmail(resposta.email);
+        setTelefone(resposta.telefone);
+        setData(resposta.data.substr(0, 10));
+        setHorário(resposta.horário);
+        setTipo(resposta.tipo);
+
+        setId(resposta.id);
+    }
+
+   
+
 
     async function salvarClick(){
         try {
@@ -76,7 +100,7 @@ export default function Cad() {
             
             <div className="quadrado">
 
-                <div className="txt1">AGENDE UMA CONSULTA DE UM PACIENTE</div>
+                <div className="txt1">{id===0 ? 'AGENDAR' : 'ALTERAR'    } UMA CONSULTA DE UM PACIENTE</div>
                 
                 <div className="caixas">
 

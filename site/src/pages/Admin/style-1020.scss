@@ -44,6 +44,7 @@ details
     justify-content:space-evenly;
     font-family: 'Quicksand', sans-serif;
     font-weight: bolder;
+    margin-top: -1vh;
 }
 
 .filtragem
@@ -122,6 +123,7 @@ header .seja-bem
     padding-left: 2vh;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+
 }
 
 label
@@ -149,9 +151,11 @@ a
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     transition: transform .7s;
-    margin-bottom: 2vh;
+    margin-top: 3vh;
+    padding-bottom: -1vh;
     
 }
+
 
 
 .cards:hover{
@@ -182,7 +186,7 @@ a
 
 main{
     background-color: #baebdb;
-    height: 100vh;
+    height: auto;
     width: 120vh;
     margin-left: 35.5vh;
     display: flex;
@@ -198,6 +202,7 @@ main{
     justify-content: center;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+    margin-top: 3vh;
 }
 .data{
     margin-bottom: -2vh;
@@ -215,8 +220,8 @@ main{
 .lupa{
     height: 20px;
     width: 20px;
-    margin-left: 81vh;
-    margin-top: 19.3vh;
+    margin-left: -5vh;
+    margin-top: 4.3vh;
     position: absolute;
     cursor: pointer;
 }
