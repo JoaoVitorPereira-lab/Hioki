@@ -149,8 +149,8 @@ export default function Admin() {
                             <p className='tipo'>Tipo: {item.tipo}</p>
                         </div>
                         <div className="acoes">
-                        <img className="delete" src="../images/delete.png" onClick={() => removerAgendamentoClick(item.id, item.nome)}></img>
-                        <img className="edit"src="../images/edit-button.png" onClick={() => editarAgendamento(item.id)}></img>
+                        <img className="delete" src="/images/delete.png" onClick={() => removerAgendamentoClick(item.id, item.nome)}></img>
+                        <img className="edit"src="/images/edit-button.png" onClick={() => editarAgendamento(item.id)}></img>
                         </div>
                     </div>
                  </div>

@@ -19,7 +19,8 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Cad() {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    
     useEffect(() => {
         if (!storage('usuario-logado')){
             navigate('/login')
@@ -105,7 +106,7 @@ export default function Cad() {
                 <div className="caixas">
 
                 <div className="cx1">
-                    <img className="user" src="../images/user.png" alt=""/> &nbsp;NOME 
+                    <img className="user" src="/images/user.png" alt=""/> &nbsp;NOME 
                     <div className="t"> </div> 
                     
                     <input required="" className="caixatxt" placeholder='Insira o nome do paciente' value={nome} onChange={e => setNome(e.target.value)}/> 
@@ -114,7 +115,7 @@ export default function Cad() {
                 <br/>
 
                 <div className="cx2">
-                    <img className="mail" src="../images/mail.png" alt=""/>&nbsp;EMAIL
+                    <img className="mail" src="/images/mail.png" alt=""/>&nbsp;EMAIL
                     <div className="t"> </div> 
                     
                     <input className="caixatxt2" placeholder='Insira o email do paciente' value={email} onChange={e => setEmail(e.target.value)}/> 
@@ -123,7 +124,7 @@ export default function Cad() {
                 <br/>
 
                 <div className="cx3"> 
-                    <img className="tel" src="../images/telephone-call.png" alt=""/>&nbsp;TELEFONE
+                    <img className="tel" src="/images/telephone-call.png" alt=""/>&nbsp;TELEFONE
                     <div className="t"> </div> 
                     
                     <input type="tel" id="Telefone" name="Telefone" placeholder="(99) 99999-9999"  className="caixatxt3" value={telefone} onChange={e => setTelefone(e.target.value)}/>
@@ -132,7 +133,7 @@ export default function Cad() {
                 <br/>
 
                 <div className="cx4">
-                    <img className="calendar" src="../images/calendar.png" alt=""/>&nbsp;DATA
+                    <img className="calendar" src="/images/calendar.png" alt=""/>&nbsp;DATA
                     <div className="t"> </div> 
                     
                     <input type="date" id="data" name="data" className="caixatxt4" value={data} onChange={e => setData(e.target.value)}/> 
@@ -140,7 +141,7 @@ export default function Cad() {
                 </div>
 
                     <div className="cx5">
-                        <img className="clock" src="../images/clock.png" alt=""/>&nbsp;HORÁRIO
+                        <img className="clock" src="/images/clock.png" alt=""/>&nbsp;HORÁRIO
                         <div className="t"> </div> 
                     
                     <input type="time" className="caixatxt5" value={horário} onChange={e => setHorário(e.target.value)}/>
@@ -149,7 +150,7 @@ export default function Cad() {
 
                 <div className='escolha'>
                 <div className="cx6">
-                    <img className="user" src="../images/user.png" alt=""/> &nbsp;TIPO
+                    <img className="user" src="/images/user.png" alt=""/> &nbsp;TIPO
                     <div className="t"> </div> 
                     
                     <input required="" className="caixatxt6" placeholder='Online ou Presencial' value={tipo} onChange={e => setTipo(e.target.value)}/> 
