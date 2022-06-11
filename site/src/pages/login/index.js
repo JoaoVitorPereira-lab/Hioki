@@ -62,6 +62,12 @@ export default function Login() {
         senha.type = "password"
     }
 
+    document.addEventListener("keypress", function  (e) {
+        if(e.key === "Enter"){
+            const btn = document.querySelector("#send");
+            btn.click();
+        }
+    })
   
     
 
@@ -93,7 +99,7 @@ export default function Login() {
             
                 <br/>
 
-                <button className="botao" onClick={entrarClick} disabled={carregando}> Entrar </button>
+                <button id='send' className="botao" onClick={entrarClick} disabled={carregando}> Entrar </button>
                 
                 <br/>
 

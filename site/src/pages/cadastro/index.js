@@ -91,6 +91,7 @@ export default function Cad() {
         setTipo('');
     }
 
+
     return(
     
     <body className='bd-cad'>

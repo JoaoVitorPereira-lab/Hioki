@@ -55,6 +55,7 @@ export default function Admin() {
     async function filtrarPorNome(){
         const resposta = await listarPorNome(filtroNome);
         setAgendamento(resposta);
+        
     }
 
     async function removerAgendamentoClick(id, nome) {
@@ -91,6 +92,13 @@ export default function Admin() {
     async function editarAgendamento(id){
         navigate(`alterar/${id}`)
     }
+    
+    document.addEventListener("keypress", function  (e) {
+        if(e.key === "Enter"){
+            const btn = document.querySelector("#send");
+            btn.click();
+        }
+    })
 
     return(  
 
@@ -127,8 +135,8 @@ export default function Admin() {
                 </select>
                 </section>
             <div>
-                <input className="ftl" type="text" placeholder='Insira sua pesquisa' value={filtroNome} onChange={e => setFiltroNome(e.target.value)}/>
-                <img className="lupa" src='../images/search-free-icon-font.svg' onClick={filtrarPorNome}/>
+            <input className="ftl" id="name" type="text" placeholder='Insira sua pesquisa' value={filtroNome} onChange={e => setFiltroNome(e.target.value)}/>
+            <img className="lupa"  id= "send" type="submit" src='/images/search-free-icon-font.svg' onClick={filtrarPorNome}/>
 
                 </div>
 
