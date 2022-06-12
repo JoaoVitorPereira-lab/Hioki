@@ -114,10 +114,10 @@ response{
 
 
 ----------------------------DESATIVADO PORÉM MANTIDO ---------------------------------------
-(Perguntar pra o bruno)
-
-
-CS08 (Listar por Data) /get   /agendamento/buscar/data?dt=                                 |
+(Perguntar pra o bruno)                                                                    |
+                                                                                           |
+                                                                                           |
+CS08 (Listar por Data) /get   /agendamento/buscar/data?dt=                                |
                                                                                            |
 response{   response                                                                       |
                                                                                            |
