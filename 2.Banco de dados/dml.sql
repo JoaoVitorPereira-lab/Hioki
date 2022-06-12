@@ -56,8 +56,25 @@ SELECT id_login			'id',
 	   ds_tipo			'tipo'	
   FROM tb_agendamento
   WHERE nm_paciente			like '%a%';
+
+  -- CSU07:: Consultar por ID
+  SELECT id_login	 'usuário',
+    id_agendamento   'id',
+    nm_paciente		 'nome',
+    ds_email		  'email',
+    ds_telefone	     'telefone',
+    hr_consulta	     'horário',
+    dt_consulta      'data',
+    ds_tipo			  	 'tipo'	
+FROM tb_agendamento
+WHERE id_agendamento = ?;
   
-  -- CSU07:: consultar agendamento por data
+
+-- Desativado-----------------------------------------------------------------------------
+
+
+
+-- CSU08:: consultar agendamento por data
 SELECT id_login		'id',
 	   id_agendamento   'agendamento',	
 	   nm_paciente		'nome',
@@ -69,7 +86,7 @@ SELECT id_login		'id',
   FROM tb_agendamento
   WHERE dt_consulta		=  '2022-05-15';
   
-  -- CSU08:: consultar agendamento por horário
+  -- CSU09:: consultar agendamento por horário
 SELECT id_login			'id',
 	   id_agendamento   'agendamento',	
 	   nm_paciente		'nome',
@@ -81,7 +98,7 @@ SELECT id_login			'id',
   FROM tb_agendamento
   WHERE dt_consulta		=  '2022-05-15';
   
-  -- CSU09:: consultar agendamento por tipo de consulta
+  -- CSU10:: consultar agendamento por tipo de consulta
 SELECT id_login			'id',
 	   id_agendamento   'agendamento',	
 	   nm_paciente		'nome',
