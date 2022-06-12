@@ -156,7 +156,6 @@ export default function Cad() {
                     
                     <input required="" className="caixatxt6" placeholder='Online ou Presencial' value={tipo} onChange={e => setTipo(e.target.value)}/> 
                 </div>
-                   
                         </div>
 
 
