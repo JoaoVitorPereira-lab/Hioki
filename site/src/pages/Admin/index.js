@@ -122,21 +122,10 @@ export default function Admin() {
 
         <main>
             <h1 className="consultas">Consultas Marcadas</h1>
-            <section className="filtros">
-
-                <label className="filtrin">Selecione uma filtragem:</label>
-
-                <select className="filtragem">
-                    <option value="Nome">Nome</option>
-                    <option value="Data">Data</option>
-                    <option value="Consulta">Consulta</option>
-                    <option value="Horário">Horário</option>
-                    
-                </select>
-                </section>
+            
             <div>
-            <input className="ftl" id="name" type="text" placeholder='Insira sua pesquisa' value={filtroNome} onChange={e => setFiltroNome(e.target.value)}/>
-            <img className="lupa"  id= "send" type="submit" src='/images/search-free-icon-font.svg' onClick={filtrarPorNome}/>
+            <input className="ftl" id="name" type="text" placeholder='Insira o nome do paciente' value={filtroNome} onChange={e => setFiltroNome(e.target.value)}/>
+            <img className="lupa"  id= "send" type="submit" src='/images/search-free-icon-font.svg'  onClick={filtrarPorNome}/>
 
                 </div>
 
