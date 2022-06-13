@@ -2,6 +2,11 @@
 {
     /* Faixa 1 */
 
+    body
+    {
+        overflow-x: hidden;
+    }
+
     .bt-me
     {
         margin-left: -40px;
@@ -126,11 +131,6 @@
         background-size: 1230px;
         width: 100%;
         background-position: 10px;
-
-        margin-left: 10px;
-
-        overflow-x: inherit;
-        overflow-y: visible;
     }
 
     .rd-rdsc
@@ -211,7 +211,7 @@
     .rd-cnt
     {
         margin-top: 70px;
-        margin-right: -10px;
+        margin-right: -40px;
         margin-left: 10px;
     }
 
