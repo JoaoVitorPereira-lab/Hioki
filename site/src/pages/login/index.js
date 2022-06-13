@@ -1,10 +1,19 @@
 import './index.scss';
 import './style-320.scss';
-import './style-400.scss';
-import './style-561.scss';
-import './style-602.scss';
+import './style-360.scss';
+import './style-568.scss';
+import './style-768.scss';
 import './style-800.scss';
-import './style-1020.scss';
+import './style-880.scss';
+import './style-960.scss';
+import './style-1080.scss';
+import './style-1140.scss';
+import './style-1280.scss';
+import './style-1366.scss';
+import './style-1440.scss';
+import './style-1680.scss';
+import './style-1780.scss';
+import './style-1920.scss';
 import { Helmet } from 'react-helmet';
 import storage from 'local-storage'
 import { login } from '../../api/usuarioApi.js'
@@ -77,7 +86,7 @@ export default function Login() {
         <Helmet title='Login'/>
    
         <main className="page1">
-            <Link to="/landing-page">
+            <Link to="/">
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
             </Link>
 
