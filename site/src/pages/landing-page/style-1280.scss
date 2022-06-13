@@ -1,4 +1,4 @@
-@media screen and (min-width: 1250px) and (max-width: 1365px)
+@media screen and (min-width: 80rem) and (max-width: 86rem)
 {
     /* Faixa 1 */
 
@@ -36,12 +36,13 @@
 
     .diz
     {
-        background-position: 590px;
+        background-position: 630px;
     }
 
     .tx-d
     {
-        margin-left: 50px;
+        margin-left: 40px;
+        margin-right: 50px;
     }
 
     .img-d
@@ -54,16 +55,21 @@
     .oque
     {
         background-position: 580px;
+        background-position-y: 190px;
     }
 
     .img-oq
     {
-        margin-left: 280px;
+        margin-left: 380px;
+        margin-right: 0px;
+        margin-top: -100px;
     }
 
     .tx-oq
     {
-        margin-right: 350px;
+        margin-right: 390px;
+        margin-left: 80px;
+        margin-top: -100px;
     }
 
     /* Faixa 4 */
@@ -79,11 +85,29 @@
         height: 300px;
 
         margin-right: 50px;
+        margin-top: 60px;
     }
 
     .tx-a
     {
         margin-left: 50px;
+    }
+
+    /* Faixa 5 */
+
+    .bios
+    {
+        background-position-y: 120px;
+    }
+
+    .img-b
+    {
+        margin-top: -140px;
+    }
+
+    .tx-b
+    {
+        margin-top: -100px;
     }
 
     /* Rodapé/Footer */
@@ -100,8 +124,13 @@
         background-image: url('../../../public/images/Screenshot_21-removebg-preview.png');
         background-repeat: no-repeat;
         background-size: 1230px;
-        width: 1240px;
-        background-position: 0px;
+        width: 100%;
+        background-position: 10px;
+
+        margin-left: 10px;
+
+        overflow-x: inherit;
+        overflow-y: visible;
     }
 
     .rd-rdsc
