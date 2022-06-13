@@ -1,6 +1,5 @@
-@media screen and (min-width: 1001px) and (max-width: 1700px) {
-
-    .bd-login
+@media screen and (min-width: 750px) and (max-width: 800px){
+.bd-login
     {
         display: flex;
         flex-direction: column;
@@ -147,17 +146,6 @@
         justify-content: center;
         margin-top: 2.5vh;
         color: red;
-        animation: fadein 1s;
-
-    @keyframes fadein {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
     }
    
     .cxconfirma{
@@ -195,4 +183,4 @@
         left: 20px;
     }
     }
-    }
+}
