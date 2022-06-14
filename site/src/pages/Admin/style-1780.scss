@@ -1,0 +1,233 @@
+@media screen and (min-width: 1760px) and (max-width: 1900px){
+    .bd-Admin
+{
+    background-color: white;
+
+
+.adm
+{
+    background-color:#10DA96 ;
+}
+
+
+
+
+
+header
+{
+    background-color: #10DA96;
+    height:11em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header .logo
+{
+    height: 15em;
+    width: 15em;
+
+  
+    margin-left: 0px;
+}
+
+details
+{
+    text-align: center;
+}
+
+.filtros
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    margin-top: -1vh;
+}
+
+.filtragem
+{
+    margin-left: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    border-radius: 2vh;
+    border: none;
+    outline: none;
+    padding: 3px
+}
+
+
+
+
+
+header .botao-agendar
+{
+    background-color: #baebdb;
+    padding: 6px 12px;
+    text-align: center;
+    border-radius: 20px;
+    width: 25vh;
+    color: black;
+    text-decoration: none;
+    font-family: 'Dela Gothic One';
+    font-size: 14px;
+    margin-right: 50px;
+    transition: transform .7s;
+    margin-top: 2vh;
+}
+header .botao-sair
+{
+    background-color: #baebdb;
+    padding: 6px 10px;
+    border-radius: 20px;
+    width: 28vh;
+    color: black;
+    text-decoration: none;
+    font-family: 'Dela Gothic One';
+    font-size: 14px;
+    margin-right: 50px;
+    transition: transform .7s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.botao-agendar:hover, .botao-sair:hover{
+    transform: scale(1.05);
+}
+h5
+{
+    font-size: 17px;
+}
+
+header .seja-bem
+{
+    font-family: 'Dela Gothic One';
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0vh;
+    font-size: 3vh;
+}
+
+.ftl
+{
+    margin-left: 34vh;
+    margin-top: 3vh;
+    width: 50vh;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 15vh;
+    padding-left: 2vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+
+}
+
+label
+{
+    margin-right: -18em;
+}
+
+a
+{
+    font-family: 'Dela Gothic One';
+}
+
+
+
+.cards{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #65d4af;
+    width: 100vh;
+    height: 12vh;
+    margin-left: 10vh;
+    align-items: center;
+    border-radius: 15vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    transition: transform .7s;
+    margin-top: 3vh;
+    padding-bottom: -1vh;
+    
+}
+
+
+
+.cards:hover{
+    transform: scale(1.05)
+}
+
+
+.acoes{
+    display: flex;
+    flex-direction: column;
+}
+
+.delete
+{
+    height: 1.9em;
+    cursor: pointer;
+    margin-right: 8vh;
+}
+.edit{
+    
+    height: 1.7em;
+    width: 1.7em;
+    cursor: pointer;
+    margin-left: 0.5vh;
+    
+
+}
+
+
+main{
+    background-color: #baebdb;
+    height: auto;
+    width: 120vh;
+    margin-left: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    border-radius: 2vh;
+
+}
+.consultas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    margin-top: 3vh;
+}
+.data{
+    margin-bottom: -2vh;
+}
+
+.numero,
+.tipo{
+    margin-top: -2vh;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+}
+.lupa{
+    height: 20px;
+    width: 20px;
+    margin-left: -5vh;
+    margin-top: 4.3vh;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+
+}
+}

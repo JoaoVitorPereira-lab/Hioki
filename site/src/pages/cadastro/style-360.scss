@@ -1,0 +1,257 @@
+@media screen and (min-width: 336px) and (max-width: 559px){
+body {
+    display: flex;
+flex-direction: column;
+animation: fadein 0.5s;
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+}
+.bd-cad
+{
+background-image: url('../../../public/images/WhatsApp\ Image\ 2022-06-04\ at\ 16.52.56.jpeg');
+background-size: 100% 100%;   
+background-repeat: no-repeat;
+background-attachment: fixed;
+height: 100vh;
+}
+
+.cadastre
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.txt1
+{
+    text-align: center;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 28px;
+    color:#FFF;
+    margin: 20px 25px;
+    height: 43px;
+}
+
+.t
+{
+    left: 42%;
+}
+
+.quadrado
+{
+    background-color:#7FCBB1;
+    height: 43em;
+    width: 33em;
+    margin-top: 2em;
+}
+
+.cx1,
+.cx2,
+.cx3,
+.cx4,
+.cx5{
+font-family: 'Quicksand', sans-serif;
+font-weight: bold;
+font-size: 15px;
+display: flex;
+align-items: center;
+border: 1px solid #ced4da;
+background-color: #FFF;
+border-radius: 5px;
+height: 30px;
+width: 29em;
+margin: auto;
+border-right: solid 1px #ccc;
+padding: 5px;
+border-radius: 10px;
+margin-bottom: -10px;
+}
+
+.cx5
+{
+    margin-top: 30px;
+    
+}
+
+.caixatxt
+{
+    margin-left: 63px;
+    border: transparent;
+    transform: none;
+    height: 15px;
+    width: 19em;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.caixatxt2
+{
+    margin-left: 65px;
+    border: transparent;
+    transform: none;
+    height: 20px;
+    width: 19em;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.caixatxt3
+{
+    margin-left: 34px;
+    border: transparent;
+    transform: none;
+    height: 20px;
+    width: 19em;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.caixatxt4
+{
+    margin-left: 71px;
+    border: transparent;
+    transform: none;
+    height: 20px;
+    width: 40rem;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.caixatxt5
+{
+    margin-left: 41px;
+    border: transparent;
+    transform: none;
+    height: 20px;
+    width: 40rem;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.tel,
+.user,
+.mail,
+.calendar,
+.clock
+{
+    height: 24px;
+}
+
+.online1
+{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #FFF;
+    background-color: #FFF;
+    border-radius: 12px;
+    height: 29px;
+    width: 7em;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.online2
+{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #FFF;
+    background-color: #FFF;
+    border-radius: 12px;
+    height: 29px;
+    width: 7em;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+
+
+.caixita
+{
+    margin-top: 4.6px;
+    margin-left: 5px;
+    height: 16px;
+    width: 16px;
+}
+
+.confirmacaotxt
+{
+    color: black;
+    font-weight: bold;
+    height: 20px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+.t{
+    left: 43%;
+}
+.confirm{
+    margin-top: 20px;
+}
+.agend{
+    font-size: 15px;
+    font-family: 'Dela Gothic One', cursive;
+    background-color: #baebdb;
+    transition: transform 7s;
+}
+
+.agend:hover{
+    transform: scale(1.05)
+}
+.t2{
+    left: 49%;
+    height: 1.8em;
+}
+.on{
+    transition: transform 7s;
+}
+.on2{
+    width: 20px;
+    margin-right: 11vh;
+    transition: transform 7s;
+}
+on:hover, on2:hover{
+    transform: scale(1.05)
+}
+.escolha{
+    display: flex;
+    flex-direction: row;
+    
+}
+}

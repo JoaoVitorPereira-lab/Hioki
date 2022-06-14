@@ -1,6 +1,5 @@
-@media screen and (min-width: 400px) and (max-width: 559px){
-
-    body {
+@media screen and (min-width: 1420px) and (max-width: 1679px){
+    body{
         display: flex;
     flex-direction: column;
     animation: fadein 0.5s;
@@ -14,7 +13,7 @@
             opacity: 1;
         }
     }
-    }
+    
     .bd-cad
 {
     background-image: url('../../../public/images/WhatsApp\ Image\ 2022-06-04\ at\ 16.52.56.jpeg');
@@ -50,7 +49,7 @@
     .quadrado
     {
         background-color:#7FCBB1;
-        height: 43em;
+        height: 36em;
         width: 33em;
         margin-top: 2em;
     }
@@ -59,7 +58,8 @@
     .cx2,
     .cx3,
     .cx4,
-    .cx5{
+    .cx5,
+    .cx6{
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-size: 15px;
@@ -79,7 +79,7 @@
 
     .cx5
     {
-        margin-top: 30px;
+        margin-top: 20px;
         
     }
 
@@ -147,6 +147,17 @@
         font-family: 'Quicksand', sans-serif;
         font-weight: bold;
     }
+    .caixatxt6{
+        margin-left: 10.2vh;
+        border: transparent;
+        transform: none;
+        height: 20px;
+        width: 40rem;
+        outline: none;
+        font-size: 14px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+    }
 
     .tel,
     .user,
@@ -178,6 +189,7 @@
         justify-content: space-evenly;
         cursor: pointer;
         margin-right: 10px;
+        transition: transform .7s;
     }
     .online2
     {
@@ -199,6 +211,10 @@
         align-items: center;
         justify-content: space-evenly;
         cursor: pointer;
+        transition: transform .7s;
+    }
+    online1:hover, online2:hover{
+        transform:scale(1.05);
     }
 
     
@@ -218,6 +234,7 @@
         height: 20px;
         margin-left: 10px;
         font-size: 18px;
+        outline: none;
     }
     .t{
         left: 43%;
@@ -226,34 +243,63 @@
         margin-top: 20px;
     }
     .agend{
-        font-size: 15px;
-        font-family: 'Dela Gothic One', cursive;
-        background-color: #baebdb;
-        transition: transform 7s;
+        
+            background-color: #ffffff;
+            padding: 6px 10px;
+            border-radius: 20px;
+            width: 20vh;
+            color: black;
+            text-decoration: none;
+            font-family: 'Dela Gothic One';
+            font-size: 16px;
+            margin-right: auto;
+            transition: transform .7s;
+            margin-top: 3vh;
+            cursor: pointer;
     }
-
-    .agend:hover{
-        transform: scale(1.05)
-    }
+    .novo{
+        
+            background-color: #ffffff;
+            padding: 6px 10px;
+            border-radius: 20px;
+            width: 20vh;
+            color: black;
+            text-decoration: none;
+            font-family: 'Dela Gothic One';
+            font-size: 16px;
+            margin-left: 11.1rem;
+            transition: transform .7s;
+            cursor: pointer;
+            outline: none;
+            border: none;
+}
+        .agend:hover, .novo:hover{
+            transform: scale(1.05);
+        }
     .t2{
         left: 49%;
         height: 1.8em;
     }
-    .on{
-        transition: transform 7s;
+   .on{
+        margin-left: -1vh;
+        transition: transform .7s;
     }
     .on2{
         width: 20px;
         margin-right: 11vh;
-        transition: transform 7s;
+        transition: transform .7s;
     }
     on:hover, on2:hover{
-        transform: scale(1.05)
+        transform:scale(1.05)
     }
+    
     .escolha{
         display: flex;
         flex-direction: row;
         
     }
+    .caixas{
+        margin-top: 10vh;
+    }
+    }
 }
-

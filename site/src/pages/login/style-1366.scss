@@ -1,4 +1,164 @@
 @media screen and (min-width: 1340px) and (max-width: 1439px){
+    .bd-login
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        background-image: url('../../../public/images/WhatsApp\ Image\ 2022-06-04\ at\ 15.30.47.jpeg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    
+        height: 100vh;
+    
+    
+    .logo
+    {
+        display: flex;
+        flex-direction: column;
+    
+        height: 20em;
+        width: 22em;
+        margin: -50px auto;
+        margin-top: -30vh;
+    }
+    
+    .login
+    {
+        display: flex;
+        flex-direction: column;
+        background-color:#7FCBB1;
+        border-radius: 5px;
+        width: 25em;
+        height: 22em;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+    }
+    .txt1{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 28px;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+    }
+    
+    .txt2
+    {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 28px;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+    }
+    
+    
+   
+    .botao
+    {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: none;
+        background-color: #baebdb;
+        width: 8em;
+        padding: 14px 11px;
+        text-decoration: none;
+    
+        border-radius: 10px;
+        font-size: 15px;
+    
+        margin-left: 9rem;
+        margin-top: 1.05vh;
+        margin-bottom: -35px;
+        cursor: pointer;
+        color: black;
+        transition: transform .7s;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+    }
+    .botao:hover{
+        transform: scale(1.05);
+    }
+    
+    .esq
+    {    
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        font-size: 15px;
+    
+        text-decoration: none;
+    
+        color: black;
+    }
+    
+    .cad
+    {
+        margin-left: 60em;
+    }
+    
+    .cx1{
+        margin-top: -15px;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 20px;
+        border-style: none;
+        height: 25px;
+        width: 23em;
+        padding-left: 10px;
+        outline: none;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        
+    } 
+    .cx2
+    {
+        margin-top: 13px;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 20px;
+        border-style: none;
+        height: 25px;
+        width: 23em;
+        padding-left: 10px;
+        outline: none;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        position:absolute
+    }
+    .invalido{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2.5vh;
+        color: red;
+        animation: fadein 1s;
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+    }
+   
     .cxconfirma{
         display: flex;
         flex-direction: row;
@@ -32,5 +192,6 @@
     }
     .cxconfirma:checked::before{
         left: 20px;
+    }
     }
 }
