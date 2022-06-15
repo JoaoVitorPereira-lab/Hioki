@@ -119,7 +119,7 @@ export default function Admin() {
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
             </Link>
 
-            <h5 className="seja-bem">Seja bem vindo, {usuario}!</h5>
+            <h5 className="seja-bem">Seja bem vindo {usuario}!</h5>
         <div className='botoes'>
              <button className="botao-sair" onClick={sairClick}>Sair</button>
             <Link className="botao-agendar" to="/cadastro">Novo Agendamento</Link>
