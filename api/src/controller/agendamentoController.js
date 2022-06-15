@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {inserirAgendamento, ConsultarTodos, alterarAgendamento, removerAgendamento, ListarporNome, ListarporData, ListarporHorario, ListarporTipo, BuscarPorID} from '../repository/agendamentoRepository.js'
+import {inserirAgendamento, ConsultarTodos, alterarAgendamento, removerAgendamento, ListarporNome, BuscarPorID, BuscarDeHoje} from '../repository/agendamentoRepository.js'
 
 const server = Router();
 
@@ -117,24 +117,7 @@ server.delete('/agendamento/:id', async (req,resp) =>{
         })
     }
 })
-//Listar por Data
-server.get('/agendamento/buscar/data', async(req, resp) => {
-    try{
-    const {dt} = req.query;
 
-    const resposta = await ListarporData(dt)
-    if(!resposta){
-        resp.status(404).send([])
-    }
-    else{
-    resp.send(resposta)
-}
-    } catch(err){
-        resp.send({
-            erro: err.message
-        })
-    }
-})
 //Listar por Nome
 server.get('/agendamento/buscar/nome', async(req, resp) => {
     try{
@@ -153,38 +136,14 @@ server.get('/agendamento/buscar/nome', async(req, resp) => {
         })
     }
 })
-//Listar por Horário
-server.get('/agendamento/buscar/horario', async(req, resp) => {
+//Buscar Agendamentos de hoje
+server.get('/agendamento/hoje', async (req, resp) => {
     try{
-    const {hr} = req.query;
-
-    const resposta = await ListarporHorario(hr)
-    if(!resposta){
-        resp.status(404).send([])
+        const resposta = await BuscarDeHoje();
+        resp.send(resposta) 
     }
-    else{
-    resp.send(resposta)
-}
-    } catch(err){
-        resp.send({
-            erro: err.message
-        })
-    }
-})
-//Listar por Tipo da Consulta
-server.get('/agendamento/buscar/consulta', async(req, resp) => {
-    try{
-    const {tp} = req.query;
-
-    const resposta = await ListarporTipo(tp)
-    if(!resposta){
-        resp.status(404).send([])
-    }
-    else{
-    resp.send(resposta)
-}
-    } catch(err){
-        resp.send({
+    catch(err){
+        resp.status(401).send({
             erro: err.message
         })
     }

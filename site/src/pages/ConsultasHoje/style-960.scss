@@ -1,5 +1,6 @@
-@media screen and (min-width: 80rem) and (max-width: 86rem){
-    .bd-Admin
+@media screen and (min-width: 940px) and (max-width: 1079px){
+    
+    .bd-Admin-hoje
 {
     background-color: white;
 
@@ -16,7 +17,7 @@
 header
 {
     background-color: #10DA96;
-    height:18em;
+    height:10em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,21 +78,6 @@ header .botao-agendar
     transition: transform .7s;
     margin-top: 2vh;
 }
-header .botao-consultas
-{
-    background-color: #baebdb;
-    padding: 6px 12px;
-    text-align: center;
-    border-radius: 20px;
-    width: 25vh;
-    color: black;
-    text-decoration: none;
-    font-family: 'Dela Gothic One';
-    font-size: 14px;
-    margin-right: 50px;
-    transition: transform .7s;
-    margin-top: 2vh;
-}
 header .botao-sair
 {
     background-color: #baebdb;
@@ -108,7 +94,7 @@ header .botao-sair
     outline: none;
     cursor: pointer;
 }
-.botao-agendar:hover, .botao-sair:hover, .botao-consultas:hover{
+.botao-agendar:hover, .botao-sair:hover{
     transform: scale(1.05);
 }
 h5
@@ -128,7 +114,7 @@ header .seja-bem
 
 .ftl
 {
-    margin-left: 17rem;
+    margin-left: 38vh;
     margin-top: 3vh;
     width: 50vh;
     height: 5vh;
@@ -203,8 +189,8 @@ a
 main{
     background-color: #baebdb;
     height: auto;
-    width: 64rem;
-    margin-left: 15vh;
+    width: 53rem;
+    margin-left: 14.5vh;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -245,4 +231,5 @@ main{
 
 
 }
+
 }

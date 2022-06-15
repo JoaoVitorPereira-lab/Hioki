@@ -9,6 +9,7 @@ import Admin from './pages/Admin';
 import Cadastro from './pages/cadastro';
 import LandingPage from './pages/landing-page';
 import Login from './pages/login';
+import ConsultasHoje from './pages/ConsultasHoje'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
           <Route path='/Admin/alterar/:idParam'        element={<Cadastro />} />
           <Route path='/cadastro'                 element={<Cadastro />} />
           <Route path='/login'                    element={<Login />} />
+          <Route path='/consultas/hoje'                    element={<ConsultasHoje />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

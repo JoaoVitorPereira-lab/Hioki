@@ -1,5 +1,5 @@
 @media screen and (min-width: 80rem) and (max-width: 86rem){
-    .bd-Admin
+    .bd-Admin-hoje
 {
     background-color: white;
 
@@ -77,7 +77,7 @@ header .botao-agendar
     transition: transform .7s;
     margin-top: 2vh;
 }
-header .botao-consultas
+header .botao-voltar
 {
     background-color: #baebdb;
     padding: 6px 12px;
@@ -108,7 +108,7 @@ header .botao-sair
     outline: none;
     cursor: pointer;
 }
-.botao-agendar:hover, .botao-sair:hover, .botao-consultas:hover{
+.botao-agendar:hover, .botao-sair:hover, .botao-voltar:hover{
     transform: scale(1.05);
 }
 h5

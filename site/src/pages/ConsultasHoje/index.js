@@ -26,16 +26,16 @@ import 'react-toastify/dist/ReactToastify.css';
 import { confirmAlert } from 'react-confirm-alert'; 
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-import {listarTodosAgendamentos, listarPorNome, listarPorData, listarPorTipo, listarPorHorario, deletarAgendamento} from '../../api/agendamentoApi.js'
+import {listarPorNome, deletarAgendamento, BuscarDeHoje} from '../../api/agendamentoApi.js'
 export default function Admin() {
     const [usuario, setUsuario] = useState('');
     const [filtroNome, setFiltroNome] = useState('');
-    const [agendamento, setAgendamento] = useState([]);
+    const [consulta, setConsultas] = useState([]);
     const navigate = useNavigate();
 
 
     useEffect(() => {
-        carregarTodosAgendamentos();
+        ConsultasHoje();
 
         if (!storage('usuario-logado')){
             navigate('/login')
@@ -55,15 +55,16 @@ export default function Admin() {
     }
 
 
-    async function carregarTodosAgendamentos(){
-        const resposta = await listarTodosAgendamentos();
-        setAgendamento(resposta);
+    async function ConsultasHoje(){
+        const resposta = await BuscarDeHoje();
+        console.log(resposta)
+        setConsultas(resposta);
 
     }
 
     async function filtrarPorNome(){
         const resposta = await listarPorNome(filtroNome);
-        setAgendamento(resposta);
+        setConsultas(resposta);
         
     }
 
@@ -78,7 +79,7 @@ export default function Admin() {
                     onClick: async () => {
                 const resposta = await deletarAgendamento(id, nome);
                     if(filtroNome  === '')
-                              carregarTodosAgendamentos();
+                              ConsultasHoje();
                     else
                             filtrarPorNome();
                                     toast.success('Agendamento removido com sucesso')
@@ -111,9 +112,9 @@ export default function Admin() {
 
     return(  
 
-    <body className='bd-Admin'>
+    <body className='bd-Admin-hoje'>
         <ToastContainer />
-        <Helmet title='Admin'/> 
+        <Helmet title='Consultas'/> 
         <header> 
             <Link to="/">
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
@@ -123,7 +124,7 @@ export default function Admin() {
         <div className='botoes'>
              <button className="botao-sair" onClick={sairClick}>Sair</button>
             <Link className="botao-agendar" to="/cadastro">Novo Agendamento</Link>
-            <Link className="botao-consultas" to="/consultas/hoje">Consultas de Hoje</Link>
+            <Link className="botao-voltar" to="/admin">Voltar para o Histórico</Link>
             </div>
             
         </header>
@@ -131,7 +132,7 @@ export default function Admin() {
         <br/> <br/>
 
         <main>
-            <h1 className="consultas">Histórico de consultas</h1>
+            <h1 className="consultas">Consultas de hoje</h1>
             
             <div>
             <input className="ftl" id="name" type="text" placeholder='Insira o nome do paciente' value={filtroNome} onChange={e => setFiltroNome(e.target.value)}/>
@@ -142,7 +143,7 @@ export default function Admin() {
             <br/>
 
                
-                    {agendamento.map(item => 
+                    {consulta.map(item => 
                 <div className='todos'>
                     <div className='cards'>
                         <div className="info1">

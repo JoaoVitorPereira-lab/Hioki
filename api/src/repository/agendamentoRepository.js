@@ -79,60 +79,7 @@ export async function ListarporNome(nome){
     const [linhas] = await con.query(comando, [`%${nome}%`])
     return linhas
 }
-export async function ListarporData(data){
-    const comando =
-    `
-    SELECT id_login		'usuário',
-	   id_agendamento   'id',
-	   nm_paciente		'nome',
-       ds_email		    'email',
-       ds_telefone	    'telefone',
-       hr_consulta	    'horário',
-       dt_consulta     	'data',
-	   ds_tipo			'tipo'	
-  FROM tb_agendamento
-  WHERE dt_consulta		like ?
-    `
 
-    const [linhas] = await con.query(comando, [`%${data}%`])
-    return linhas
-}
-export async function ListarporHorario(horario){
-    const comando =
-    `
-    SELECT id_login		'usuário',
-	   id_agendamento   'id',
-	   nm_paciente		'nome',
-       ds_email		    'email',
-       ds_telefone	    'telefone',
-       hr_consulta	    'horário',
-       dt_consulta     	'data',
-	   ds_tipo			'tipo'	
-  FROM tb_agendamento
-  WHERE hr_consulta		like ?
-    `
-
-    const [linhas] = await con.query(comando, [`%${horario}%`])
-    return linhas
-}
-export async function ListarporTipo(tipo){
-    const comando =
-    `
-    SELECT id_login		'usuário',
-	   id_agendamento   'id',
-	   nm_paciente		'nome',
-       ds_email		    'email',
-       ds_telefone	    'telefone',
-       hr_consulta	    'horário',
-       dt_consulta     	'data',
-	   ds_tipo			'tipo'	
-  FROM tb_agendamento
-  WHERE ds_tipo	        like ?
-    `
-
-    const [linhas] = await con.query(comando, [`%${tipo}%`])
-    return linhas
-}
 
 export async function BuscarPorID (id){
     const comando = `
@@ -149,4 +96,21 @@ WHERE id_agendamento = ?
 `
 const [linhas] = await con.query(comando, [id]);
 return linhas[0];
+}
+export async function BuscarDeHoje(){
+    const comando = 
+    `
+    SELECT id_login	 'usuário',
+    id_agendamento   'id',
+    nm_paciente		 'nome',
+    ds_email		 'email',
+    ds_telefone	     'telefone',
+    hr_consulta	     'horário',
+    dt_consulta      'data',
+    ds_tipo			 'tipo'	
+FROM tb_agendamento
+where dt_consulta = curdate();
+    `
+    const [linhas] = await con.query(comando);
+    return linhas
 }

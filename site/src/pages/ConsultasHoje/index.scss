@@ -1,5 +1,4 @@
-@media screen and (min-width: 80rem) and (max-width: 86rem){
-    .bd-Admin
+.bd-Admin-hoje
 {
     background-color: white;
 
@@ -16,11 +15,10 @@
 header
 {
     background-color: #10DA96;
-    height:18em;
+    height:11em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 header .logo
@@ -44,7 +42,6 @@ details
     justify-content:space-evenly;
     font-family: 'Quicksand', sans-serif;
     font-weight: bolder;
-    margin-top: -1vh;
 }
 
 .filtragem
@@ -59,56 +56,25 @@ details
 }
 
 
-
-
-
-header .botao-agendar
-{
-    background-color: #baebdb;
-    padding: 6px 12px;
-    text-align: center;
-    border-radius: 20px;
-    width: 25vh;
-    color: black;
-    text-decoration: none;
-    font-family: 'Dela Gothic One';
-    font-size: 14px;
-    margin-right: 50px;
-    transition: transform .7s;
-    margin-top: 2vh;
+.agend{
+    margin-top: 70px;
 }
-header .botao-consultas
-{
-    background-color: #baebdb;
-    padding: 6px 12px;
-    text-align: center;
-    border-radius: 20px;
-    width: 25vh;
-    color: black;
-    text-decoration: none;
-    font-family: 'Dela Gothic One';
-    font-size: 14px;
-    margin-right: 50px;
-    transition: transform .7s;
-    margin-top: 2vh;
-}
-header .botao-sair
+
+
+header .agend
 {
     background-color: #baebdb;
     padding: 6px 10px;
     border-radius: 20px;
-    width: 28vh;
+    width: 25vh;
     color: black;
     text-decoration: none;
     font-family: 'Dela Gothic One';
     font-size: 14px;
     margin-right: 50px;
     transition: transform .7s;
-    border: none;
-    outline: none;
-    cursor: pointer;
 }
-.botao-agendar:hover, .botao-sair:hover, .botao-consultas:hover{
+.agend:hover{
     transform: scale(1.05);
 }
 h5
@@ -122,15 +88,15 @@ header .seja-bem
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-left: 0vh;
+    margin-left: 40vh;
     font-size: 3vh;
 }
 
 .ftl
 {
-    margin-left: 17rem;
+    margin-left: 10vh;
     margin-top: 3vh;
-    width: 50vh;
+    width: 100vh;
     height: 5vh;
     border: none;
     outline: none;
@@ -138,7 +104,6 @@ header .seja-bem
     padding-left: 2vh;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-
 }
 
 label
@@ -158,25 +123,39 @@ a
     flex-direction: row;
     justify-content: space-between;
     background-color: #65d4af;
-    width: 47rem;
+    width: 100vh;
     height: 12vh;
-    margin-left: 10rem;
+    margin-left: 10vh;
     align-items: center;
     border-radius: 15vh;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     transition: transform .7s;
-    margin-top: 3vh;
-    padding-bottom: -1vh;
+    
+}
+.cards2{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #65d4af;
+    width: 100vh;
+    height: 12vh;
+    margin-left: 10vh;
+    margin-top: 2vh;
+    align-items: center;
+    border-radius: 15vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    transition: transform .7s;
     
 }
 
-
-
-.cards:hover{
+.cards:hover, .cards2:hover{
     transform: scale(1.05)
 }
-
+.info1{
+    margin-left: 6vh;
+}
 
 .acoes{
     display: flex;
@@ -199,12 +178,11 @@ a
 
 }
 
-
 main{
     background-color: #baebdb;
-    height: auto;
-    width: 64rem;
-    margin-left: 15vh;
+    height: 100vh;
+    width: 120vh;
+    margin-left: 40vh;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -218,7 +196,6 @@ main{
     justify-content: center;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    margin-top: 3vh;
 }
 .data{
     margin-bottom: -2vh;
@@ -229,20 +206,14 @@ main{
     margin-top: -2vh;
 }
 
-.botoes{
-    display: flex;
-    flex-direction: column;
+.info2-4{
+    margin-left: -3vh;
 }
-.lupa{
-    height: 20px;
-    width: 20px;
+.info2-3{
+    margin-left: 1vh;
+}
+.info2-5{
     margin-left: -5vh;
-    margin-top: 4.3vh;
-    position: absolute;
-    cursor: pointer;
 }
 
-
-
-}
 }

@@ -45,20 +45,6 @@ export async function listarPorNome(nome){
     return resposta.data;
 } 
 
-export async function listarPorData(data){
-    const resposta = await api.get(`/agendamento/buscar/data?dt=${data}`);
-    return resposta.data;
-} 
-
-export async function listarPorHorario(horario){
-    const resposta = await api.get(`/agendamento/buscar/horario?hr=${horario}`);
-    return resposta.data;
-} 
-
-export async function listarPorTipo(tipo){
-    const resposta = await api.get(`/agendamento/buscar/consulta?tp=${tipo}`);
-    return resposta.data;
-} 
 
 export async function deletarAgendamento(id){
     const resposta = await api.delete(`/agendamento/${id}`);
@@ -68,4 +54,8 @@ export async function deletarAgendamento(id){
 export async function BuscarPorID (id){
     const resposta = await api.get(`/agendamento/${id}`);
     return resposta.data
+}
+export async function BuscarDeHoje (){
+    const resposta = await api.get('agendamento/hoje');
+    return resposta.data;
 }
