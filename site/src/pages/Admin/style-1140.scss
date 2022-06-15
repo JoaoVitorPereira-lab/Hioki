@@ -1,7 +1,8 @@
-@media screen and (min-width: 1100px) and (max-width: 1259px){
+@media screen and (min-width: 68.75rem) and (max-width: 78.688rem){
     .bd-Admin
 {
     background-color: white;
+     
 
 
 .adm
@@ -17,6 +18,7 @@ header
 {
     background-color: #10DA96;
     height:11em;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,8 +27,8 @@ header
 
 header .logo
 {
-    height: 15em;
-    width: 15em;
+    height: 10em;
+    width: 10em;
 
   
     margin-left: 0px;
@@ -113,8 +115,8 @@ header .seja-bem
 
 .ftl
 {
-    margin-left: 34vh;
-    margin-top: 3vh;
+    margin-left: 20px ;
+    margin-top: 30px ;
     width: 50vh;
     height: 5vh;
     border: none;
@@ -143,8 +145,8 @@ a
     flex-direction: row;
     justify-content: space-between;
     background-color: #65d4af;
-    width: 100vh;
-    height: 12vh;
+    width: 50vh;
+    height: 10vh;
     margin-left: 10vh;
     align-items: center;
     border-radius: 15vh;
