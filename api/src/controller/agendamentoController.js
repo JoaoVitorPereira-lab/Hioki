@@ -63,26 +63,26 @@ server.put('/agendamento/:id', async (req, resp) => {
         const agendamento = req.body
         const {id} = req.params;
 
-        if(!agendamento.nome){
+        if(!agendamento.nome.trim()){
             throw new Error('Nome do paciente é obrigatório!');
         }
 
-        if(!agendamento.email){
+        if(!agendamento.email.trim()){
             throw new Error('Email do paciente é obrigatório!');
         }
 
-        if(!agendamento.telefone){
+        if(!agendamento.telefone.trim()){
             throw new Error('Telefone do paciente é obrigatório!');
         }
 
-        if(!agendamento.horário){
+        if(!agendamento.horário.trim()){
             throw new Error('Horário da consulta é obrigatória!');
         }
 
-        if(!agendamento.data){
+        if(!agendamento.data.trim()){
             throw new Error('Data da consulta é obrigatória!');
         }
-        if(!agendamento.tipo){
+        if(!agendamento.tipo.trim()){
             throw new Error('Tipo da consulta é obrigatório!');
         }
 

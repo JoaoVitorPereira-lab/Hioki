@@ -19,7 +19,7 @@ import { Helmet } from 'react-helmet';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import InputMask from "react-input-mask";
+import InputMask from 'react-input-mask'
 import storage from 'local-storage'
 import { useEffect, useState } from 'react';
 

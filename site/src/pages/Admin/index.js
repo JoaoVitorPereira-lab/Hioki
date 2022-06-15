@@ -130,7 +130,7 @@ export default function Admin() {
         <br/> <br/>
 
         <main>
-            <h1 className="consultas">Consultas Marcadas</h1>
+            <h1 className="consultas">Histórico de consultas</h1>
             
             <div>
             <input className="ftl" id="name" type="text" placeholder='Insira o nome do paciente' value={filtroNome} onChange={e => setFiltroNome(e.target.value)}/>
