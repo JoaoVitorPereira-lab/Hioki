@@ -1,4 +1,4 @@
-@media screen and (min-width: 1060px) and (max-width: 1139px)
+@media screen and (min-width: 67.5rem) and (max-width: 71.188rem)
 {
     .faixas
     {
@@ -92,6 +92,7 @@
         height: 210px;
         margin-left: 570px;
         margin-right: -350px;
+        margin-top: 8em;
 
         background-color: inherit;
     }
@@ -150,6 +151,7 @@
         height: 210px;
         margin-left: 570px;
         margin-right: -350px;
+        margin-top: 6em;
 
         background-color: inherit;
     }
@@ -196,8 +198,9 @@
 
     .a
     {
-        background-position: 320px;
-        background-size: 680px;
+        background-position: 380px;
+        background-position-y: 12em;
+        background-size: 600px;
     }
 
     .img-a
@@ -214,13 +217,15 @@
 
         width: 180px;
         height: 240px;
+
+        margin-top: 8em;
     }
 
     .tx-a
     {
         justify-content: center;
         margin-right: 170px;
-        margin-top: 20px;
+        margin-top: -3em;
     }
 
     .h1-a
@@ -255,8 +260,8 @@
         width: 1100px;
 
         background-position-x: 20px;
-        background-position-y: 270px;
-        background-size: 920px;
+        background-position-y: 190px;
+        background-size: 870px;
     }
 
     .img-b
@@ -278,9 +283,9 @@
     .tx-b
     {
         justify-content: center;
-        margin-right: 40px;
-        margin-left: 320px;
-        margin-top: 20px;
+        margin-right: 80px;
+        margin-left: 200px;
+        margin-top: -5em;
     }
 
     .h1-b
