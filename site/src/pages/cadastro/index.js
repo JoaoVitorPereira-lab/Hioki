@@ -23,7 +23,7 @@ import InputMask from "react-input-mask";
 import storage from 'local-storage'
 import { useEffect, useState } from 'react';
 
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 export default function Cad() {
@@ -182,6 +182,7 @@ export default function Cad() {
 
                     <button className="agend" onClick={salvarClick}>{id===0 ? 'AGENDAR' : 'ALTERAR'    }</button> &nbsp;
                     <button className="novo" onClick={novoClick}>NOVO</button>
+                    <Link className="voltar" to='/admin'>VOLTAR</Link>
             </div>
             </div>
 
