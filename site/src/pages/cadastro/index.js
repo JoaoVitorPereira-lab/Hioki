@@ -19,7 +19,7 @@ import { Helmet } from 'react-helmet';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import InputMask from "react-input-mask";
 import storage from 'local-storage'
 import { useEffect, useState } from 'react';
 
@@ -100,6 +100,16 @@ export default function Cad() {
         setTipo('');
     }
 
+    function mascara(telefone){ 
+        if(telefone.value.length == 0)
+            telefone.value = '(' + telefone.value; 
+        if(telefone.value.length == 3)
+            telefone.value = telefone.value + ') '; 
+
+        if(telefone.value.length == 8)
+            telefone.value = telefone.value + '-'; 
+
+}
 
     return(
     
@@ -132,12 +142,14 @@ export default function Cad() {
                 </div>
 
                 <br/>
-
+                
                 <div className="cx3"> 
                     <img className="tel" src="/images/telephone-call.png" alt=""/>&nbsp;TELEFONE
                     <div className="t"> </div> 
-                    
-                    <input type="tel" id="Telefone" name="Telefone" placeholder="(99) 99999-9999"  className="caixatxt3" value={telefone} onChange={e => setTelefone(e.target.value)}/>
+                    <InputMask type="tel" id="telefone" name="telefone" mask='(99) 99999-9999'
+                     placeholder="Digite o telefone"  className="caixatxt3" value={telefone} onChange={e => setTelefone(e.target.value)}/>
+                 
+               
                 </div>
 
                 <br/>
