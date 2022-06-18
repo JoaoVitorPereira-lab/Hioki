@@ -93,7 +93,22 @@ header .botao-sair
     outline: none;
     cursor: pointer;
 }
-.botao-agendar:hover, .botao-sair:hover{
+header .botao-voltar
+{
+    background-color: #baebdb;
+    padding: 6px 12px;
+    text-align: center;
+    border-radius: 20px;
+    width: 25vh;
+    color: black;
+    text-decoration: none;
+    font-family: 'Dela Gothic One';
+    font-size: 14px;
+    margin-right: 50px;
+    transition: transform .7s;
+    margin-top: 2vh;
+}
+.botao-agendar:hover, .botao-sair:hover, .botao-voltar:hover{
     transform: scale(1.05);
 }
 h5
@@ -189,7 +204,7 @@ main{
     background-color: #baebdb;
     height: auto;
     width: 120vh;
-    margin-left: 15vh;
+    margin-left: 15rem;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;

@@ -1,7 +1,8 @@
+import nodemailer from 'nodemailer'
 import { Router } from "express";
 import {inserirAgendamento, ConsultarTodos, alterarAgendamento, removerAgendamento, ListarporNome, BuscarPorID, BuscarDeHoje} from '../repository/agendamentoRepository.js'
-
 const server = Router();
+
 
 //Adicionar um Agendamento
 server.post('/agendamento', async (req, resp) => {
@@ -169,5 +170,38 @@ server.get('/agendamento/:id', async (req, resp) =>{
         })
     }
 })
+
+//Enviar email após fazer um agendamento
+server.post('/enviar-email', async (req, resp) =>{
+    let {text} = req.body;
+    const transport = nodemailer.createTransport({
+    host: process.env.HOST,
+    service: process.env.SERVICE,
+    secure:process.env.SECURE,
+    auth:{
+        user: process.env.EMAIL,
+        pass: process.env.SENHA
+    }
+    })
+
+    const message = {
+    from: process.env.EMAIL,
+     to: 'victor.fonseca0@gmail.com',
+     subject:'Dental Hioki',
+     text: 'Paciente Victor, obrigado por fazer um agendamento conosco!'
+    }
+    transport.sendMail(message, (error, info)=> {
+        if(error){
+            return resp.status(400).send('Erro, tente novamente')
+        }
+        return resp.status(200).send('Email enviado com sucesso!')
+    })
+})
+
+
+
+
+
+
 
 export default server;

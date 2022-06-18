@@ -144,11 +144,11 @@ export default function LP() {
                     </div>
 
                     <div className="cnt">
-                        <img src="../images/whatsapp-removebg-preview.png" className="img-cnt" /> (11) 95049-8855
+                        <img src="../images/whatsapp-removebg-preview.png" className="img-cnt" /> (11) 93344-2371
                     </div>
 
                     <div className="cnt">
-                        <img src="../images/gmail.png" className="rdsc-imgs-2" /> denthioki@gmail.com
+                        <img src="../images/gmail.png" className="rdsc-imgs-2" /> dentistahioki@gmail.com
                         
                     </div>
 

@@ -114,3 +114,4 @@ where dt_consulta = curdate();
     const [linhas] = await con.query(comando);
     return linhas
 }
+
