@@ -9,26 +9,26 @@ server.post('/agendamento', async (req, resp) => {
     try{
         const novoAgendamento = req.body;
 
-        if(!novoAgendamento.nome){
+        if(!novoAgendamento.nome.trim()){
             throw new Error('Nome do paciente é obrigatório!');
         }
 
-        if(!novoAgendamento.email){
+        if(!novoAgendamento.email.trim()){
             throw new Error('Email do paciente é obrigatório!');
         }
 
-        if(!novoAgendamento.telefone){
+        if(!novoAgendamento.telefone.trim()){
             throw new Error('Telefone do paciente é obrigatório!');
         }
 
-        if(!novoAgendamento.horário){
+        if(!novoAgendamento.horário.trim()){
             throw new Error('Horário da consulta é obrigatória!');
         }
 
-        if(!novoAgendamento.data){
+        if(!novoAgendamento.data.trim()){
             throw new Error('Data da consulta é obrigatória!');
         }
-        if(!novoAgendamento.tipo){
+        if(!novoAgendamento.tipo.trim()){
             throw new Error('Tipo da consulta é obrigatório!');
         }
 

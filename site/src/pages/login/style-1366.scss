@@ -14,15 +14,18 @@
         height: 100vh;
     
     
+    main{
+        height: 100rem;
+    }
     .logo
     {
         display: flex;
         flex-direction: column;
     
-        height: 20em;
+        height: euto;
         width: 22em;
         margin: -50px auto;
-        margin-top: -30vh;
+        margin-top: -3rem;
     }
     
     .login

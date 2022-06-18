@@ -19,6 +19,7 @@ import storage from 'local-storage'
 import { login } from '../../api/usuarioApi.js'
 import LoadingBar from 'react-top-loading-bar'
 import{Link} from 'react-router-dom'
+import InputMask from 'react-input-mask'
 import { useState, useRef, useEffect } from 'react';
 import {useNavigate} from 'react-router-dom'
 
@@ -95,7 +96,7 @@ export default function Login() {
                     CPF
                     </div>
                 <div>
-                    <input className="cx1" type="text" placeholder='Insira seu CPF' value={cpf} onChange={e => setCpf(e.target.value)}/>
+                    <InputMask className="cx1" mask='999.999.999-99' type="text" placeholder='Insira seu CPF' value={cpf} onChange={e => setCpf(e.target.value)}/>
                 </div>
 
                 <div className="txt2" >

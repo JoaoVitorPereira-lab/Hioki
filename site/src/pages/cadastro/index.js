@@ -35,8 +35,6 @@ export default function Cad() {
             navigate('/login')
         }
     }, [])
-    const [enviar, setEnviar] = useState(false)
-    const [text, setText] = useState('')
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');

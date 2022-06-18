@@ -100,7 +100,7 @@ export default function Admin() {
     }
 
     async function editarAgendamento(id){
-        navigate(`alterar/${id}`)
+        navigate(`/admin/alterar/${id}`)
     }
     
     document.addEventListener("keypress", function  (e) {
