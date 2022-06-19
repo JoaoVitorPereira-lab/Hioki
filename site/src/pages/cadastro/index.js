@@ -68,9 +68,6 @@ export default function Cad() {
     async function salvarClick(){
         try {
             
-            const resp = await EnviarEmail (email);
-            setEmail(resp.email)
-            
             const usuário = storage('usuario-logado').id;
             
 
