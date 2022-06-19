@@ -1,5 +1,7 @@
 import './index.scss';
 import './style-320.scss';
+import './style-375.scss';
+import './style-414.scss';
 import './style-568.scss';
 import './style-768.scss';
 import './style-800.scss';

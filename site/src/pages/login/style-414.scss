@@ -1,4 +1,4 @@
-@media screen and (min-width: 300px) and (max-width: 360px){
+@media screen and (min-width: 380px) and (max-width: 420px){
     .bd-login
     {
         display: flex;
@@ -28,7 +28,7 @@
         flex-direction: column;
         background-color: #7FCBB1;
         border-radius: 5px;
-        width: 50vh;
+        width: 45vh;
         margin: auto;
         height: 36em;
         margin-top: 0em;
@@ -68,7 +68,7 @@
         text-decoration: none;
         border-radius: 10px;
         font-size: 15px;
-        margin-left: 16vh;
+        margin-left: auto auto;
         margin-top: 4vh;
         margin-bottom: -35px;
         cursor: pointer;
@@ -107,7 +107,7 @@
         border-radius: 20px;
         border-style: none;
         height: 25px;
-        width: 21em;
+        width: 24em;
         padding-left: 10px;
         outline: none;
         font-family: "Quicksand", sans-serif;
@@ -124,7 +124,7 @@
         border-radius: 20px;
         border-style: none;
         height: 25px;
-        width: 21em;
+        width: 24.4em;
         padding-left: 10px;
         outline: none;
         font-family: "Quicksand", sans-serif;
@@ -143,8 +143,8 @@
     .cxconfirma{
         display: flex;
         flex-direction: row;
-        margin-left: 41vh;
-        margin-top: 2.8vh;
+        margin-left: 37vh;
+        margin-top: 2.2vh;
         position: relative;
         height: 20px;
         width: 40px;
