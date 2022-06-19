@@ -1,4 +1,3 @@
-
 @media screen and (min-width: 205px) and (max-width: 345px){
     .bd-login
     {
@@ -12,55 +11,46 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     
-        height: 100vh;
-    
-    
     .logo
     {
         display: flex;
         flex-direction: column;
-    
         height: 20em;
         width: 22em;
-        margin: -50px auto;
-        margin-top: -30vh;
+        margin-left: 8%;
+        margin-top: -12vh;
     }
     
     .login
     {
         display: flex;
         flex-direction: column;
-        background-color:#7FCBB1;
+        background-color: #7FCBB1;
         border-radius: 5px;
-        width: 25em;
-        height: 22em;
-        font-family: 'Quicksand', sans-serif;
+        width: 100%;
+        margin: auto;
+        height: 34em;
+        margin-top: 5em;
+        font-family: "Quicksand", sans-serif;
         font-weight: bold;
     }
     .txt1{
-        margin-top: 50px;
+        margin-top: 186px;
         display: flex;
         flex-direction: row;
-        margin-left: 28px;
+        margin-left: 7px;
         font-size: 20px;
-        color: rgb(0, 0, 0);
-        font-family: 'Quicksand', sans-serif;
-        font-weight: bold;
     }
     
     .txt2
     {
-        margin-top: 40px;
-        display: flex;
-        flex-direction: row;
-        margin-left: 28px;
-        font-size: 20px;
-        color: rgb(0, 0, 0);
-        font-family: 'Quicksand', sans-serif;
-        font-weight: bold;
+        margin-bottom: 15px;
+    margin-top: 54px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 7px;
+    font-size: 20px;
     }
-    
-    
    
     .botao
     {
@@ -109,36 +99,36 @@
     
     .cx1{
         margin-top: -15px;
-        margin-left: 25px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border-radius: 20px;
-        border-style: none;
-        height: 25px;
-        width: 23em;
-        padding-left: 10px;
-        outline: none;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: bold;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 20px;
+    border-style: none;
+    height: 25px;
+    width: 22em;
+    padding-left: 10px;
+    outline: none;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
         
     } 
     .cx2
     {
-        margin-top: 13px;
-        margin-left: 25px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border-radius: 20px;
-        border-style: none;
-        height: 25px;
-        width: 23em;
-        padding-left: 10px;
-        outline: none;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: bold;
-        position:absolute
+        margin-left: auto;
+    margin-top: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 20px;
+    border-style: none;
+    height: 25px;
+    width: 22em;
+    padding-left: 10px;
+    outline: none;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    position: absolute;
     }
     .invalido{
         align-items: center;
@@ -151,17 +141,17 @@
    
     .cxconfirma{
         display: flex;
-        flex-direction: row;
-        margin-left: 45vh;
-        margin-top: 2.8vh;
-        position: relative;
-        height: 20px;
-        width: 40px;
-        outline: none;
-        -webkit-appearance: none;
-        background: #c6c6c6;
-        border-radius: 20px;
-        box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.2) inset;
+    flex-direction: row;
+    margin-left: 42vh;
+    margin-top: 2.8vh;
+    position: relative;
+    height: 20px;
+    width: 40px;
+    outline: none;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px rgb(0 0 0 / 20%) inset;
     }
     .cxconfirma:checked{
         background: #baebdb
@@ -205,18 +195,18 @@
         background: #baebdb
     }
     .cxconfirma::before{
-        content:'';
-        width: 22px;
-        height: 21px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgb(214, 213, 213);
-        border-radius: 50%;
-        box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
-        transform:scale(1.2);
-        transition: .5s;
-        cursor: pointer;
+        content: "";
+    width: 22px;
+    height: 21px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(214, 213, 213);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+    transform: scale(1.2);
+    transition: 0.5s;
+    cursor: pointer;
     }
     .cxconfirma:checked::before{
         left: 20px;
