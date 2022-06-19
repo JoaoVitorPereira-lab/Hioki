@@ -59,7 +59,6 @@ export default function Cad() {
         setData(resposta.data.substr(0, 10));
         setHorário(resposta.horário);
         setTipo(resposta.tipo);
-
         setId(resposta.id);
     }
 
@@ -68,6 +67,10 @@ export default function Cad() {
 
     async function salvarClick(){
         try {
+            
+            const resp = await EnviarEmail (email);
+            setEmail(resp.email)
+            
             const usuário = storage('usuario-logado').id;
             
 
@@ -81,7 +84,7 @@ export default function Cad() {
                 await alterarAgendamento(id, nome, email, telefone, data, horário, tipo, usuário);
                 toast.success('Agendamento alterado com sucesso 🚀');
             }
-
+            
             
         } catch (err) {
           toast.error(err.response.data.erro);  
@@ -99,16 +102,7 @@ export default function Cad() {
         setTipo('');
     }
 
-    function mascara(telefone){ 
-        if(telefone.value.length == 0)
-            telefone.value = '(' + telefone.value; 
-        if(telefone.value.length == 3)
-            telefone.value = telefone.value + ') '; 
-
-        if(telefone.value.length == 8)
-            telefone.value = telefone.value + '-'; 
-
-}
+    
 
     return(
     

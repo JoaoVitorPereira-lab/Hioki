@@ -153,7 +153,7 @@ export default function Admin() {
                         </div>
                         <div className="info2">
                             <p className="data">Data: {item.data.substr(0,10)}</p>
-                            <p>Horário: {item.horário}</p>
+                            <p>Horário: {item.horário.substr(0,5)}</p>
                             <p className='tipo'>Tipo: {item.tipo}</p>
                         </div>
                         <div className="acoes">

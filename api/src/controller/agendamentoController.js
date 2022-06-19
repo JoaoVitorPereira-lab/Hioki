@@ -173,7 +173,7 @@ server.get('/agendamento/:id', async (req, resp) =>{
 
 //Enviar email após fazer um agendamento
 server.post('/enviar-email', async (req, resp) =>{
-    let {text} = req.body;
+    let data = req.body;
     const transport = nodemailer.createTransport({
     host: process.env.HOST,
     service: process.env.SERVICE,
@@ -183,12 +183,12 @@ server.post('/enviar-email', async (req, resp) =>{
         pass: process.env.SENHA
     }
     })
-
+    
     const message = {
     from: process.env.EMAIL,
-     to: 'victor.fonseca0@gmail.com',
+     to: data.email,
      subject:'Dental Hioki',
-     text: 'Paciente Victor, obrigado por fazer um agendamento conosco!'
+     text: 'Paciente, obrigado por fazer um agendamento conosco!'
     }
     transport.sendMail(message, (error, info)=> {
         if(error){

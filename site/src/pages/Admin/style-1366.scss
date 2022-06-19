@@ -2,6 +2,15 @@
     .bd-Admin
 {
     background-color: white;
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
 
 
 .adm
@@ -168,13 +177,41 @@ a
     transition: transform .7s;
     margin-top: 3vh;
     padding-bottom: -1vh;
-    
-}
 
+    img{
+        visibility: hidden;
+    }
+
+    
+    }
+
+ .delete{
+        visibility: visible;
+        height: 1.9em;
+        cursor: pointer;
+        margin-right: 8vh;
+    }
+    .edit{
+    
+        height: 1.7em;
+        width: 1.7em;
+        cursor: pointer;
+        margin-left: 0.5vh;
+
+
+    }
 
 
 .cards:hover{
-    transform: scale(1.05)
+    transform: scale(1.05);
+    img
+    {
+        visibility: visible;
+        animation: fadein 0.6s;
+
+    }
+   
+    
 }
 
 
@@ -183,21 +220,6 @@ a
     flex-direction: column;
 }
 
-.delete
-{
-    height: 1.9em;
-    cursor: pointer;
-    margin-right: 8vh;
-}
-.edit{
-    
-    height: 1.7em;
-    width: 1.7em;
-    cursor: pointer;
-    margin-left: 0.5vh;
-    
-
-}
 
 
 main{

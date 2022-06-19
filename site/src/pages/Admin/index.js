@@ -119,7 +119,7 @@ export default function Admin() {
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
             </Link>
 
-            <h5 className="seja-bem">Seja bem vindo {usuario}!</h5>
+            <h5 className="seja-bem">Seja bem vindo, {usuario}!</h5>
         <div className='botoes'>
              <button className="botao-sair" onClick={sairClick}>Sair</button>
             <Link className="botao-agendar" to="/cadastro">Novo Agendamento</Link>
@@ -152,7 +152,7 @@ export default function Admin() {
                         </div>
                         <div className="info2">
                             <p className="data">Data: {item.data.substr(0,10)}</p>
-                            <p>Horário: {item.horário}</p>
+                            <p>Horário: {item.horário.substr(0,5)}</p>
                             <p className='tipo'>Tipo: {item.tipo}</p>
                         </div>
                         <div className="acoes">

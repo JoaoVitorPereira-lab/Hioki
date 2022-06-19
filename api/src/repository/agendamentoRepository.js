@@ -19,15 +19,15 @@ export async function inserirAgendamento (agendamento){
 export async function ConsultarTodos(){
     const comando =
     `
-    SELECT id_login	 'usuário',
-    id_agendamento   'id',
-    nm_paciente		 'nome',
-    ds_email		 'email',
-    ds_telefone	     'telefone',
-    hr_consulta	     'horário',
-    dt_consulta      'data',
-    ds_tipo			 'tipo'	
-FROM tb_agendamento;
+    SELECT id_login			'id',
+	   id_agendamento   'agendamento',
+	   nm_paciente		'nome',
+       ds_email		    'email',
+       ds_telefone	    'telefone',
+       hr_consulta	    'horário',
+	   DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
+	   ds_tipo			'tipo'
+  FROM tb_agendamento;
     `
 
     const [linhas] = await con.query(comando)
@@ -70,7 +70,7 @@ export async function ListarporNome(nome){
        ds_email		    'email',
        ds_telefone	    'telefone',
        hr_consulta	    'horário',
-       dt_consulta     	'data',
+       DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
 	   ds_tipo			'tipo'	
   FROM tb_agendamento
   WHERE nm_paciente			like ?
@@ -106,7 +106,7 @@ export async function BuscarDeHoje(){
     ds_email		 'email',
     ds_telefone	     'telefone',
     hr_consulta	     'horário',
-    dt_consulta      'data',
+    DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
     ds_tipo			 'tipo'	
 FROM tb_agendamento
 where dt_consulta = curdate();

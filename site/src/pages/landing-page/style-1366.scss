@@ -2,6 +2,21 @@
 {
     /* Faixa 1 */
 
+    .me
+{
+    display: flex;
+    flex-direction: column;
+
+    height: 530px;
+
+    background-image:url('../../../public/images/WhatsApp\ Image\ 2022-06-07\ at\ 22.26.40.jpeg');
+    background-repeat: no-repeat;
+    background-size: 1100px;
+    background-position: right;
+    background-position-y: 0px;
+    background-color: rgb(249, 249, 249); 
+    margin-top: -0.5rem;
+}
     .bt-me
     {
         margin-left: -40px;
