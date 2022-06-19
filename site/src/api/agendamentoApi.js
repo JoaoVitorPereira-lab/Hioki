@@ -59,10 +59,15 @@ export async function BuscarDeHoje (){
     const resposta = await api.get('agendamento/hoje');
     return resposta.data;
 }
-export async function EnviarEmail(email){
+export async function EnviarEmail(nome, email, telefone, data, horário, tipo){
     const resposta = await api.post('/enviar-email', {
-        email: email
+        nome:nome, 
+        email:email, 
+        telefone:telefone, 
+        data:data, 
+        horário:horário, 
+        tipo:tipo
+        
     });
-    
     return resposta.status;
 }

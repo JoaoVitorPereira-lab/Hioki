@@ -21,11 +21,11 @@ server.post('/agendamento', async (req, resp) => {
             throw new Error('Telefone do paciente é obrigatório!');
         }
 
-        if(!novoAgendamento.horário.trim()){
+        if(!novoAgendamento.horário.trim){
             throw new Error('Horário da consulta é obrigatória!');
         }
 
-        if(!novoAgendamento.data.trim()){
+        if(!novoAgendamento.data.trim){
             throw new Error('Data da consulta é obrigatória!');
         }
         if(!novoAgendamento.tipo.trim()){
@@ -188,7 +188,18 @@ server.post('/enviar-email', async (req, resp) =>{
     from: process.env.EMAIL,
      to: data.email,
      subject:'Dental Hioki',
-     text: 'Paciente, obrigado por fazer um agendamento conosco!'
+     html: `
+     <h1>Dental Hioki</h1>
+     <h3> Paciente, seu agendamento foi confirmado com sucesso!</h3>
+     <h3> Informações de sua consulta </h3>
+     <p>Nome: ${data.nome}</p>
+     <p>Email: ${data.email}</p>
+     <p>Telefone: ${data.telefone}</p>
+     <p>Data: ${data.data}</p>
+     <p>Horário: ${data.horário}</p>
+     <p>Tipo: ${data.tipo}</p>
+     `
+     
     }
     transport.sendMail(message, (error, info)=> {
         if(error){
