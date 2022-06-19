@@ -26,4 +26,6 @@ Agendamento</panel_attributes><additional_attributes></additional_attributes></e
 Agendamento</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>370</x><y>350</y><w>120</w><h>50</h></coordinates><panel_attributes>Filtrar por
 Nome</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>380</y><w>170</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
 </panel_attributes><additional_attributes>150;80;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>310</x><y>460</y><w>120</w><h>50</h></coordinates><panel_attributes>Buscar por
-ID</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+ID</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>380</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>60;120;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>120</x><y>520</y><w>170</w><h>50</h></coordinates><panel_attributes>Buscar agendamentos
+de hoje</panel_attributes><additional_attributes></additional_attributes></element></diagram>
