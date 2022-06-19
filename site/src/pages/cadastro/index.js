@@ -14,7 +14,7 @@ import './style-1440.scss';
 import './style-1680.scss';
 import './style-1780.scss';
 import './style-1920.scss';
-import {cadastrarAgendamento, alterarAgendamento, BuscarPorID, EnviarEmail} from '../../api/agendamentoApi'
+import {cadastrarAgendamento, alterarAgendamento, BuscarPorID} from '../../api/agendamentoApi'
 import { Helmet } from 'react-helmet';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -67,9 +67,6 @@ export default function Cad() {
 
     async function salvarClick(){
         try {
-            
-            const resp = await EnviarEmail (email);
-            setEmail(resp.email)
             
             const usuário = storage('usuario-logado').id;
             

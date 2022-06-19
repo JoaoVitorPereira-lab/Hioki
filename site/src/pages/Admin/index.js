@@ -18,7 +18,7 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom'
 import storage from 'local-storage'
-import { useEffect, useState } from 'react';
+import { useEffect,  useState } from 'react';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -26,7 +26,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { confirmAlert } from 'react-confirm-alert'; 
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-import {listarTodosAgendamentos, listarPorNome, listarPorData, listarPorTipo, listarPorHorario, deletarAgendamento} from '../../api/agendamentoApi.js'
+import {listarTodosAgendamentos, listarPorNome, deletarAgendamento} from '../../api/agendamentoApi.js'
 export default function Admin() {
     const [usuario, setUsuario] = useState('');
     const [filtroNome, setFiltroNome] = useState('');
@@ -35,7 +35,7 @@ export default function Admin() {
 
 
     useEffect(() => {
-        carregarTodosAgendamentos();
+        
 
         if (!storage('usuario-logado')){
             navigate('/login')
@@ -45,6 +45,10 @@ export default function Admin() {
             setUsuario(usuarioLogado.nomedoutor)
         }
     }, [])
+
+    useEffect(() => {
+        carregarTodosAgendamentos();
+    }, []);
 
 
 
@@ -93,13 +97,10 @@ export default function Admin() {
 
         })
 
-
-        
-
     }
 
     async function editarAgendamento(id){
-        navigate(`alterar/${id}`)
+        navigate(`/admin/alterar/${id}`)
     }
     
     document.addEventListener("keypress", function  (e) {

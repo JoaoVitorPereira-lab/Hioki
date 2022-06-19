@@ -19,8 +19,8 @@ export async function inserirAgendamento (agendamento){
 export async function ConsultarTodos(){
     const comando =
     `
-    SELECT id_login			'id',
-	   id_agendamento   'agendamento',
+    SELECT id_login		'usuário',
+	   id_agendamento   'id',
 	   nm_paciente		'nome',
        ds_email		    'email',
        ds_telefone	    'telefone',

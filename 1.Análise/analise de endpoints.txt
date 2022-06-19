@@ -93,6 +93,8 @@ response{
 ]
 }
 
+//////////////////////////////////////////////////////////////////////////////
+
 CS07 (Buscar por ID) /get        /agendamento/:id
 
 response{
@@ -112,64 +114,18 @@ response{
 
 //////////////////////////////////////////////////////////////////////////////
 
+CS08 (Buscar de hoje) /get     /agendamento/hoje
 
-----------------------------DESATIVADO PORÉM MANTIDO ---------------------------------------
-(Perguntar pra o bruno)                                                                    |
-                                                                                           |
-                                                                                           |
-CS08 (Listar por Data) /get   /agendamento/buscar/data?dt=                                |
-                                                                                           |
-response{   response                                                                       |
-                                                                                           |
-    [                                                                                      |
-  {                                                                                        |
-    "usuário": ?,                                                                          |
-    "id": ?,                                                                               |
-    "nome": "?",                                                                           |
-    "email": "?",                                                                          |
-    "telefone": "?",                                                                       |
-    "horário": "?",                                                                        |
-    "data": "?",                                                                           |
-    "tipo": "?"                                                                            |
-  }                                                                                        |
-]                                                                                          |
-}                                                                                          |
-                                                                                           |
-//////////////////////////////////////////////////////////////////////////////             |
-                                                                                           |
-CS09 (Listar por Horário) /get              /agendamento/buscar/horario?hr=                |
-                                                                                           |
-response{                                                                                  |
-    [                                                                                      |
-  {                                                                                        |
-    "usuário": ?,                                                                          |
-    "id": ?,                                                                               |
-    "nome": "?",                                                                           |
-    "email": "?",                                                                          |
-    "telefone": "?",                                                                       |
-    "horário": "?",                                                                        | 
-    "data": "?",                                                                           |
-    "tipo": "?"                                                                            |
-  }                                                                                        |
-]                                                                                          |
-}                                                                                          |
-                                                                                           |
-//////////////////////////////////////////////////////////////////////////////             |
-                                                                                           |
-CS10 (Listar por Tipo da consulta) /get    /agendamento/buscar/consulta?tp=                |
-                                                                                           |
-response{                                                                                  |
-    [                                                                                      |
-  {                                                                                        |
-    "usuário": ?,                                                                          |
-    "id": ?,                                                                               |
-    "nome": "?",                                                                           |
-    "email": "?",                                                                          |
-    "telefone": "?",                                                                       |
-    "horário": "?",                                                                        |
-    "data": "?",                                                                           |
-    "tipo": "?"                                                                            |
-  }                                                                                        |
-]                                                                                          |
-}                                                                                          |
---------------------------------------------------------------------------------------------
+response{
+    [
+  {
+    "usuário": ?,
+    "id": ?,
+    "nome": "?",
+    "email": "?",
+    "telefone": "?",
+    "horário": "?",
+    "data": "?",
+    "tipo": "?"
+  }
+]

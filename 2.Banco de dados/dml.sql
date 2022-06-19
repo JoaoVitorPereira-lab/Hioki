@@ -1,8 +1,8 @@
 
 
 -- carga inicial usuário admin
-insert into tb_login (ds_cpf, ds_senha)
-	values ('111.111.111-11','DoutorHioki');
+insert into tb_login (nm_doutor, ds_cpf, ds_senha)
+	values ('Hioki','111.111.111-11','DoutorHioki');
     
 
 -- CSU01:: efetuar login
@@ -25,8 +25,8 @@ SELECT id_login			'id',
        ds_email		    'email',
        ds_telefone	    'telefone',
        hr_consulta	    'horário',
-       dt_consulta     	'data',
-	   ds_tipo			'tipo'	
+	   DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
+	   ds_tipo			'tipo'
   FROM tb_agendamento;
 
 	-- CSU04:: alterar agendamento
@@ -52,7 +52,7 @@ SELECT id_login			'id',
        ds_email		    'email',
        ds_telefone	    'telefone',
        hr_consulta	    'horário',
-       dt_consulta     	'data',
+       DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
 	   ds_tipo			'tipo'	
   FROM tb_agendamento
   WHERE nm_paciente			like '%a%';
@@ -64,48 +64,20 @@ SELECT id_login			'id',
     ds_email		  'email',
     ds_telefone	     'telefone',
     hr_consulta	     'horário',
-    dt_consulta      'data',
+    DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
     ds_tipo			  	 'tipo'	
 FROM tb_agendamento
 WHERE id_agendamento = ?;
-  
 
--- Desativado-----------------------------------------------------------------------------
+-- CSU08:: Consultar agendamentos de hoje
+  SELECT id_login	 'usuário',
+    id_agendamento   'id',
+    nm_paciente		 'nome',
+    ds_email		 'email',
+    ds_telefone	     'telefone',
+    hr_consulta	     'horário',
+    DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
+    ds_tipo			 'tipo'	
+FROM tb_agendamento
+where dt_consulta = curdate();
 
-
-
--- CSU08:: consultar agendamento por data
-SELECT id_login		'id',
-	   id_agendamento   'agendamento',	
-	   nm_paciente		'nome',
-       ds_email		    'email',
-       ds_telefone	    'telefone',
-       hr_consulta	    'horário',
-       dt_consulta     	'data',
-	   ds_tipo			'tipo'	
-  FROM tb_agendamento
-  WHERE dt_consulta		=  '2022-05-15';
-  
-  -- CSU09:: consultar agendamento por horário
-SELECT id_login			'id',
-	   id_agendamento   'agendamento',	
-	   nm_paciente		'nome',
-       ds_email		    'email',
-       ds_telefone	    'telefone',
-       hr_consulta	    'horário',
-       dt_consulta     	'data',
-	   ds_tipo			'tipo'	
-  FROM tb_agendamento
-  WHERE dt_consulta		=  '2022-05-15';
-  
-  -- CSU10:: consultar agendamento por tipo de consulta
-SELECT id_login			'id',
-	   id_agendamento   'agendamento',	
-	   nm_paciente		'nome',
-       ds_email		    'email',
-       ds_telefone	    'telefone',
-       hr_consulta	    'horário',
-       dt_consulta     	'data',
-	   ds_tipo			'tipo'	
-  FROM tb_agendamento
-  WHERE ds_tipo			=  'Presencial';

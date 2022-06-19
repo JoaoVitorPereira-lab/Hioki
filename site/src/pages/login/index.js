@@ -84,11 +84,13 @@ export default function Login() {
     <body className='bd-login'>
         <LoadingBar color='#f11946' ref={ref} />
         <Helmet title='Login'/>
-   
-        <main className="page1">
+        
             <Link to="/">
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
             </Link>
+
+        <main className="page1">
+            
 
             <section className="login"> 
                 <div className="txt1">
