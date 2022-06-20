@@ -6,8 +6,8 @@
         background-image:url('../../../public/images/WhatsApp\ Image\ 2022-06-04\ at\ 17.08.22.jpeg');
         background-size: 300px;
 
-        height: 350px;
-        width: 350px;
+        height: 390px;
+        width: 390px;
     }
 
     .bt-me
@@ -19,7 +19,7 @@
     .botao-me
     {
         background-color: #7FFFD4;
-
+        font-weight: bold;
         width: 150px;
         height: 50px;
 
@@ -60,12 +60,12 @@
 
     .desc-me
     {
-        margin-left: 0px;
+        margin-left: 10px;
         margin-top: 10px;
 
         font-size: 20px;
     }
-
+    
     /* faixa 2 */
 
     .diz
@@ -110,7 +110,7 @@
     {
         text-align: center;
 
-        font-size: 14px;
+        font-size: 1.3rem;
 
         height: 10px;
 
@@ -123,7 +123,7 @@
     {
         text-align: center;   
         
-        font-size: 12px;
+        font-size: 1rem;
         
         width: 330px;
 
@@ -177,9 +177,8 @@
     {
         text-align: center;
 
-        font-size: 14px;
-
-        letter-spacing: 3px;
+        
+        font-size: 1.1rem;
 
         height: 3px;
 
@@ -192,7 +191,7 @@
     {
         text-align: center; 
         
-        font-size: 12px;
+        font-size: 1rem;
         
         width: 280px;
 
@@ -207,7 +206,8 @@
         height: 20px;
 
         font-size: 14px;
-
+        background-color: #7FFFD4;
+        font-weight: bold;
         margin-left: 18em;
         padding: 5px 5px;
     }
@@ -247,8 +247,8 @@
 
     .img-f4
     {
-        width: 90px;
-        height: 130px;
+        width: 140px;
+        height: 180px;
 
         margin-right: 0px;
         margin-left: -80px;
@@ -270,7 +270,7 @@
 
     .h1-a
     {
-        font-size: 14px;
+        font-size: 1.2rem;
 
         line-height: 10px;
 
@@ -289,7 +289,7 @@
 
     .h1-a2
     {
-        font-size: 14px;
+        font-size: 1.1rem;
 
         line-height: 10px;
 
@@ -302,14 +302,14 @@
 
     .p-a
     {
-        font-size: 12px;
+        font-size: 1rem;
 
         text-align: inherit;    
         
         width: 300px;
 
         margin-top: 70px;
-        margin-left: 0px;
+        margin-left: 28px;
         margin-right: 250px;
     }
 
@@ -366,7 +366,7 @@
 
     .h1-b
     {
-        font-size: 14px;
+        font-size: 1.2rem;
 
         line-height: 10px;
 
@@ -385,7 +385,7 @@
 
     .h1-b-2
     {
-        font-size: 14px;
+        font-size: 1.1rem;
 
         line-height: 10px;
 
@@ -399,7 +399,7 @@
 
     .p-b
     {
-        font-size: 12px;
+        font-size: 1rem;
 
         text-align: end;    
         

@@ -1,4 +1,4 @@
-@media screen and (min-width: 22.5rem) and (max-width: 35.438rem){
+@media screen and (min-width: 360px) and (max-width: 567px){
     
     .bd-Admin
 {
@@ -10,9 +10,60 @@
     background-color:#10DA96 ;
 }
 
+header  .botoes{
+    margin-left: -17rem;
+}
 
-
-
+header .botao-agendar
+{
+    background-color: #baebdb;
+    padding: 6px 12px;
+    text-align: center;
+    border-radius: 20px;
+    width: 7rem;
+    color: black;
+    text-decoration: none;
+    font-family: 'Dela Gothic One';
+    font-size: 11px;
+    margin-left: -12rem;
+    transition: transform .7s;
+    margin-top: -1.3rem;
+    position: absolute;
+}
+header .botao-sair
+{
+    background-color: #baebdb;
+    padding: 6px 10px;
+    border-radius: 20px;
+    width: 5rem;
+    margin-top: -4rem;
+    color: black;
+    text-decoration: none;
+    font-family: 'Dela Gothic One';
+    font-size: 14px;
+    margin-left: -10.2rem;
+    transition: transform .7s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position:absolute;
+}
+header .botao-consultas
+{
+    background-color: #baebdb;
+    padding: 6px 12px;
+    text-align: center;
+    border-radius: 20px;
+    width: 5rem;
+    color: black;
+    text-decoration: none;
+    font-family: 'Dela Gothic One';
+    font-size: 11px;
+    margin-left: -11rem;
+    transition: transform .7s;
+    margin-top: 2rem;
+    position:absolute;
+}
 
 header
 {
@@ -29,7 +80,7 @@ header .logo
     width: 15em;
 
   
-    margin-left: 0px;
+    margin-left: -2rem;
 }
 
 details
@@ -91,14 +142,14 @@ header .seja-bem
     display: flex;
     flex-direction: row;
     margin-left: 40vh;
-    font-size: 3vh;
+    font-size: 0px;
 }
 
 .ftl
 {
     margin-left: 10vh;
     margin-top: 3vh;
-    width: 100vh;
+    width: 15rem;
     height: 5vh;
     border: none;
     outline: none;
@@ -122,73 +173,70 @@ a
 
 .cards{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     background-color: #65d4af;
-    width: 100vh;
-    height: 12vh;
+    align-items: center;
+    width: 16rem;
+    height: 14rem;
     margin-left: 10vh;
     align-items: center;
-    border-radius: 15vh;
+    font-size: 1rem;
+    border-radius: 3rem;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     transition: transform .7s;
+    margin-bottom: 2rem;
     
 }
-.cards2{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #65d4af;
-    width: 100vh;
-    height: 12vh;
-    margin-left: 10vh;
-    margin-top: 2vh;
-    align-items: center;
-    border-radius: 15vh;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    transition: transform .7s;
-    
-}
+
 
 .cards:hover, .cards2:hover{
     transform: scale(1.05)
 }
 .info1{
-    margin-left: 6vh;
+    margin-left: 0vh;
+}
+.info2{
+    margin-top: -6rem;
 }
 
 .acoes{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-top: -2rem;
 }
 
 .delete
 {
     height: 1.9em;
     cursor: pointer;
-    margin-right: 8vh;
+    position: absolute;
+    margin-top: -2.6rem;
+    margin-left: 1rem;
 }
 .edit{
     
     height: 1.7em;
     width: 1.7em;
     cursor: pointer;
-    margin-left: 0.5vh;
-    
+    margin-left: -2rem;
+    position: absolute;
+    margin-top: -2.5rem;
+    margin-right: 1rem;
 
 }
 
 main{
     background-color: #baebdb;
-    height: 100vh;
-    width: 120vh;
-    margin-left: 40vh;
+    height: auto;
+    width: 23.45rem;
+    margin-left: 0vh;
+    margin-top: -2.7rem;
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    border-radius: 2vh;
+    justify-content: flex-start;
+    border-radius: -1rem;
 
 }
 .consultas{
@@ -198,6 +246,7 @@ main{
     justify-content: center;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 .data{
     margin-bottom: -2vh;
@@ -208,14 +257,13 @@ main{
     margin-top: -2vh;
 }
 
-.info2-4{
-    margin-left: -3vh;
-}
-.info2-3{
-    margin-left: 1vh;
-}
-.info2-5{
-    margin-left: -5vh;
+
+.lupa{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-left: -2rem;
+    margin-top: 1.7rem;
 }
 
 }

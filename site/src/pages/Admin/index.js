@@ -147,9 +147,9 @@ export default function Admin() {
                 <div className='todos'>
                     <div className='cards'>
                         <div className="info1">
-                        <p>{item.nome}</p>
-                        <p className='numero'>{item.telefone}</p>
-                        <p className='tipo'>{item.email}</p>
+                        <p>Nome: {item.nome}</p>
+                        <p className='numero'>Tel: {item.telefone}</p>
+                        <p className='tipo'>Email: {item.email}</p>
                         </div>
                         <div className="info2">
                             <p className="data">Data: {item.data.substr(0,10)}</p>
