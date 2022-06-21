@@ -19,14 +19,15 @@ insert into tb_agendamento (id_login, nm_paciente, ds_email, ds_telefone, hr_con
 values (1, 'José', 'luluminecraftbr@hotmail.com', '(11) 98724-0982', '12:20:00', '2022-05-14', 'Presencial');
 
 	-- CSU03:: consultar todos os agendamentos 
-SELECT id_login			'id',
-	   id_agendamento   'agendamento',
+SELECT id_login			'usuário',
+	   id_agendamento   'id',
 	   nm_paciente		'nome',
        ds_email		    'email',
        ds_telefone	    'telefone',
        hr_consulta	    'horário',
 	   DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
-	   ds_tipo			'tipo'
+	   ds_tipo			'tipo',
+       img_paciente     'foto'
   FROM tb_agendamento;
 
 	-- CSU04:: alterar agendamento
@@ -46,14 +47,15 @@ DELETE FROM tb_agendamento
 		
 	-- CSU06:: consultar agendamento por nome
 	
-SELECT id_login			'id',
-	   id_agendamento   'agendamento',
+SELECT id_login			'usuário',
+	   id_agendamento   'id',
 	   nm_paciente		'nome',
        ds_email		    'email',
        ds_telefone	    'telefone',
        hr_consulta	    'horário',
        DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
-	   ds_tipo			'tipo'	
+	   ds_tipo			'tipo',
+       img_paciente     'foto'
   FROM tb_agendamento
   WHERE nm_paciente			like '%a%';
 
@@ -65,7 +67,8 @@ SELECT id_login			'id',
     ds_telefone	     'telefone',
     hr_consulta	     'horário',
     DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
-    ds_tipo			  	 'tipo'	
+    ds_tipo			  	 'tipo',
+	img_paciente     'foto'
 FROM tb_agendamento
 WHERE id_agendamento = ?;
 
@@ -77,7 +80,8 @@ WHERE id_agendamento = ?;
     ds_telefone	     'telefone',
     hr_consulta	     'horário',
     DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
-    ds_tipo			 'tipo'	
+    ds_tipo			 'tipo',
+	img_paciente     'foto'
 FROM tb_agendamento
 where dt_consulta = curdate();
 

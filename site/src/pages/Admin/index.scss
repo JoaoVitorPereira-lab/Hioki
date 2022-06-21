@@ -2,7 +2,15 @@
 {
     background-color: white;
 
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
 
+        to {
+            opacity: 1;
+        }
+    }
 .adm
 {
     background-color:#10DA96 ;
@@ -131,22 +139,23 @@ a
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     transition: transform .7s;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));
+    
+    img{
+        visibility: hidden;
+    }
     
 }
-.cards2{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #65d4af;
-    width: 100vh;
-    height: 12vh;
-    margin-left: 10vh;
-    margin-top: 2vh;
-    align-items: center;
-    border-radius: 15vh;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    transition: transform .7s;
+.cards:hover{
+    transform: scale(1.02);
+    img
+    {
+        visibility: visible;
+        animation: fadein 0.6s;
+
+    }
+   
     
 }
 
@@ -155,6 +164,9 @@ a
 }
 .info1{
     margin-left: 6vh;
+    outline: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 .acoes{
@@ -187,6 +199,7 @@ main{
     flex-direction: column;
     justify-content:flex-start;
     border-radius: 2vh;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));
 
 }
 .consultas{
@@ -206,14 +219,5 @@ main{
     margin-top: -2vh;
 }
 
-.info2-4{
-    margin-left: -3vh;
-}
-.info2-3{
-    margin-left: 1vh;
-}
-.info2-5{
-    margin-left: -5vh;
-}
 
 }

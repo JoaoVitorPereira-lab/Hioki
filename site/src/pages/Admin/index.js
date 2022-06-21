@@ -15,7 +15,7 @@ import './style-1680.scss';
 import './style-1780.scss';
 import './style-1920.scss';
 import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {Link} from 'react-router-dom'
 import storage from 'local-storage'
 import { useEffect,  useState } from 'react';
@@ -26,11 +26,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { confirmAlert } from 'react-confirm-alert'; 
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-import {listarTodosAgendamentos, listarPorNome, deletarAgendamento} from '../../api/agendamentoApi.js'
+import {listarTodosAgendamentos, listarPorNome, deletarAgendamento, BuscarPorID} from '../../api/agendamentoApi.js'
 export default function Admin() {
     const [usuario, setUsuario] = useState('');
     const [filtroNome, setFiltroNome] = useState('');
     const [agendamento, setAgendamento] = useState([]);
+    const [agendarBusca, setAgendarBusca] = useState({});
     const navigate = useNavigate();
 
 
@@ -110,6 +111,20 @@ export default function Admin() {
         }
     })
 
+    function abrirDetalhes(id){
+        navigate(`/detalhe/${id}`)
+    };
+
+    const {idParam} = useParams();
+
+    async function carregarDetalhe(){
+        const resposta = await BuscarPorID(idParam);
+        setAgendarBusca(resposta)
+    }
+
+    useEffect(() => {
+        carregarDetalhe();
+    }, [])
     return(  
 
     <body className='bd-Admin'>
@@ -117,7 +132,7 @@ export default function Admin() {
         <Helmet title='Admin'/> 
         <header> 
             <Link to="/">
-            <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
+            <img id="imagem"className="logo" src="/images/Dental_Hioki__1_-removebg-preview.png"/>
             </Link>
 
             <h5 className="seja-bem">Seja bem vindo, {usuario}!</h5>
@@ -145,7 +160,7 @@ export default function Admin() {
                
                     {agendamento.map(item => 
                 <div className='todos'>
-                    <div className='cards'>
+                    <div className='cards' onClick={() => abrirDetalhes(item.id)} agendarBusca={agendarBusca}>
                         <div className="info1">
                         <p>Nome: {item.nome}</p>
                         <p className='numero'>Tel: {item.telefone}</p>
@@ -162,6 +177,7 @@ export default function Admin() {
                         </div>
                     </div>
                  </div>
+                 
                         )}
                    
 

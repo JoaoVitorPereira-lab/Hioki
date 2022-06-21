@@ -1,7 +1,16 @@
 @media screen and (min-width: 1420px) and (max-width: 1679px){
-    .bd-Admin-hoje
+    .bd-Detalhe
 {
     background-color: white;
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
 
 
 .adm
@@ -93,7 +102,7 @@ header .botao-sair
     outline: none;
     cursor: pointer;
 }
-header .botao-voltar
+header .botao-consultas
 {
     background-color: #baebdb;
     padding: 6px 12px;
@@ -108,7 +117,7 @@ header .botao-voltar
     transition: transform .7s;
     margin-top: 2vh;
 }
-.botao-agendar:hover, .botao-sair:hover, .botao-voltar:hover{
+.botao-agendar:hover, .botao-sair:hover, .botao-consultas:hover{
     transform: scale(1.05);
 }
 h5
@@ -172,9 +181,25 @@ a
     img{
         visibility: hidden;
     }
-    
-}
 
+    
+    }
+
+ .delete{
+        visibility: visible;
+        height: 1.9em;
+        cursor: pointer;
+        margin-right: 8vh;
+    }
+    .edit{
+    
+        height: 1.7em;
+        width: 1.7em;
+        cursor: pointer;
+        margin-left: 0.5vh;
+
+
+    }
 
 
 .cards:hover{
@@ -185,35 +210,23 @@ a
         animation: fadein 0.6s;
 
     }
+   
+    
 }
+
 
 .acoes{
     display: flex;
     flex-direction: column;
 }
 
-.delete
-{
-    height: 1.9em;
-    cursor: pointer;
-    margin-right: 8vh;
-}
-.edit{
-    
-    height: 1.7em;
-    width: 1.7em;
-    cursor: pointer;
-    margin-left: 0.5vh;
-    
-
-}
 
 
 main{
     background-color: #baebdb;
     height: auto;
-    width: 120vh;
-    margin-left: 18rem;
+    width: 90vh;
+    margin-left: 23rem;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -250,6 +263,23 @@ main{
     position: absolute;
     cursor: pointer;
 }
+
+.info-detalhes{
+    margin-left: 3rem;
+}
+.info-detalhes p{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+}
+.info-detalhes h3{
+    font-family: 'Dela Gothic One';
+    font-weight: lighter;
+}
+.img-detalhes{
+    height: 26rem;
+    width: 25rem;
+}
+
 
 
 

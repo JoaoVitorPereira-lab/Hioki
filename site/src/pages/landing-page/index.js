@@ -16,9 +16,24 @@ import './style-1780.scss';
 import './style-1920.scss';
 import Helmet from 'react-helmet'
 import {Link} from 'react-router-dom'
-export default function LP() {
 
-   
+export default function LP() {
+    const target = document.querySelectorAll('[data-anime]')
+    const animationClass = 'animate';
+
+    function animeScroll(){
+        const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+        target.forEach(function(element){
+            if((windowTop) > element.offsetTop){
+                element.classList.add(animationClass);
+            }
+            console.log(element.offsetTop)
+        })
+    }
+    window.addEventListener('scroll', function(){
+        animeScroll()
+    });
+
     return(
     
     <body className='bd-lp'>
@@ -46,10 +61,10 @@ export default function LP() {
                 
             </section>
 
-            <section className="diz">
+            <section className="diz" data-anime="right">
             
                 <div className="img-d">
-                    <img src="../images/img f2-dent.png" className="img-f2" border="0"/>
+                    <img src="../images/img f2-dent.png" className="img-f2" border="0" />
                 </div>
 
                 <div className="tx-d">
@@ -59,7 +74,7 @@ export default function LP() {
 
             </section>
 
-            <nav className="oque">
+            <nav className="oque" data-anime="left">
 
                 <div className="img-oq">
                     <img src="../images/img f3-.png" className="img-f3" border="0"/>
@@ -76,7 +91,7 @@ export default function LP() {
 
             </nav>
 
-            <section className="a">
+            <section className="a" data-anime="right">
 
                 <div className="img-a">
                     <img src="../images/c85b0e07b7800e73565e62d5c12910f7.png" className="img-f4" border="0"/>
@@ -91,7 +106,7 @@ export default function LP() {
                 
             </section>
 
-            <nav className="bios">
+            <nav className="bios" data-anime="left">
 
                 <div className="img-b">
                     <img src="../images/Screenshot_18-removebg-preview.png" className="img-f5" border="0"/>
@@ -107,9 +122,8 @@ export default function LP() {
             </nav>
 
             <footer>
-
+           
                 <section className="rd-rdsc">
-
                     <div className="txt-rd">
                         <img src="../images/Screenshot_19-removebg-preview.png" className="img-rd"/>
                         <p className="p-rd"> Siga-nos em nossas redes sociais </p>
@@ -153,7 +167,7 @@ export default function LP() {
                     </div>
 
                 </section>
-
+                
             </footer>
         
         </main>  

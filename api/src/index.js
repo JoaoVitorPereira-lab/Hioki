@@ -13,6 +13,7 @@ server.use(express.json());
 server.use(usercontrol);
 server.use(agndcontrol);
 
+server.use('/storage/fotosPacientes', express.static('/storage/fotosPacientes'))
 
 
 

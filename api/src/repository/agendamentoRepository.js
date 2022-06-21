@@ -26,7 +26,8 @@ export async function ConsultarTodos(){
        ds_telefone	    'telefone',
        hr_consulta	    'horário',
 	   DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
-	   ds_tipo			'tipo'
+	   ds_tipo			'tipo',
+       img_paciente     'foto'
   FROM tb_agendamento;
     `
 
@@ -71,7 +72,8 @@ export async function ListarporNome(nome){
        ds_telefone	    'telefone',
        hr_consulta	    'horário',
        DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
-	   ds_tipo			'tipo'	
+	   ds_tipo			'tipo',
+       img_paciente     'foto'	
   FROM tb_agendamento
   WHERE nm_paciente			like ?
     `
@@ -90,7 +92,8 @@ export async function BuscarPorID (id){
     ds_telefone	     'telefone',
     hr_consulta	     'horário',
     dt_consulta      'data',
-    ds_tipo			 'tipo'	
+    ds_tipo			 'tipo',
+    img_paciente     'foto'	
 FROM tb_agendamento
 WHERE id_agendamento = ?
 `
@@ -107,11 +110,22 @@ export async function BuscarDeHoje(){
     ds_telefone	     'telefone',
     hr_consulta	     'horário',
     DATE_FORMAT (dt_consulta,'%d/%m/%Y') AS 'data',
-    ds_tipo			 'tipo'	
+    ds_tipo			 'tipo',
+    img_paciente     'foto'	
 FROM tb_agendamento
 where dt_consulta = curdate();
     `
     const [linhas] = await con.query(comando);
     return linhas
+}
+export async function enviarFoto(foto, id){
+    const comando =
+    `
+    update tb_agendamento
+    set img_paciente = ?
+    where id_agendamento = ?
+    `
+    const [resposta] = await con.query(comando, [foto, id])
+    return resposta.affectedRows
 }
 

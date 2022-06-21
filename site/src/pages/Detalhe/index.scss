@@ -1,9 +1,16 @@
-@media screen and (min-width: 1420px) and (max-width: 1679px){
-    .bd-Admin-hoje
+.bd-Detalhe
 {
     background-color: white;
 
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
 
+        to {
+            opacity: 1;
+        }
+    }
 .adm
 {
     background-color:#10DA96 ;
@@ -20,7 +27,6 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 header .logo
@@ -44,7 +50,6 @@ details
     justify-content:space-evenly;
     font-family: 'Quicksand', sans-serif;
     font-weight: bolder;
-    margin-top: -1vh;
 }
 
 .filtragem
@@ -59,9 +64,24 @@ details
 }
 
 
+.agend{
+    margin-top: 70px;
+}
 
 
-
+header .agend
+{
+    background-color: #baebdb;
+    padding: 6px 10px;
+    border-radius: 20px;
+    width: 25vh;
+    color: black;
+    text-decoration: none;
+    font-family: 'Dela Gothic One';
+    font-size: 14px;
+    margin-right: 50px;
+    transition: transform .7s;
+}
 header .botao-agendar
 {
     background-color: #baebdb;
@@ -82,33 +102,34 @@ header .botao-sair
     background-color: #baebdb;
     padding: 6px 10px;
     border-radius: 20px;
-    width: 28vh;
     color: black;
     text-decoration: none;
     font-family: 'Dela Gothic One';
-    font-size: 14px;
-    margin-right: 50px;
     transition: transform .7s;
     border: none;
     outline: none;
     cursor: pointer;
 }
-header .botao-voltar
+header .botao-consultas
 {
     background-color: #baebdb;
     padding: 6px 12px;
     text-align: center;
     border-radius: 20px;
-    width: 25vh;
     color: black;
     text-decoration: none;
     font-family: 'Dela Gothic One';
     font-size: 14px;
-    margin-right: 50px;
     transition: transform .7s;
-    margin-top: 2vh;
 }
-.botao-agendar:hover, .botao-sair:hover, .botao-voltar:hover{
+.botao-agendar:hover, .botao-sair:hover, .botao-consultas:hover{
+    transform: scale(1.05);
+}
+.botoes{
+    display: flex;
+    flex-direction: column;
+}
+.agend:hover{
     transform: scale(1.05);
 }
 h5
@@ -122,102 +143,22 @@ header .seja-bem
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-left: 0vh;
+    margin-left: 40vh;
     font-size: 3vh;
 }
 
-.ftl
-{
-    margin-left: 34vh;
-    margin-top: 3vh;
-    width: 50vh;
-    height: 5vh;
-    border: none;
-    outline: none;
-    border-radius: 15vh;
-    padding-left: 2vh;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-
-}
-
-label
-{
-    margin-right: -18em;
-}
-
-a
-{
-    font-family: 'Dela Gothic One';
-}
-
-
-
-.cards{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #65d4af;
-    width: 100vh;
-    height: 12vh;
-    margin-left: 10vh;
-    align-items: center;
-    border-radius: 15vh;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    transition: transform .7s;
-    margin-top: 3vh;
-    padding-bottom: -1vh;
-
-    img{
-        visibility: hidden;
-    }
-    
-}
-
-
-
-.cards:hover{
-    transform: scale(1.02);
-    img
-    {
-        visibility: visible;
-        animation: fadein 0.6s;
-
-    }
-}
-
-.acoes{
-    display: flex;
-    flex-direction: column;
-}
-
-.delete
-{
-    height: 1.9em;
-    cursor: pointer;
-    margin-right: 8vh;
-}
-.edit{
-    
-    height: 1.7em;
-    width: 1.7em;
-    cursor: pointer;
-    margin-left: 0.5vh;
-    
-
-}
 
 
 main{
     background-color: #baebdb;
-    height: auto;
+    height: 100vh;
     width: 120vh;
-    margin-left: 18rem;
+    margin-left: 40vh;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     border-radius: 2vh;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));
 
 }
 .consultas{
@@ -227,31 +168,14 @@ main{
     justify-content: center;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    margin-top: 3vh;
-}
-.data{
-    margin-bottom: -2vh;
 }
 
-.numero,
-.tipo{
-    margin-top: -2vh;
-}
-
-.botoes{
+.detalhes{
     display: flex;
-    flex-direction: column;
-}
-.lupa{
-    height: 20px;
-    width: 20px;
-    margin-left: -5vh;
-    margin-top: 4.3vh;
-    position: absolute;
-    cursor: pointer;
-}
-
-
+    flex-direction: row;
+    justify-content: start;
+    
 
 }
+
 }

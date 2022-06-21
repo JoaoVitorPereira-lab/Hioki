@@ -14,7 +14,7 @@ import './style-1440.scss';
 import './style-1680.scss';
 import './style-1780.scss';
 import './style-1920.scss';
-import {cadastrarAgendamento, alterarAgendamento, BuscarPorID, EnviarEmail} from '../../api/agendamentoApi'
+import {cadastrarAgendamento, alterarAgendamento, BuscarPorID, EnviarEmail, EnviarFotoPaciente} from '../../api/agendamentoApi'
 import { Helmet } from 'react-helmet';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -42,6 +42,7 @@ export default function Cad() {
     const [horário, setHorário] = useState(0);
     const [tipo, setTipo] = useState('');
     const [id, setId] = useState(0);
+    const [foto, setFoto] = useState();
 
     const {idParam} = useParams();
 
@@ -67,15 +68,17 @@ export default function Cad() {
 
     async function salvarClick(){
         try {   
-            
+            if(!foto){
+                throw new Error("A foto é obrigatória")
+            }
 
             const usuário = storage('usuario-logado').id;
             
-
             if(id === 0){
-            const resposta = await cadastrarAgendamento(nome, email, telefone, data, horário, tipo, usuário);
+            const novoAgendamento = await cadastrarAgendamento(nome, email, telefone, data, horário, tipo, usuário);
+            await EnviarFotoPaciente(novoAgendamento.id, foto)
 
-            setId(resposta.id)
+            setId(novoAgendamento.id)
             toast.success('Agendamento cadastrado com sucesso 🚀');
             }
             else{
@@ -83,14 +86,17 @@ export default function Cad() {
                 toast.success('Agendamento alterado com sucesso 🚀');
             }
 
-            const resp = await EnviarEmail(nome, email, telefone, data, horário, tipo);
-            setEmail(resp.nome, resp.email, resp.telefone, resp.data, resp.horário, resp.tipo);
+            await EnviarEmail(nome, email, telefone, data, horário, tipo);
             
             
             
             
         } catch (err) {
-          toast.error(err.response.data.erro);  
+            if(err.response)
+                toast.error(err.response.data.erro);  
+            else{
+                toast.error(err.message)
+            }
         }
         
     }
@@ -105,7 +111,15 @@ export default function Cad() {
         setTipo('');
     }
 
+    function EscolherFoto() {
+        document.getElementById('ClickFoto').click();
+     }
     
+     function MostrarFoto() {
+        return URL.createObjectURL(foto)
+      }
+
+
 
     return(
     
@@ -173,6 +187,17 @@ export default function Cad() {
                     
                     <input required="" className="caixatxt6" placeholder='Online ou Presencial' value={tipo} onChange={e => setTipo(e.target.value)}/> 
                 </div>
+                        </div>
+                        <div className='foto-upload' onClick={EscolherFoto}>
+                            {!foto &&
+                            <img src="/images/upload-free-icon-font.png"></img>
+                            
+                            }
+                            {foto &&
+                            <img className="foto-paciente" src={MostrarFoto()}/>
+                            }
+                            
+                            <input type="file" id='ClickFoto' onChange={e  => setFoto(e.target.files[0])}/>
                         </div>
 
 

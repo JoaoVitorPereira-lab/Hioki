@@ -1,7 +1,17 @@
-@media screen and (min-width: 1420px) and (max-width: 1679px){
-    .bd-Admin-hoje
+@media screen and (min-width: 68.75rem) and (max-width: 78.688rem){
+    .bd-Detalhe
 {
     background-color: white;
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+     
 
 
 .adm
@@ -17,6 +27,7 @@ header
 {
     background-color: #10DA96;
     height:11em;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,8 +36,8 @@ header
 
 header .logo
 {
-    height: 15em;
-    width: 15em;
+    height: 10em;
+    width: 10em;
 
   
     margin-left: 0px;
@@ -93,22 +104,7 @@ header .botao-sair
     outline: none;
     cursor: pointer;
 }
-header .botao-voltar
-{
-    background-color: #baebdb;
-    padding: 6px 12px;
-    text-align: center;
-    border-radius: 20px;
-    width: 25vh;
-    color: black;
-    text-decoration: none;
-    font-family: 'Dela Gothic One';
-    font-size: 14px;
-    margin-right: 50px;
-    transition: transform .7s;
-    margin-top: 2vh;
-}
-.botao-agendar:hover, .botao-sair:hover, .botao-voltar:hover{
+.botao-agendar:hover, .botao-sair:hover{
     transform: scale(1.05);
 }
 h5
@@ -128,8 +124,8 @@ header .seja-bem
 
 .ftl
 {
-    margin-left: 34vh;
-    margin-top: 3vh;
+    margin-left: 20px ;
+    margin-top: 30px ;
     width: 50vh;
     height: 5vh;
     border: none;
@@ -158,8 +154,8 @@ a
     flex-direction: row;
     justify-content: space-between;
     background-color: #65d4af;
-    width: 100vh;
-    height: 12vh;
+    width: 50vh;
+    height: 10vh;
     margin-left: 10vh;
     align-items: center;
     border-radius: 15vh;
@@ -168,17 +164,16 @@ a
     transition: transform .7s;
     margin-top: 3vh;
     padding-bottom: -1vh;
-
+    
     img{
         visibility: hidden;
     }
-    
 }
 
 
 
 .cards:hover{
-    transform: scale(1.02);
+    transform: scale(1.05);
     img
     {
         visibility: visible;
@@ -186,6 +181,7 @@ a
 
     }
 }
+
 
 .acoes{
     display: flex;
@@ -213,7 +209,7 @@ main{
     background-color: #baebdb;
     height: auto;
     width: 120vh;
-    margin-left: 18rem;
+    margin-left: 15vh;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;

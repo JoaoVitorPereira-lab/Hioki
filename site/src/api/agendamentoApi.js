@@ -71,3 +71,13 @@ export async function EnviarEmail(nome, email, telefone, data, horário, tipo){
     });
     return resposta.status;
 }
+export async function EnviarFotoPaciente(id, foto){
+    const formData = new FormData();
+    formData.append('foto', foto)
+    const resposta = await api.put(`/agendamento/${id}/foto`, formData, {
+        headers: { 
+            "Content-Type": "multipart/form-data"
+        },
+    });
+    return resposta.status;
+}

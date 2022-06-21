@@ -1,7 +1,9 @@
 import nodemailer from 'nodemailer'
 import { Router } from "express";
-import {inserirAgendamento, ConsultarTodos, alterarAgendamento, removerAgendamento, ListarporNome, BuscarPorID, BuscarDeHoje} from '../repository/agendamentoRepository.js'
+import multer from 'multer'
+import {inserirAgendamento, ConsultarTodos, alterarAgendamento, removerAgendamento, ListarporNome, BuscarPorID, BuscarDeHoje, enviarFoto} from '../repository/agendamentoRepository.js'
 const server = Router();
+const upload = multer({ dest: 'storage/fotosPacientes'})
 
 
 //Adicionar um Agendamento
@@ -95,7 +97,7 @@ server.put('/agendamento/:id', async (req, resp) => {
             resp.sendStatus(204)
     } 
     catch(err){
-        resp.send({
+        resp.status(400).send({
             erro:err.message
         })
 
@@ -209,6 +211,26 @@ server.post('/enviar-email', async (req, resp) =>{
     })
 })
 
+server.put(`/agendamento/:id/foto`,upload.single('foto'), async(req, resp)=> {
+    try {
+
+        if(!req.file){
+            throw new Error('A foto é obrigatória')
+        }
+        const {id} = req.params;
+        const foto = req.file.path;
+
+        const resposta = await enviarFoto(foto, id);
+        if(resposta != 1){
+            throw new Error('A foto não pode ser salva.')
+        }
+        resp.status(204).send();
+    } catch (err) {
+        resp.status(400).send({
+            error: err.message
+        })
+    }
+})
 
 
 

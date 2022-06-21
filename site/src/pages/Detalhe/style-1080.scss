@@ -1,7 +1,16 @@
-@media screen and (min-width: 1420px) and (max-width: 1679px){
-    .bd-Admin-hoje
+@media screen and (min-width: 1060px) and (max-width: 1139px) {
+    .bd-Admin
 {
     background-color: white;
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
 
 
 .adm
@@ -93,22 +102,7 @@ header .botao-sair
     outline: none;
     cursor: pointer;
 }
-header .botao-voltar
-{
-    background-color: #baebdb;
-    padding: 6px 12px;
-    text-align: center;
-    border-radius: 20px;
-    width: 25vh;
-    color: black;
-    text-decoration: none;
-    font-family: 'Dela Gothic One';
-    font-size: 14px;
-    margin-right: 50px;
-    transition: transform .7s;
-    margin-top: 2vh;
-}
-.botao-agendar:hover, .botao-sair:hover, .botao-voltar:hover{
+.botao-agendar:hover, .botao-sair:hover{
     transform: scale(1.05);
 }
 h5
@@ -168,17 +162,16 @@ a
     transition: transform .7s;
     margin-top: 3vh;
     padding-bottom: -1vh;
-
+    
     img{
         visibility: hidden;
     }
-    
 }
 
 
 
 .cards:hover{
-    transform: scale(1.02);
+    transform: scale(1.05);
     img
     {
         visibility: visible;
@@ -186,6 +179,7 @@ a
 
     }
 }
+
 
 .acoes{
     display: flex;
@@ -213,7 +207,7 @@ main{
     background-color: #baebdb;
     height: auto;
     width: 120vh;
-    margin-left: 18rem;
+    margin-left: 15vh;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -254,4 +248,6 @@ main{
 
 
 }
+
+
 }
