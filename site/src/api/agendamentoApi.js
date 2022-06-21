@@ -81,3 +81,8 @@ export async function EnviarFotoPaciente(id, foto){
     });
     return resposta.status;
 }
+
+export function buscarImagem(foto){
+    console.log(`${api.getUri()}/${foto}`)
+    return `${api.getUri()}/${foto}`
+}

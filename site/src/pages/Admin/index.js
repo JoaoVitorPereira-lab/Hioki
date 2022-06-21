@@ -26,12 +26,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { confirmAlert } from 'react-confirm-alert'; 
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-import {listarTodosAgendamentos, listarPorNome, deletarAgendamento, BuscarPorID} from '../../api/agendamentoApi.js'
+import {listarTodosAgendamentos, listarPorNome, deletarAgendamento, BuscarPorID, buscarImagem} from '../../api/agendamentoApi.js'
 export default function Admin() {
     const [usuario, setUsuario] = useState('');
     const [filtroNome, setFiltroNome] = useState('');
     const [agendamento, setAgendamento] = useState([]);
-    const [agendarBusca, setAgendarBusca] = useState({});
+    const [agendar, setAgendar] = useState({});
     const navigate = useNavigate();
 
 
@@ -111,15 +111,13 @@ export default function Admin() {
         }
     })
 
-    function abrirDetalhes(id){
-        navigate(`/detalhe/${id}`)
-    };
+    
 
     const {idParam} = useParams();
 
     async function carregarDetalhe(){
         const resposta = await BuscarPorID(idParam);
-        setAgendarBusca(resposta)
+        setAgendar(resposta)
     }
 
     useEffect(() => {
@@ -159,8 +157,8 @@ export default function Admin() {
 
                
                     {agendamento.map(item => 
-                <div className='todos'>
-                    <div className='cards' onClick={() => abrirDetalhes(item.id)} agendarBusca={agendarBusca}>
+                <div className='todos' agendar={agendar}>
+                    <div className='cards'>
                         <div className="info1">
                         <p>Nome: {item.nome}</p>
                         <p className='numero'>Tel: {item.telefone}</p>
@@ -170,7 +168,11 @@ export default function Admin() {
                             <p className="data">Data: {item.data.substr(0,10)}</p>
                             <p>Horário: {item.horário.substr(0,5)}</p>
                             <p className='tipo'>Tipo: {item.tipo}</p>
+                            
                         </div>
+                        <div className='quadrado-foto'>
+                                <img className='foto-adm' src={buscarImagem(item.foto)}></img>
+                            </div>
                         <div className="acoes">
                         <img className="delete" src="/images/delete.png" onClick={() => removerAgendamentoClick(item.id, item.nome)}></img>
                         <img className="edit"src="/images/edit-button.png" onClick={() => editarAgendamento(item.id)}></img>

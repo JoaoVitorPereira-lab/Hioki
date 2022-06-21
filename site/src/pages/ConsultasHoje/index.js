@@ -26,7 +26,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { confirmAlert } from 'react-confirm-alert'; 
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-import {listarPorNome, deletarAgendamento, BuscarDeHoje} from '../../api/agendamentoApi.js'
+import {listarPorNome, deletarAgendamento, BuscarDeHoje, buscarImagem} from '../../api/agendamentoApi.js'
 export default function Admin() {
     const [usuario, setUsuario] = useState('');
     const [filtroNome, setFiltroNome] = useState('');
@@ -120,7 +120,7 @@ export default function Admin() {
             <img className="logo" src="../images/Dental_Hioki__1_-removebg-preview.png"/>
             </Link>
 
-            <h5 className="seja-bem">Seja bem vindo {usuario}!</h5>
+            <h5 className="seja-bem">Seja bem vindo, {usuario}!</h5>
         <div className='botoes'>
              <button className="botao-sair" onClick={sairClick}>Sair</button>
             <Link className="botao-agendar" to="/cadastro">Novo Agendamento</Link>
@@ -156,6 +156,9 @@ export default function Admin() {
                             <p>Horário: {item.horário.substr(0,5)}</p>
                             <p className='tipo'>Tipo: {item.tipo}</p>
                         </div>
+                        <div className='quadrado-foto'>
+                                <img className='foto-adm' src={buscarImagem(item.foto)}></img>
+                            </div>
                         <div className="acoes">
                         <img className="delete" src="/images/delete.png" onClick={() => removerAgendamentoClick(item.id, item.nome)}></img>
                         <img className="edit"src="/images/edit-button.png" onClick={() => editarAgendamento(item.id)}></img>

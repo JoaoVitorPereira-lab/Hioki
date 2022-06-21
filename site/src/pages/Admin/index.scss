@@ -192,8 +192,8 @@ a
 
 main{
     background-color: #baebdb;
-    height: 100vh;
-    width: 120vh;
+    height: 100%;
+    width: auto;
     margin-left: 40vh;
     display: flex;
     flex-direction: column;
@@ -218,6 +218,14 @@ main{
 .tipo{
     margin-top: -2vh;
 }
-
+.foto-adm{
+    height: 5rem;
+    width: 4rem;
+    position: absolute;
+    border-radius: 5px;
+}
+.quadrado-foto{
+    visibility: visible;
+}
 
 }

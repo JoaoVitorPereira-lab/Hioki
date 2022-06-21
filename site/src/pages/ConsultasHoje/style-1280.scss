@@ -9,7 +9,9 @@
     background-color:#10DA96 ;
 }
 
-
+.quadrado-foto{
+    margin-top: -5rem;
+}
 
 
 
@@ -168,13 +170,22 @@ a
     transition: transform .7s;
     margin-top: 3vh;
     padding-bottom: -1vh;
+    img{
+        visibility: hidden;
+    }
     
 }
 
 
 
 .cards:hover{
-    transform: scale(1.05)
+    transform: scale(1.02);
+    img
+    {
+        visibility: visible;
+        animation: fadein 0.6s;
+
+    }
 }
 
 

@@ -14,7 +14,7 @@ import './style-1440.scss';
 import './style-1680.scss';
 import './style-1780.scss';
 import './style-1920.scss';
-import {cadastrarAgendamento, alterarAgendamento, BuscarPorID, EnviarEmail, EnviarFotoPaciente} from '../../api/agendamentoApi'
+import {cadastrarAgendamento, alterarAgendamento, BuscarPorID, EnviarEmail, EnviarFotoPaciente, buscarImagem} from '../../api/agendamentoApi'
 import { Helmet } from 'react-helmet';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -54,6 +54,9 @@ export default function Cad() {
 
     async function carregarAgendamento(){
         const resposta = await BuscarPorID(idParam);
+
+        console.log(resposta);
+
         setNome(resposta.nome);
         setEmail(resposta.email);
         setTelefone(resposta.telefone);
@@ -61,6 +64,7 @@ export default function Cad() {
         setHorário(resposta.horário);
         setTipo(resposta.tipo);
         setId(resposta.id);
+        setFoto(resposta.foto)
     }
 
    
@@ -82,7 +86,10 @@ export default function Cad() {
             toast.success('Agendamento cadastrado com sucesso 🚀');
             }
             else{
-                await alterarAgendamento(id, nome, email, telefone, data, horário, tipo, usuário);
+                await alterarAgendamento(idParam, nome, email, telefone, data, horário, tipo, usuário);
+                if(typeof(foto) == 'object'){
+                    await EnviarFotoPaciente(idParam, foto)
+                }
                 toast.success('Agendamento alterado com sucesso 🚀');
             }
 
@@ -109,6 +116,7 @@ export default function Cad() {
         setData(0);
         setHorário(0);
         setTipo('');
+        setFoto();
     }
 
     function EscolherFoto() {
@@ -116,7 +124,13 @@ export default function Cad() {
      }
     
      function MostrarFoto() {
+         if(typeof (foto) === 'object'){
         return URL.createObjectURL(foto)
+         }
+         else{
+             return buscarImagem(foto)
+         }
+
       }
 
 
@@ -190,7 +204,7 @@ export default function Cad() {
                         </div>
                         <div className='foto-upload' onClick={EscolherFoto}>
                             {!foto &&
-                            <img src="/images/upload-free-icon-font.png"></img>
+                            <img src="/images/upload-free-icon-font.png"    ></img>
                             
                             }
                             {foto &&
